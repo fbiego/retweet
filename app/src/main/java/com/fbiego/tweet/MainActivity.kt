@@ -11,6 +11,11 @@ import androidx.core.app.NotificationManagerCompat
 import timber.log.Timber
 
 class MainActivity : AppCompatActivity() {
+
+    companion object{
+        const val PREF_FOLLOWS = "pref_follows"
+        const val PREF_RETWEETS = "pref_retweets"
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
