@@ -51,34 +51,25 @@ class NotificationListener : NotificationListenerService() {
 
 
     private fun retweet(sbn: StatusBarNotification){
-
         val click : Int? = NotificationUtils.getClickAction(sbn.notification, "retweet")
-
         if (click != null){
             Timber.w("Found retweet button")
-
             val pref = PreferenceManager.getDefaultSharedPreferences(this)
             val cur = pref.getInt(MN.PREF_RETWEETS, 0)
             pref.edit().putInt(MN.PREF_RETWEETS, (cur+1)).apply()
-
             this.cancelNotification(sbn.key)
-
             sbn.notification.actions[click].actionIntent.send()
         }
     }
 
     private fun follow(sbn: StatusBarNotification){
-
         val click : Int? = NotificationUtils.getClickAction(sbn.notification, "follow")
-
         if (click != null){
             Timber.w("Found follow button")
-
             val pref = PreferenceManager.getDefaultSharedPreferences(this)
             val cur = pref.getInt(MN.PREF_FOLLOWS, 0)
             pref.edit().putInt(MN.PREF_FOLLOWS, (cur+1)).apply()
             this.cancelNotification(sbn.key)
-
             sbn.notification.actions[click].actionIntent.send()
         }
     }
