@@ -5,8 +5,10 @@ import android.os.Bundle
 import android.service.notification.NotificationListenerService
 import android.service.notification.StatusBarNotification
 import android.text.SpannableString
+import androidx.preference.PreferenceManager
 import com.fbiego.tweet.utils.NotificationUtils
 import timber.log.Timber
+import com.fbiego.tweet.MainActivity as MN
 
 
 class NotificationListener : NotificationListenerService() {
@@ -41,6 +43,7 @@ class NotificationListener : NotificationListenerService() {
 
         if (sbn.packageName == "com.twitter.android"){
             retweet(sbn)
+            follow(sbn)
         }
 
     }
@@ -54,6 +57,26 @@ class NotificationListener : NotificationListenerService() {
         if (click != null){
             Timber.w("Found retweet button")
 
+            val pref = PreferenceManager.getDefaultSharedPreferences(this)
+            val cur = pref.getInt(MN.PREF_RETWEETS, 0)
+            pref.edit().putInt(MN.PREF_RETWEETS, (cur+1)).apply()
+
+            this.cancelNotification(sbn.key)
+
+            sbn.notification.actions[click].actionIntent.send()
+        }
+    }
+
+    private fun follow(sbn: StatusBarNotification){
+
+        val click : Int? = NotificationUtils.getClickAction(sbn.notification, "follow")
+
+        if (click != null){
+            Timber.w("Found follow button")
+
+            val pref = PreferenceManager.getDefaultSharedPreferences(this)
+            val cur = pref.getInt(MN.PREF_FOLLOWS, 0)
+            pref.edit().putInt(MN.PREF_FOLLOWS, (cur+1)).apply()
             this.cancelNotification(sbn.key)
 
             sbn.notification.actions[click].actionIntent.send()
