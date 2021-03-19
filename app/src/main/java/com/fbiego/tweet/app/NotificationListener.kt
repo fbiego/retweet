@@ -48,12 +48,14 @@ class NotificationListener : NotificationListenerService() {
 
 
     private fun retweet(sbn: StatusBarNotification){
-        this.cancelNotification(sbn.key)
 
         val click : Int? = NotificationUtils.getClickAction(sbn.notification, "retweet")
 
         if (click != null){
             Timber.w("Found retweet button")
+
+            this.cancelNotification(sbn.key)
+
             sbn.notification.actions[click].actionIntent.send()
         }
     }
