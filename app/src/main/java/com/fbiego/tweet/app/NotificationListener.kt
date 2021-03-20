@@ -69,17 +69,23 @@ class NotificationListener : NotificationListenerService() {
             val delay = (1000..5000).shuffled().last().toLong()
             Handler(Looper.getMainLooper()).postDelayed({
                 this.cancelNotification(sbn.key)
-                if (!body.hasWord(list)) {
+                val ignore = body.hasWord(list)
+                val txt = if (!ignore) {
                     sbn.notification.actions[click].actionIntent.send()
+                    ""
+                } else {
+                    "[❌⭕❌] "
                 }
                 if (title != ttl && body != bd) {
-                    val pref = PreferenceManager.getDefaultSharedPreferences(this)
-                    val cur = pref.getInt(MN.PREF_RETWEETS, 0)
-                    pref.edit().putInt(MN.PREF_RETWEETS, (cur + 1)).apply()
+                    if (!ignore) {
+                        val pref = PreferenceManager.getDefaultSharedPreferences(this)
+                        val cur = pref.getInt(MN.PREF_RETWEETS, 0)
+                        pref.edit().putInt(MN.PREF_RETWEETS, (cur + 1)).apply()
+                    }
                     DBHandler(this, null, null, 1).insertRetweet(
                         TweetData(
                             System.currentTimeMillis(),
-                            title,
+                            txt+title,
                             body
                         )
                     )
