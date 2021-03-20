@@ -30,14 +30,9 @@
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="2"
-                    android:text="Text"
+                    android:text="origin"
                     android:textSize="14sp"
                     android:textStyle="bold" />
-                <View
-                    android:id="@+id/divider"
-                    android:layout_width="1dp"
-                    android:layout_height="match_parent"
-                    android:background="?android:attr/listDivider" />
 
                 <TextView
                     android:id="@+id/timeText"
@@ -46,7 +41,7 @@
                     android:textSize="14sp"
                     android:textStyle="bold"
                     android:gravity="end"
-                    android:text="Reply"
+                    android:text="time"
                     android:layout_height="wrap_content"/>
 
 
