@@ -27,6 +27,8 @@ class NotificationListener : NotificationListenerService() {
     private var bd = ""
     private var ttl = ""
 
+    private val list = listOf("follow", "retweet", "handle")
+
     override fun onNotificationPosted(sbn: StatusBarNotification) {
         val notification = sbn.notification
         val ticker = notification?.tickerText
@@ -53,7 +55,12 @@ class NotificationListener : NotificationListenerService() {
 
     }
 
-
+    private fun String.hasWord(keywords: List<String>): Boolean {
+        for (keyword in keywords) {
+            if (this.contains(keyword, true)) return true
+        }
+        return false
+    }
 
     private fun retweet(sbn: StatusBarNotification, title: String, body: String){
         val click : Int? = NotificationUtils.getClickAction(sbn.notification, "retweet")
@@ -62,7 +69,9 @@ class NotificationListener : NotificationListenerService() {
             val delay = (1000..5000).shuffled().last().toLong()
             Handler(Looper.getMainLooper()).postDelayed({
                 this.cancelNotification(sbn.key)
-                sbn.notification.actions[click].actionIntent.send()
+                if (!body.hasWord(list)) {
+                    sbn.notification.actions[click].actionIntent.send()
+                }
                 if (title != ttl && body != bd) {
                     val pref = PreferenceManager.getDefaultSharedPreferences(this)
                     val cur = pref.getInt(MN.PREF_RETWEETS, 0)
