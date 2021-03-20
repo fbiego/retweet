@@ -21,6 +21,8 @@ class NotificationListener : NotificationListenerService() {
      * (package name).
      */
 
+    var bd = ""
+    var ttl = ""
 
     override fun onNotificationPosted(sbn: StatusBarNotification) {
         val notification = sbn.notification
@@ -54,26 +56,45 @@ class NotificationListener : NotificationListenerService() {
         val click : Int? = NotificationUtils.getClickAction(sbn.notification, "retweet")
         if (click != null){
             Timber.w("Found retweet button")
-            val pref = PreferenceManager.getDefaultSharedPreferences(this)
-            val cur = pref.getInt(MN.PREF_RETWEETS, 0)
-            pref.edit().putInt(MN.PREF_RETWEETS, (cur+1)).apply()
             this.cancelNotification(sbn.key)
             sbn.notification.actions[click].actionIntent.send()
-            DBHandler(this, null, null, 1).insertRetweet(TweetData(System.currentTimeMillis(), title, body))
+            if (title != ttl && body != bd) {
+                val pref = PreferenceManager.getDefaultSharedPreferences(this)
+                val cur = pref.getInt(MN.PREF_RETWEETS, 0)
+                pref.edit().putInt(MN.PREF_RETWEETS, (cur+1)).apply()
+                DBHandler(this, null, null, 1).insertRetweet(
+                    TweetData(
+                        System.currentTimeMillis(),
+                        title,
+                        body
+                    )
+                )
+                bd = body
+                ttl = title
+            }
         }
     }
 
     private fun follow(sbn: StatusBarNotification, title: String, body: String){
         val click : Int? = NotificationUtils.getClickAction(sbn.notification, "follow")
         if (click != null){
-
             Timber.w("Found follow button")
-            val pref = PreferenceManager.getDefaultSharedPreferences(this)
-            val cur = pref.getInt(MN.PREF_FOLLOWS, 0)
-            pref.edit().putInt(MN.PREF_FOLLOWS, (cur+1)).apply()
             this.cancelNotification(sbn.key)
             sbn.notification.actions[click].actionIntent.send()
-            DBHandler(this, null, null, 1).insertFollow(TweetData(System.currentTimeMillis(), title, body))
+            if (title != ttl && body != bd) {
+                val pref = PreferenceManager.getDefaultSharedPreferences(this)
+                val cur = pref.getInt(MN.PREF_FOLLOWS, 0)
+                pref.edit().putInt(MN.PREF_FOLLOWS, (cur+1)).apply()
+                DBHandler(this, null, null, 1).insertFollow(
+                    TweetData(
+                        System.currentTimeMillis(),
+                        title,
+                        body
+                    )
+                )
+                bd = body
+                ttl = title
+            }
         }
     }
 

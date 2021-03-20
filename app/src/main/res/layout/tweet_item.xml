@@ -45,6 +45,7 @@
                     android:layout_weight="1"
                     android:textSize="14sp"
                     android:textStyle="bold"
+                    android:gravity="end"
                     android:text="Reply"
                     android:layout_height="wrap_content"/>
 
