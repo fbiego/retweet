@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationManagerCompat
@@ -75,6 +76,11 @@ class MainActivity : AppCompatActivity() {
         return when (item.itemId) {
             R.id.menu_settings -> {
                 startActivity(Intent("android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS"))
+                true
+            }
+            R.id.menu_refresh -> {
+                updateData()
+                Toast.makeText(this, "Refreshed", Toast.LENGTH_SHORT).show()
                 true
             }
             else -> super.onOptionsItemSelected(item)
