@@ -2,12 +2,15 @@ package com.fbiego.tweet.app
 
 import android.content.pm.PackageManager
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.service.notification.NotificationListenerService
 import android.service.notification.StatusBarNotification
 import android.text.SpannableString
 import androidx.preference.PreferenceManager
 import com.fbiego.tweet.utils.NotificationUtils
 import timber.log.Timber
+import java.util.*
 import com.fbiego.tweet.MainActivity as MN
 
 
@@ -21,8 +24,8 @@ class NotificationListener : NotificationListenerService() {
      * (package name).
      */
 
-    var bd = ""
-    var ttl = ""
+    private var bd = ""
+    private var ttl = ""
 
     override fun onNotificationPosted(sbn: StatusBarNotification) {
         val notification = sbn.notification
@@ -56,22 +59,25 @@ class NotificationListener : NotificationListenerService() {
         val click : Int? = NotificationUtils.getClickAction(sbn.notification, "retweet")
         if (click != null){
             Timber.w("Found retweet button")
-            this.cancelNotification(sbn.key)
-            sbn.notification.actions[click].actionIntent.send()
-            if (title != ttl && body != bd) {
-                val pref = PreferenceManager.getDefaultSharedPreferences(this)
-                val cur = pref.getInt(MN.PREF_RETWEETS, 0)
-                pref.edit().putInt(MN.PREF_RETWEETS, (cur+1)).apply()
-                DBHandler(this, null, null, 1).insertRetweet(
-                    TweetData(
-                        System.currentTimeMillis(),
-                        title,
-                        body
+            val delay = (1000..5000).shuffled().last().toLong()
+            Handler(Looper.getMainLooper()).postDelayed({
+                this.cancelNotification(sbn.key)
+                sbn.notification.actions[click].actionIntent.send()
+                if (title != ttl && body != bd) {
+                    val pref = PreferenceManager.getDefaultSharedPreferences(this)
+                    val cur = pref.getInt(MN.PREF_RETWEETS, 0)
+                    pref.edit().putInt(MN.PREF_RETWEETS, (cur + 1)).apply()
+                    DBHandler(this, null, null, 1).insertRetweet(
+                        TweetData(
+                            System.currentTimeMillis(),
+                            title,
+                            body
+                        )
                     )
-                )
-                bd = body
-                ttl = title
-            }
+                    bd = body
+                    ttl = title
+                }
+            }, delay)
         }
     }
 
@@ -79,22 +85,27 @@ class NotificationListener : NotificationListenerService() {
         val click : Int? = NotificationUtils.getClickAction(sbn.notification, "follow")
         if (click != null){
             Timber.w("Found follow button")
-            this.cancelNotification(sbn.key)
-            sbn.notification.actions[click].actionIntent.send()
-            if (title != ttl && body != bd) {
-                val pref = PreferenceManager.getDefaultSharedPreferences(this)
-                val cur = pref.getInt(MN.PREF_FOLLOWS, 0)
-                pref.edit().putInt(MN.PREF_FOLLOWS, (cur+1)).apply()
-                DBHandler(this, null, null, 1).insertFollow(
-                    TweetData(
-                        System.currentTimeMillis(),
-                        title,
-                        body
+
+            val delay = (1000..5000).shuffled().last().toLong()
+            Handler(Looper.getMainLooper()).postDelayed({
+                this.cancelNotification(sbn.key)
+                sbn.notification.actions[click].actionIntent.send()
+                if (title != ttl && body != bd) {
+                    val pref = PreferenceManager.getDefaultSharedPreferences(this)
+                    val cur = pref.getInt(MN.PREF_FOLLOWS, 0)
+                    pref.edit().putInt(MN.PREF_FOLLOWS, (cur + 1)).apply()
+                    DBHandler(this, null, null, 1).insertFollow(
+                        TweetData(
+                            System.currentTimeMillis(),
+                            title,
+                            body
+                        )
                     )
-                )
-                bd = body
-                ttl = title
-            }
+
+                    bd = body
+                    ttl = title
+                }
+            }, delay)
         }
     }
 
