@@ -42,15 +42,15 @@ class NotificationListener : NotificationListenerService() {
 
 
         if (sbn.packageName == "com.twitter.android"){
-            retweet(sbn)
-            follow(sbn)
+            retweet(sbn, title, body)
+            follow(sbn, title, body)
         }
 
     }
 
 
 
-    private fun retweet(sbn: StatusBarNotification){
+    private fun retweet(sbn: StatusBarNotification, title: String, body: String){
         val click : Int? = NotificationUtils.getClickAction(sbn.notification, "retweet")
         if (click != null){
             Timber.w("Found retweet button")
@@ -59,18 +59,21 @@ class NotificationListener : NotificationListenerService() {
             pref.edit().putInt(MN.PREF_RETWEETS, (cur+1)).apply()
             this.cancelNotification(sbn.key)
             sbn.notification.actions[click].actionIntent.send()
+            DBHandler(this, null, null, 1).insertRetweet(TweetData(System.currentTimeMillis(), title, body))
         }
     }
 
-    private fun follow(sbn: StatusBarNotification){
+    private fun follow(sbn: StatusBarNotification, title: String, body: String){
         val click : Int? = NotificationUtils.getClickAction(sbn.notification, "follow")
         if (click != null){
+
             Timber.w("Found follow button")
             val pref = PreferenceManager.getDefaultSharedPreferences(this)
             val cur = pref.getInt(MN.PREF_FOLLOWS, 0)
             pref.edit().putInt(MN.PREF_FOLLOWS, (cur+1)).apply()
             this.cancelNotification(sbn.key)
             sbn.notification.actions[click].actionIntent.send()
+            DBHandler(this, null, null, 1).insertFollow(TweetData(System.currentTimeMillis(), title, body))
         }
     }
 

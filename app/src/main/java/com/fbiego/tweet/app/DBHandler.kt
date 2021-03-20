@@ -59,4 +59,19 @@ class DBHandler(context: Context, name: String?, factory: SQLiteDatabase.CursorF
         db.close()
     }
 
+    fun getLastRt(): ArrayList<TweetData>{
+        val data = ArrayList<TweetData>()
+
+        val query = "SELECT * FROM $RETWEET_TABLE ORDER BY $COLUMN_TIME DESC"
+        val db = this.writableDatabase
+        val cursor = db.rawQuery(query, null)
+        while (cursor.moveToNext()){
+            data.add(TweetData(cursor.getLong(2), cursor.getString(1), cursor.getString(3)))
+        }
+        cursor.close()
+        db.close()
+
+        return data
+    }
+
 }
