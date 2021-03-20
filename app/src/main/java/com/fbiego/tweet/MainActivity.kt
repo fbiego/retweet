@@ -8,6 +8,8 @@ import android.view.MenuItem
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.NotificationManagerCompat
+import androidx.preference.PreferenceManager
+import kotlinx.android.synthetic.main.activity_main.*
 import timber.log.Timber
 
 class MainActivity : AppCompatActivity() {
@@ -27,7 +29,14 @@ class MainActivity : AppCompatActivity() {
 
     override fun onResume() {
         super.onResume()
+
+        val pref = PreferenceManager.getDefaultSharedPreferences(this)
+        val cur = pref.getInt(PREF_FOLLOWS, 0)
+        val rts = pref.getInt(PREF_RETWEETS, 0)
+        follows.text = "$cur Follows"
+        retweets.text = "$rts Retweets"
         appsList()
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
