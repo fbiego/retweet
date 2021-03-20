@@ -2,9 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
+    <item android:id="@+id/menu_refresh"
+        android:title="Settings"
+        android:contentDescription="Refersh"
+        android:icon="@drawable/ic_refresh"
+        android:orderInCategory="100"
+        app:showAsAction="ifRoom"
+        />
+
     <item android:id="@+id/menu_settings"
         android:title="Settings"
-        android:contentDescription="App settings"
+        android:contentDescription="Settings"
         android:icon="@drawable/ic_settings"
         android:orderInCategory="100"
         app:showAsAction="ifRoom"
