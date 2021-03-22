@@ -1,6 +1,6 @@
 package com.fbiego.tweet.app
 
-fun lastPlayed(millis: Long): String{
+fun time(millis: Long): String{
     val sec = (System.currentTimeMillis() - millis)/1000
     return when {
         sec >= 3600 -> {
