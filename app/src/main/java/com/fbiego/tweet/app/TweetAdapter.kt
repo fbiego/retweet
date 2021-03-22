@@ -37,7 +37,7 @@ class TweetAdapter(myData: ArrayList<TweetData>): RecyclerView.Adapter<TweetAdap
 
         fun bind(data: TweetData){
             mOrigin.text = data.origin
-            mTime.text = lastPlayed(data.time)
+            mTime.text = time(data.time)
             mRetweet.text = data.retweet
         }
 
