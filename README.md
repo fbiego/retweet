@@ -1,13 +1,13 @@
 # Auto Retweet
 
-retweets your tweets 
+retweets & likes your tweets 
 
 follow me on twitter [`@_retweets___`](https://twitter.com/_retweets___)
 
 
 ### Create your own
 
-Download the app [`Retweet-v1.2.apk`](https://github.com/fbiego/retweet/raw/master/app/release/Retweet-v1.2.apk)
+<a href='https://play.google.com/store/apps/details?id=com.fbiego.tweet&pcampaignid=pcampaignidMKT-github'><img alt='Get it on Google Play' height="100px" src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a>
 
 >- Requires Android 7+
 >- Enable notification access
