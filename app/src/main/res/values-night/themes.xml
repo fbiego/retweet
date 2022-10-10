@@ -2,15 +2,38 @@
     <!-- Base application theme. -->
     <style name="Theme.Tweet" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/black</item>
+        <item name="colorPrimary">@color/gradStart</item>
+        <item name="colorPrimaryVariant">@color/gradEnd</item>
+        <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorSecondary">@color/white</item>
+        <item name="colorSecondaryVariant">@color/line</item>
         <item name="colorOnSecondary">@color/black</item>
+
+        <item name="android:windowBackground">@drawable/gradient</item>
+        <item name="android:navigationBarColor">@color/gradEnd</item>
+
+        <item name="colorAccent">@color/white</item>
         <!-- Status bar color. -->
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="android:statusBarColor" tools:targetApi="l">@color/gradStart</item>
         <!-- Customize your theme here. -->
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:textColor">#fff</item>
+
+        <item name="android:listDivider">@color/line</item>
+        <item name="android:timePickerDialogTheme">@style/MyTimePickerDialogStyle</item>
+    </style>
+
+    <style name="MyTimePickerDialogStyle" parent="@style/ThemeOverlay.AppCompat.Dialog.Alert">
+        <item name="showTitle">false</item>
+        <item name="colorControlActivated">@color/gradStart</item>
+        <item name="colorAccent">@color/gradStart</item>
+        <item name="android:textColorPrimary">@color/gradStart</item>
+        <item name="android:textColorSecondary">@color/gradStart</item>
+        <item name="android:numbersBackgroundColor">@color/transparent</item>
+        <item name="android:windowBackground">@drawable/popup_dialog</item>
+        <item name="colorPrimary">@color/white</item>
+
     </style>
 </resources>

@@ -27,8 +27,6 @@ class NotificationListener : NotificationListenerService() {
     private var bd = ""
     private var ttl = ""
 
-    private val list = listOf("follow", "retweet", "handle")
-
     override fun onNotificationPosted(sbn: StatusBarNotification) {
         val notification = sbn.notification
         val ticker = notification?.tickerText
@@ -40,17 +38,35 @@ class NotificationListener : NotificationListenerService() {
         }
         val body: String = bundle?.getCharSequence("android.text").toString()
 
-        val appInfo = applicationContext.packageManager.getApplicationInfo(
-            sbn.packageName,
-            PackageManager.GET_META_DATA
-        )
-        val appName = applicationContext.packageManager.getApplicationLabel(appInfo)
-        Timber.w("onNotificationPosted {app=${appName},id=${sbn.id},ticker=$ticker,title=$title,body=$body,posted=${sbn.postTime},package=${sbn.packageName}}")
-
-
         if (sbn.packageName == "com.twitter.android"){
-            retweet(sbn, title, body)
-            follow(sbn, title, body)
+            val appInfo = applicationContext.packageManager.getApplicationInfo(
+                sbn.packageName,
+                PackageManager.GET_META_DATA
+            )
+            val appName = applicationContext.packageManager.getApplicationLabel(appInfo)
+            Timber.w("onNotificationPosted {app=${appName},id=${sbn.id},ticker=$ticker,title=$title,body=$body,posted=${sbn.postTime},package=${sbn.packageName}}")
+
+
+            val pref = PreferenceManager.getDefaultSharedPreferences(this)
+            var cleared = false
+
+            if (pref.getBoolean(MN.PREF_AUTO_RETWEET, false)) {
+                cleared = retweet(sbn, title, body)
+            }
+            if (pref.getBoolean(MN.PREF_AUTO_LIKE, false)) {
+                cleared = like(sbn, title, body)
+            }
+            if (pref.getBoolean(MN.PREF_AUTO_FOLLOW, false)) {
+                cleared = follow(sbn, title, body)
+            }
+            if(pref.getBoolean(MN.PREF_REMOVE, false) && !cleared){
+                this.cancelNotification(sbn.key)
+            }
+
+        }
+        if (sbn.packageName == "com.fbiego.tweet"){
+            Timber.w("onNotificationPosted from retweet :id=${sbn.id},ticker=$ticker,title=$title,body=$body,posted=${sbn.postTime},package=${sbn.packageName}}")
+            EventReceiver().sendTest()
         }
 
     }
@@ -62,30 +78,26 @@ class NotificationListener : NotificationListenerService() {
         return false
     }
 
-    private fun retweet(sbn: StatusBarNotification, title: String, body: String){
+    private fun retweet(sbn: StatusBarNotification, title: String, body: String): Boolean{
         val click : Int? = NotificationUtils.getClickAction(sbn.notification, "retweet")
         if (click != null){
             Timber.w("Found retweet button")
             val delay = (1000..5000).shuffled().last().toLong()
             Handler(Looper.getMainLooper()).postDelayed({
                 this.cancelNotification(sbn.key)
-                val ignore = body.hasWord(list)
-                val txt = if (!ignore) {
-                    sbn.notification.actions[click].actionIntent.send()
-                    ""
-                } else {
-                    "[❌⭕❌] "
-                }
+                //val ignore = body.hasWord(list)
+                sbn.notification.actions[click].actionIntent.send()
+
                 if (title != ttl && body != bd) {
-                    if (!ignore) {
+
                         val pref = PreferenceManager.getDefaultSharedPreferences(this)
                         val cur = pref.getInt(MN.PREF_RETWEETS, 0)
                         pref.edit().putInt(MN.PREF_RETWEETS, (cur + 1)).apply()
-                    }
+
                     DBHandler(this, null, null, 1).insertRetweet(
                         TweetData(
                             System.currentTimeMillis(),
-                            txt+title,
+                            title,
                             body
                         )
                     )
@@ -93,10 +105,12 @@ class NotificationListener : NotificationListenerService() {
                     ttl = title
                 }
             }, delay)
+            return true
         }
+        return false
     }
 
-    private fun follow(sbn: StatusBarNotification, title: String, body: String){
+    private fun follow(sbn: StatusBarNotification, title: String, body: String): Boolean{
         val click : Int? = NotificationUtils.getClickAction(sbn.notification, "follow")
         if (click != null){
             Timber.w("Found follow button")
@@ -121,38 +135,29 @@ class NotificationListener : NotificationListenerService() {
                     ttl = title
                 }
             }, delay)
+            return true
         }
+        return false
     }
 
+    private fun like(sbn: StatusBarNotification, title: String, body: String): Boolean{
+        val click : Int? = NotificationUtils.getClickAction(sbn.notification, "like")
+        if (click != null){
+            Timber.w("Found like button")
 
+            val delay = (1000..5000).shuffled().last().toLong()
+            Handler(Looper.getMainLooper()).postDelayed({
+                this.cancelNotification(sbn.key)
+                sbn.notification.actions[click].actionIntent.send()
+                if (title != ttl && body != bd) {
 
-    override fun onNotificationRemoved(sbn: StatusBarNotification) {
-        super.onNotificationRemoved(sbn)
-        val notification = sbn.notification
-        val ticker = notification?.tickerText
-        val bundle: Bundle? = notification?.extras
-        val title: String = when (val titleObj = bundle?.get("android.title")) {
-            is String -> titleObj
-            is SpannableString -> titleObj.toString()
-            else -> "undefined"
+                    bd = body
+                    ttl = title
+                }
+            }, delay)
+            return true
         }
-        val body: String = bundle?.getCharSequence("android.text").toString()
-
-        val appInfo = applicationContext.packageManager.getApplicationInfo(
-            sbn.packageName,
-            PackageManager.GET_META_DATA
-        )
-        val appName = applicationContext.packageManager.getApplicationLabel(appInfo)
-        Timber.d("onNotificationRemoved {app=${appName},id=${sbn.id},ticker=$ticker,title=$title,body=$body,posted=${sbn.postTime},package=${sbn.packageName}}")
-
-
-
+        return false
     }
-
-    override fun onListenerConnected() {
-        super.onListenerConnected()
-        Timber.w("Listener Connected")
-    }
-
 
 }

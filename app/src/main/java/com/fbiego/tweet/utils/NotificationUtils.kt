@@ -10,9 +10,9 @@ object NotificationUtils {
 
         for (i in 0 until NotificationCompat.getActionCount(n)){
             val action = NotificationCompat.getAction(n, i)
-            Timber.w("Action = ${action.title}")
+            Timber.w("Action = ${action!!.title}")
             if (action.remoteInputs != null) {
-                for (element in action.remoteInputs) {
+                for (element in action.remoteInputs!!) {
                     Timber.w("action no:$i  ${element.resultKey}")
                 }
             }
@@ -20,7 +20,7 @@ object NotificationUtils {
 
         for (i in 0 until NotificationCompat.getActionCount(n)) {
             val action = NotificationCompat.getAction(n, i)
-            if (action.title.toString().equals(text, ignoreCase = true)){
+            if (action!!.title.toString().equals(text, ignoreCase = true)){
                 return i
             }
         }

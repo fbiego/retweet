@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer-array name="star_colors">
+        <!-- This is how you can configure the ratio of star colors-->
+        <item>@color/white</item>
+        <item>@color/purple_200</item>
+        <item>@color/teal_200</item>
+    </integer-array>
+
+
+    <integer-array name="meteorites_colors">
+
+        <item>@color/white</item>
+        <item>@color/purple_200</item>
+        <item>@color/teal_200</item>
+    </integer-array>
+</resources>

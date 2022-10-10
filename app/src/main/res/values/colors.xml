@@ -7,4 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#0000</color>
+    <color name="cardBg">#3fff</color>
+    <color name="text">#333</color>
+    <color name="line">#7fff</color>
+    <color name="clicked">#9fff</color>
+    <color name="gradStart">#0000ff</color>
+    <color name="gradEnd">#9e1fde</color>
 </resources>

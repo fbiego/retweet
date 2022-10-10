@@ -1,35 +1,60 @@
 package com.fbiego.tweet
 
-import android.content.DialogInterface
+import android.annotation.TargetApi
+import android.app.Notification
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.content.Context
 import android.content.Intent
+import android.os.Build
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
+import android.os.Handler
+import android.os.Looper
 import android.view.View
-import android.widget.Toast
+import android.widget.ImageView
+import android.widget.LinearLayout
+import android.widget.ProgressBar
+import android.widget.TextView
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
+import androidx.core.content.ContextCompat
 import androidx.preference.PreferenceManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.fbiego.tweet.app.DBHandler
-import com.fbiego.tweet.app.TweetAdapter
-import com.fbiego.tweet.app.TweetData
+import com.fbiego.tweet.app.*
+import com.github.angads25.toggle.widget.LabeledSwitch
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.settings.*
 import timber.log.Timber
-import java.util.ArrayList
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(), EventListener {
 
     private var dataList = ArrayList<TweetData>()
+    private var test_result: TextView? = null
+    private var testIcon: ImageView? = null
+    private var testLoad: ProgressBar? = null
+    private var testPass = false
+
     companion object{
         const val PREF_FOLLOWS = "pref_follows"
         const val PREF_RETWEETS = "pref_retweets"
 
+        const val PREF_AUTO_LIKE = "pref_auto_like"
+        const val PREF_AUTO_RETWEET = "pref_auto_retweet"
+        const val PREF_AUTO_FOLLOW = "pref_auto_follow"
+
+        const val PREF_REMOVE = "pref_remove"
+
+        const val NOTIFICATION_CHANNEL = "com.fbiego.tweet"
+        const val NOTIFY_ID = 0xFB1E40
+
         lateinit var tweetAdapter : TweetAdapter
         lateinit var tweetRecycler : RecyclerView
+
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -37,6 +62,8 @@ class MainActivity : AppCompatActivity() {
         if (BuildConfig.DEBUG) {
             Timber.plant(Timber.DebugTree())
         }
+        notificationChannel(this)
+
 
         tweetAdapter = TweetAdapter(dataList)
         tweetRecycler = findViewById<View>(R.id.recycler_view) as RecyclerView
@@ -47,6 +74,32 @@ class MainActivity : AppCompatActivity() {
             adapter = tweetAdapter
         }
         tweetRecycler.itemAnimator?.changeDuration = 0
+
+        setting_icon.setOnClickListener {
+            openSettings()
+        }
+
+        silent.setOnClickListener {
+            openSettings()
+        }
+        about.setOnClickListener {
+            startActivity(Intent(this, AboutActivity::class.java))
+            //overridePendingTransition(R.anim.slide_in_right, R.anim.slide_out_left)
+        }
+
+
+        swipe_layout.setOnRefreshListener {
+            updateData()
+
+            Handler(Looper.getMainLooper()).postDelayed({
+                swipe_layout.isRefreshing = false
+            }, 3000)
+
+        }
+    }
+
+    private fun checkNotification(){
+        notify(this, "Test", "This is a notification test")
     }
 
     override fun onResume() {
@@ -54,65 +107,190 @@ class MainActivity : AppCompatActivity() {
 
         updateData()
         appsList()
+        EventReceiver.bindListener(this)
 
+    }
+
+    override fun onPause() {
+        super.onPause()
+        EventReceiver.unBindListener()
+    }
+
+    override fun onStart() {
+        super.onStart()
+        stars.onStart()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        stars.onStop()
+    }
+
+    private fun openSettings(){
+
+        val pref = PreferenceManager.getDefaultSharedPreferences(this)
+
+        val enabled = NotificationManagerCompat.getEnabledListenerPackages(this).contains(
+            BuildConfig.APPLICATION_ID
+        )
+
+        val inflater = layoutInflater
+        val layout = inflater.inflate(R.layout.settings, null)
+
+        var alertDialog: AlertDialog? = null
+
+
+        val buttonText: TextView = layout.findViewById(R.id.button_text)
+        val statusText: TextView = layout.findViewById(R.id.status_text)
+        val buttonAction: LinearLayout = layout.findViewById(R.id.button_action)
+
+        val retweet: LabeledSwitch = layout.findViewById(R.id.retweet_button)
+        val like: LabeledSwitch = layout.findViewById(R.id.like_button)
+        val follow: LabeledSwitch = layout.findViewById(R.id.follow_button)
+        val clear: LabeledSwitch = layout.findViewById(R.id.clear_button)
+        val test_check: LinearLayout = layout.findViewById(R.id.button_test)
+        test_result = layout.findViewById(R.id.test_text)
+        testIcon = layout.findViewById(R.id.test_icon)
+        testLoad = layout.findViewById(R.id.testing)
+
+
+        retweet.isOn = pref.getBoolean(PREF_AUTO_RETWEET, false)
+        like.isOn = pref.getBoolean(PREF_AUTO_LIKE, false)
+        follow.isOn = pref.getBoolean(PREF_AUTO_FOLLOW, false)
+        clear.isOn = pref.getBoolean(PREF_REMOVE, false)
+
+        retweet.setOnToggledListener{_, b ->
+            pref.edit().putBoolean(PREF_AUTO_RETWEET, b).apply()
+        }
+        like.setOnToggledListener{_, b ->
+            pref.edit().putBoolean(PREF_AUTO_LIKE, b).apply()
+        }
+        follow.setOnToggledListener{_, b ->
+            pref.edit().putBoolean(PREF_AUTO_FOLLOW, b).apply()
+        }
+        clear.setOnToggledListener { _, b ->
+            pref.edit().putBoolean(PREF_REMOVE, b).apply()
+        }
+        statusText.text = "Notification access is " + if (enabled) "enabled" else "disabled"
+        buttonText.text = if (enabled) "Change" else "Enable"
+
+        buttonAction.setOnClickListener {
+            startActivity(Intent("android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS"))
+        }
+        val dialog = AlertDialog.Builder(this)
+
+
+//        saveButton.setOnClickListener {
+//            alertDialog!!.dismiss()
+//        }
+
+        test_check.setOnClickListener {
+            testPass = false
+            testIcon!!.visibility = View.GONE
+            testLoad!!.visibility = View.VISIBLE
+            checkNotification()
+
+            Handler(Looper.getMainLooper()).postDelayed({
+                if (!testPass){
+                    test_result!!.text = "Test Failed"
+                    testIcon!!.visibility = View.VISIBLE
+                    testLoad!!.visibility = View.GONE
+                }
+                notificationChannel(this).cancel(NOTIFY_ID)
+            }, 3000)
+        }
+
+
+        dialog.setView(layout)
+
+        dialog.setOnDismissListener {
+            Timber.e("Dialog dismissed")
+        }
+
+
+        alertDialog = dialog.create()
+
+        alertDialog.window?.setBackgroundDrawableResource(R.drawable.popup_dialog)
+        alertDialog.show()
     }
 
     private fun updateData(){
         val pref = PreferenceManager.getDefaultSharedPreferences(this)
         val cur = pref.getInt(PREF_FOLLOWS, 0)
         val rts = pref.getInt(PREF_RETWEETS, 0)
-        follows.text = "$cur Follows"
-        retweets.text = "$rts Retweets"
+        follows.text = "$cur Follow" + if (cur == 1) "" else "s"
+        retweets.text = "$rts Retweet" + if (rts == 1) "" else "s"
         dataList = DBHandler(this, null, null, 1).getLastRt()
+
         tweetAdapter.update(dataList)
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.main_menu, menu)
-        return super.onCreateOptionsMenu(menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.menu_settings -> {
-                startActivity(Intent("android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS"))
-                true
-            }
-            R.id.menu_refresh -> {
-                updateData()
-                Toast.makeText(this, "Refreshed", Toast.LENGTH_SHORT).show()
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
-        }
-
-    }
 
     private fun appsList(){
 
         val enabled = NotificationManagerCompat.getEnabledListenerPackages(this).contains(
             BuildConfig.APPLICATION_ID
         )
-        Timber.d("Notification Listener Enabled $enabled")
 
-        if (enabled) {
-
-            //Toast.makeText(this, "Granted", Toast.LENGTH_SHORT).show()
-
+        if (enabled){
+            silent.visibility = View.GONE
         } else {
-            AlertDialog.Builder(this)
-                .setTitle("Notification Access")
-                .setMessage("Grant notification access?")
-                .setNegativeButton(android.R.string.no, null)
-                .setPositiveButton(android.R.string.yes) { _: DialogInterface?, _: Int ->
-
-                    startActivity(Intent("android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS"))
-
-                }
-                .show()
-
+            silent.visibility = View.VISIBLE
         }
 
+
+
+    }
+
+    private fun notify(context: Context, title: String, text: String): Notification {
+
+        val notBuild = NotificationCompat.Builder(context, NOTIFICATION_CHANNEL)
+        notBuild.setSmallIcon(R.drawable.ic_about)
+        notBuild.color = ContextCompat.getColor(context, R.color.gradEnd)
+
+        notBuild.setContentTitle(title)
+        notBuild.setContentText(text)
+
+        notBuild.priority = NotificationCompat.PRIORITY_DEFAULT
+        notBuild.setShowWhen(true)
+        notBuild.setOnlyAlertOnce(true)
+
+        val notification= notBuild.build()
+        notificationChannel(context).notify(NOTIFY_ID, notification)
+        return notification
+    }
+
+    @TargetApi(Build.VERSION_CODES.O)
+    private fun notificationChannel(context: Context): NotificationManager {
+        val notificationMgr = context.getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+
+            val notificationChannel = NotificationChannel(NOTIFICATION_CHANNEL, BuildConfig.APPLICATION_ID, NotificationManager.IMPORTANCE_DEFAULT)
+            notificationChannel.description = "Retweet test"
+            notificationChannel.lightColor = ContextCompat.getColor(context, R.color.gradEnd)
+            notificationChannel.enableLights(true)
+            notificationChannel.enableVibration(true)
+            notificationMgr.createNotificationChannel(notificationChannel)
+        }
+        return notificationMgr
+
+    }
+
+    override fun onTest() {
+        testPass = true
+        if (test_result != null) {
+            test_result!!.text = "Test Okay"
+        }
+        if (testIcon != null) {
+            testIcon!!.visibility = View.VISIBLE
+        }
+        if (testLoad != null) {
+            testLoad!!.visibility = View.GONE
+        }
+
+    }
+
+    override fun onRetweet() {
 
     }
 }
