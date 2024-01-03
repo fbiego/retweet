@@ -65,7 +65,7 @@ class DBHandler(context: Context, name: String?, factory: SQLiteDatabase.CursorF
         val query = "SELECT * FROM $RETWEET_TABLE ORDER BY $COLUMN_TIME DESC"
         val db = this.writableDatabase
         val cursor = db.rawQuery(query, null)
-        var max = 20
+        var max = 50
         while (cursor.moveToNext()){
             data.add(TweetData(cursor.getLong(2), cursor.getString(1), cursor.getString(3)))
             max--

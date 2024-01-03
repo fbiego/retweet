@@ -6,18 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.sofakingforever.stars.AnimatedStarsView
-        android:id="@+id/stars"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:starsView_bigStarThreshold="5dp"
-        app:starsView_meteoritesColors="@array/meteorites_colors"
-        app:starsView_meteoritesEnabled="true"
-        app:starsView_meteoritesInterval="2000"
-        app:starsView_maxStarSize="2dp"
-        app:starsView_minStarSize="1dp"
-        app:starsView_starColors="@array/star_colors"
-        app:starsView_starCount="200" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/status"
@@ -151,7 +139,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:gravity="center"
-            android:text="Retweets"/>
+            android:text="Reposts"/>
         <TextView
             android:id="@+id/follows"
             android:layout_width="wrap_content"

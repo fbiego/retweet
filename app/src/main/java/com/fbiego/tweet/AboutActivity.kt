@@ -8,58 +8,61 @@ import android.net.Uri
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import kotlinx.android.synthetic.main.activity_about.*
+import com.fbiego.tweet.databinding.ActivityAboutBinding
 import java.io.InputStream
 
 class AboutActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityAboutBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_about)
+        binding = ActivityAboutBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        aboutTitle.setOnClickListener {
+        binding.aboutTitle.setOnClickListener {
 
-            legalInfo.visibility = View.GONE
-            aboutInfo.visibility = View.VISIBLE
+            binding.legalInfo.visibility = View.GONE
+            binding.aboutInfo.visibility = View.VISIBLE
         }
 
         val imageStream: InputStream = this.resources.openRawResource(R.raw.enable_access)
         val bitmap: Bitmap = BitmapFactory.decodeStream(imageStream)
 
-        img_access.setImageBitmap(bitmap)
+        binding.imgAccess.setImageBitmap(bitmap)
 
         val imageStream2: InputStream = this.resources.openRawResource(R.raw.not_available)
         val bitmap2: Bitmap = BitmapFactory.decodeStream(imageStream2)
-        img_na.setImageBitmap(bitmap2)
+        binding.imgNa.setImageBitmap(bitmap2)
 
         val imageStream3: InputStream = this.resources.openRawResource(R.raw.enable_twitter)
         val bitmap3: Bitmap = BitmapFactory.decodeStream(imageStream3)
-        img_twitter.setImageBitmap(bitmap3)
+        binding.imgTwitter.setImageBitmap(bitmap3)
 
         val imageStream4: InputStream = this.resources.openRawResource(R.raw.turn_on)
         val bitmap4: Bitmap = BitmapFactory.decodeStream(imageStream4)
-        img_post.setImageBitmap(bitmap4)
+        binding.imgPost.setImageBitmap(bitmap4)
 
-        btn_terms.setOnClickListener {
-            legalInfo.visibility = View.VISIBLE
-            aboutInfo.visibility = View.GONE
-            webView.loadUrl("file:///android_asset/terms.html")
-            webView.setBackgroundColor(Color.TRANSPARENT)
+        binding.btnTerms.setOnClickListener {
+            binding.legalInfo.visibility = View.VISIBLE
+            binding.aboutInfo.visibility = View.GONE
+            binding.webView.loadUrl("file:///android_asset/terms.html")
+            binding.webView.setBackgroundColor(Color.TRANSPARENT)
         }
 
-        btn_privacy.setOnClickListener {
-            legalInfo.visibility = View.VISIBLE
-            aboutInfo.visibility = View.GONE
-            webView.loadUrl("file:///android_asset/policy.html")
-            webView.setBackgroundColor(Color.TRANSPARENT)
+        binding.btnPrivacy.setOnClickListener {
+            binding.legalInfo.visibility = View.VISIBLE
+            binding.aboutInfo.visibility = View.GONE
+            binding.webView.loadUrl("file:///android_asset/policy.html")
+            binding.webView.setBackgroundColor(Color.TRANSPARENT)
         }
 
-        btn_twitter.setOnClickListener {
+        binding.btnTwitter.setOnClickListener {
             val i = Intent(Intent.ACTION_VIEW)
             i.data = Uri.parse("https://twitter.com/_retweets___")
             startActivity(i)
         }
 
-        btn_github.setOnClickListener {
+        binding.btnGithub.setOnClickListener {
             val i = Intent(Intent.ACTION_VIEW)
             i.data = Uri.parse("https://github.com/fbiego/retweet")
             startActivity(i)
@@ -67,13 +70,4 @@ class AboutActivity : AppCompatActivity() {
 
     }
 
-    override fun onStart() {
-        super.onStart()
-        starsAbout.onStart()
-    }
-
-    override fun onStop() {
-        super.onStop()
-        starsAbout.onStop()
-    }
 }

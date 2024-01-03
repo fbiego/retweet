@@ -1,31 +1,30 @@
 package com.fbiego.tweet.app
 
 interface EventListener {
-    fun onTest()
-    fun onRetweet()
+    fun onTest(){}
+    fun onRetweet(tweetData: TweetData){}
 }
 
 class EventReceiver {
     companion object {
-        private lateinit var mListener: EventListener
-        var isInit = false
+        private var listeners = ArrayList<EventListener>()
+
         fun bindListener(listener: EventListener){
-            mListener = listener
-            isInit = true
+            listeners.add(listener)
         }
-        fun unBindListener(){
-            isInit = false
+        fun unBindListener(listener: EventListener): Boolean{
+            return listeners.remove(listener)
         }
     }
 
-    fun sendRetweet(){
-        if(isInit) {
-            mListener.onRetweet()
+    fun sendRetweet(tweetData: TweetData){
+        listeners.forEach{
+            it.onRetweet(tweetData)
         }
     }
     fun sendTest(){
-        if(isInit) {
-            mListener.onTest()
+        listeners.forEach{
+            it.onTest()
         }
     }
 }

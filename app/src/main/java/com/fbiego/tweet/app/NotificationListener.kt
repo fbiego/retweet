@@ -1,5 +1,6 @@
 package com.fbiego.tweet.app
 
+import android.app.PendingIntent
 import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.Handler
@@ -8,6 +9,7 @@ import android.service.notification.NotificationListenerService
 import android.service.notification.StatusBarNotification
 import android.text.SpannableString
 import androidx.preference.PreferenceManager
+import com.fbiego.tweet.utils.Action
 import com.fbiego.tweet.utils.NotificationUtils
 import timber.log.Timber
 import java.util.*
@@ -26,6 +28,15 @@ class NotificationListener : NotificationListenerService() {
 
     private var bd = ""
     private var ttl = ""
+
+
+    private val rsp = arrayListOf(
+        "●▬▬ @_retweets___ ▬▬●\nLet's gain together!\n●▬▬ #retweet_app ▬▬●",
+        "●▬▬ @_retweets___ ▬▬●\nFollow and let's grow together!\n●▬▬ #retweet_app ▬▬●",
+        "●▬▬ @_retweets___ ▬▬●\nLet's help each other grow on Twitter!\n●▬▬ #retweet_app ▬▬●",
+        "●▬▬ @_retweets___ ▬▬●\nConnect with other Twitter users and gain followers.\n●▬▬ #retweet_app ▬▬●",
+        "●▬▬ @_retweets___ ▬▬●\nGrow your Twitter audience. Follow now!\n●▬▬ #retweet_app ▬▬●"
+    )
 
     override fun onNotificationPosted(sbn: StatusBarNotification) {
         val notification = sbn.notification
@@ -48,15 +59,21 @@ class NotificationListener : NotificationListenerService() {
 
 
             val pref = PreferenceManager.getDefaultSharedPreferences(this)
+            val received = pref.getBoolean(MN.PREF_RECEIVED_TWEET, false)
+            if (!received){
+                MN().notify(this, "Setup Complete", "We've detected a Twitter notification")
+                pref.edit().putBoolean(MN.PREF_RECEIVED_TWEET, true).apply()
+            }
             var cleared = false
 
-            if (pref.getBoolean(MN.PREF_AUTO_RETWEET, false)) {
+
+            if (pref.getBoolean(MN.PREF_AUTO_RETWEET, true)) {
                 cleared = retweet(sbn, title, body)
             }
-            if (pref.getBoolean(MN.PREF_AUTO_LIKE, false)) {
+            if (pref.getBoolean(MN.PREF_AUTO_LIKE, true)) {
                 cleared = like(sbn, title, body)
             }
-            if (pref.getBoolean(MN.PREF_AUTO_FOLLOW, false)) {
+            if (pref.getBoolean(MN.PREF_AUTO_FOLLOW, true)) {
                 cleared = follow(sbn, title, body)
             }
             if(pref.getBoolean(MN.PREF_REMOVE, false) && !cleared){
@@ -78,10 +95,31 @@ class NotificationListener : NotificationListenerService() {
         return false
     }
 
+    private fun reply(sbn: StatusBarNotification, message: String): Boolean {
+        val action: Action? = NotificationUtils.getQuickReplyAction(sbn.notification, packageName)
+        var success = false
+        if (action != null) {
+            Timber.i("Found reply action")
+            try {
+                action.sendReply(
+                    applicationContext,
+                    message
+                )
+                success = true
+            } catch (e: PendingIntent.CanceledException) {
+                Timber.i("CRAP $e")
+            }
+        } else {
+            Timber.i("Reply action not found")
+        }
+        //this.cancelNotification(sbn.key)
+        return success
+    }
+
     private fun retweet(sbn: StatusBarNotification, title: String, body: String): Boolean{
-        val click : Int? = NotificationUtils.getClickAction(sbn.notification, "retweet")
+        val click : Int? = NotificationUtils.getClickAction(sbn.notification, "repost") ?: NotificationUtils.getClickAction(sbn.notification, "retweet")
         if (click != null){
-            Timber.w("Found retweet button")
+            Timber.w("Found retweet/repost button")
             val delay = (1000..5000).shuffled().last().toLong()
             Handler(Looper.getMainLooper()).postDelayed({
                 this.cancelNotification(sbn.key)
@@ -94,12 +132,20 @@ class NotificationListener : NotificationListenerService() {
                         val cur = pref.getInt(MN.PREF_RETWEETS, 0)
                         pref.edit().putInt(MN.PREF_RETWEETS, (cur + 1)).apply()
 
+                    var response = false
+//                    if (title.hasWord(acc)){
+//                        val random = (0..4).random()
+//                        //response = reply(sbn, rsp[random])
+//                    }
+
+                    val tweet = TweetData(
+                        System.currentTimeMillis(),
+                        title, // + if (response) " [\uD83D\uDD04\uD83D\uDD4A️]" else " [-]",
+                        body
+                    )
+                    EventReceiver().sendRetweet(tweet)
                     DBHandler(this, null, null, 1).insertRetweet(
-                        TweetData(
-                            System.currentTimeMillis(),
-                            title,
-                            body
-                        )
+                        tweet
                     )
                     bd = body
                     ttl = title

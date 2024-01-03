@@ -149,7 +149,7 @@
                 android:layout_marginStart="10dp"
                 android:gravity="start|center_vertical"
                 android:textStyle="bold"
-                android:text="Auto-Retweet" />
+                android:text="Auto-Repost" />
 
             <com.github.angads25.toggle.widget.LabeledSwitch
                 android:id="@+id/retweet_button"

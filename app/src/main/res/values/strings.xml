@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Retweet</string>
+
+    <string name="notification_permissions">To function properly, Retweet needs notification permissions. If permission is not granted, the app will not work. Note that some Android versions may not have the \'Read notification permission\' available, which will prevent Retweet from working on those versions.</string>
+    <string name="twitter_setup">Retweet relies on Twitter notifications to function. The Twitter app is necessary and must be set up to receive notifications on your phone.</string>
+    <string name="setup_detect">The setup process will be finished once Retweet detects a Twitter notification. You can check back later, and we\'ll also send you a notification when it\'s complete.</string>
+    <string name="setup_alerts">Once the setup is complete, any tweet alerts received as notifications will be automatically retweeted and liked according to your settings. You can access the settings page after setup to adjust these preferences.</string>
 </resources>

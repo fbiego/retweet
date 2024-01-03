@@ -1,5 +1,2 @@
 include ':app'
 rootProject.name = "Tweet"
-
-include ':stars'
-project(':stars').projectDir = file('../animated-stars-android/stars')
