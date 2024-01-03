@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity(), EventListener {
     private lateinit var binding: ActivityMainBinding
 
     private var dataList = ArrayList<TweetData>()
-    private var test_result: TextView? = null
+    private var testResult: TextView? = null
     private var testIcon: ImageView? = null
     private var testLoad: ProgressBar? = null
     private var testPass = false
@@ -110,8 +110,8 @@ class MainActivity : AppCompatActivity(), EventListener {
         }
     }
 
-    fun checkNotification(){
-        notify(this, "Test", "This is a notification test")
+    private fun checkNotification(){
+        notify(this, getString(R.string.test), getString(R.string.not_test))
     }
 
     override fun onResume() {
@@ -139,7 +139,7 @@ class MainActivity : AppCompatActivity(), EventListener {
         val inflater = layoutInflater
         val layout = inflater.inflate(R.layout.settings, null)
 
-        var alertDialog: AlertDialog? = null
+        val alertDialog: AlertDialog?
 
 
         val buttonText: TextView = layout.findViewById(R.id.button_text)
@@ -150,8 +150,8 @@ class MainActivity : AppCompatActivity(), EventListener {
         val like: LabeledSwitch = layout.findViewById(R.id.like_button)
         val follow: LabeledSwitch = layout.findViewById(R.id.follow_button)
         val clear: LabeledSwitch = layout.findViewById(R.id.clear_button)
-        val test_check: LinearLayout = layout.findViewById(R.id.button_test)
-        test_result = layout.findViewById(R.id.test_text)
+        val testCheck: LinearLayout = layout.findViewById(R.id.button_test)
+        testResult = layout.findViewById(R.id.test_text)
         testIcon = layout.findViewById(R.id.test_icon)
         testLoad = layout.findViewById(R.id.testing)
 
@@ -173,8 +173,8 @@ class MainActivity : AppCompatActivity(), EventListener {
         clear.setOnToggledListener { _, b ->
             pref.edit().putBoolean(PREF_REMOVE, b).apply()
         }
-        statusText.text = "Notification access is " + if (enabled) "enabled" else "disabled"
-        buttonText.text = if (enabled) "Change" else "Enable"
+        statusText.text = if (enabled) getString(R.string.access_enabled) else getString(R.string.access_disabled)
+        buttonText.text = if (enabled) getString(R.string.change) else getString(R.string.enable)
 
         buttonAction.setOnClickListener {
             startActivity(Intent("android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS"))
@@ -186,7 +186,7 @@ class MainActivity : AppCompatActivity(), EventListener {
 //            alertDialog!!.dismiss()
 //        }
 
-        test_check.setOnClickListener {
+        testCheck.setOnClickListener {
             testPass = false
             testIcon!!.visibility = View.GONE
             testLoad!!.visibility = View.VISIBLE
@@ -194,7 +194,7 @@ class MainActivity : AppCompatActivity(), EventListener {
 
             Handler(Looper.getMainLooper()).postDelayed({
                 if (!testPass){
-                    test_result!!.text = "Test Failed"
+                    testResult!!.text = getString(R.string.test_fail)
                     testIcon!!.visibility = View.VISIBLE
                     testLoad!!.visibility = View.GONE
                 }
@@ -220,16 +220,16 @@ class MainActivity : AppCompatActivity(), EventListener {
         val pref = PreferenceManager.getDefaultSharedPreferences(this)
         val cur = pref.getInt(PREF_FOLLOWS, 0)
         val rts = pref.getInt(PREF_RETWEETS, 0)
-        binding.follows.text = "$cur Follow" + if (cur == 1) "" else "s"
-        binding.retweets.text = "$rts Repost" + if (rts == 1) "" else "s"
+        binding.follows.text = "$cur " + getString(R.string.follows)
+        binding.retweets.text = "$rts " + getString(R.string.repost)
         dataList = DBHandler(this, null, null, 1).getLastRt()
 
         if (dataList.size < 10){
-            dataList.add(TweetData(System.currentTimeMillis(), "Setup Complete", "Welcome to the Retweet app. Retweeted tweets will appear here once the app receives notifications from Twitter"))
-            dataList.add(TweetData(System.currentTimeMillis(), "Rate & Review", "Don't forget to leave us a review on Google Play. Your feedback is highly appreciated"))
-            dataList.add(TweetData(System.currentTimeMillis(), "Post Notifications", "In order to retweet & like a users tweet, it is recommended to turn on their post notifications"))
-            dataList.add(TweetData(System.currentTimeMillis(), "Optimization", "Due to Android background execution limits, some tweets may not be shown here. It is recommended to disable battery optimization for the Retweet app"))
-            dataList.add(TweetData(System.currentTimeMillis(), "What next?", "You have completed the initial setup. Interaction with the app is no longer required as the likes and reposts will be performed automatically. You can check back on the app at least once a day to ensure that it's still running"))
+            dataList.add(TweetData(System.currentTimeMillis(), getString(R.string.complete_title), getString(R.string.complete_text)))
+            dataList.add(TweetData(System.currentTimeMillis(), getString(R.string.rate_title), getString(R.string.rate_text)))
+            dataList.add(TweetData(System.currentTimeMillis(), getString(R.string.post_title), getString(R.string.post_text)))
+            dataList.add(TweetData(System.currentTimeMillis(), getString(R.string.optimization_title), getString(R.string.optimization_text)))
+            dataList.add(TweetData(System.currentTimeMillis(), getString(R.string.next_title), getString(R.string.next_text)))
         }
 
         tweetAdapter.update(dataList)
@@ -297,8 +297,8 @@ class MainActivity : AppCompatActivity(), EventListener {
 
     override fun onTest() {
         testPass = true
-        if (test_result != null) {
-            test_result!!.text = "Test Okay"
+        if (testResult != null) {
+            testResult!!.text = getString(R.string.test_passed)
         }
         if (testIcon != null) {
             testIcon!!.visibility = View.VISIBLE

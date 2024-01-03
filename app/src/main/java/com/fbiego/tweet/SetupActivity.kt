@@ -24,10 +24,10 @@ class SetupActivity : AppCompatActivity(), EventListener {
 
     private lateinit var binding: ActivitySetupBinding
 
-    val notification = arrayListOf<ActionData>()
-    val actionAdapter = ActionAdapter(notification, this@SetupActivity::actionButton)
+    private val notification = arrayListOf<ActionData>()
+    private val actionAdapter = ActionAdapter(notification, this@SetupActivity::actionButton)
 
-    var setup = false
+    private var setup = false
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -68,58 +68,64 @@ class SetupActivity : AppCompatActivity(), EventListener {
 
     private fun notificationActions(click: Boolean){
         notification.clear()
-        notification.add(ActionData(3001, "Read Notifications", if (readEnabled()) "Enabled" else "Enable", 0, true, readEnabled()))
+        notification.add(ActionData(3001, getString(R.string.read_notifications), if (readEnabled()) getString(R.string.enabled) else getString(R.string.enable), 0, true, readEnabled()))
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            notification.add(ActionData(3002, "Post Notifications", if (postEnabled()) "Enabled" else "Enable", 0, true, postEnabled()))
+            notification.add(ActionData(3002, getString(R.string.post_title), if (postEnabled()) getString(R.string.enabled) else getString(R.string.enable), 0, true, postEnabled()))
         }
         if (readEnabled() && postEnabled()){
-            notification.add(ActionData(3003, "Run notification test", "Run", 0, true, false))
+            notification.add(ActionData(3003, getString(R.string.run_test), getString(R.string.run), 0,
+                actionable = true,
+                complete = false
+            ))
         }
 
         if (click && !readEnabled()){
-            notification.add(ActionData(3004, "Feature not available?", "Help", 0, true, false))
+            notification.add(ActionData(3004, getString(R.string.feature_unavailable), getString(R.string.help), 0,
+                actionable = true,
+                complete = false
+            ))
         }
 
     }
 
     private fun setupActions(complete: Boolean){
 
-        binding.appIcon.setImageDrawable(resources.getDrawable(R.drawable.ic_setup))
-        binding.welcomeText.text = "Twitter Setup"
+        binding.appIcon.setImageResource(R.drawable.ic_setup)
+        binding.welcomeText.text = getString(R.string.twitter_setup_title)
         binding.taglineText.text = getString(R.string.twitter_setup)
 
 
         notification.clear()
-        notification.add(ActionData(4003, "Twitter app required", if (!twitterInstalled()) "Install" else "Installed", 0, true, twitterInstalled()))
+        notification.add(ActionData(4003, getString(R.string.twitter_required), if (!twitterInstalled()) getString(R.string.install) else getString(R.string.installed), 0, true, twitterInstalled()))
         notification.add(
             ActionData(
                 4004,
-                "Ensure that you have enabled notifications from Twitter",
-                "Enable",
+                getString(R.string.enable_twitter_check),
+                getString(R.string.enable),
                 0,
-                false,
-                false
+                actionable = false,
+                complete = false
             )
         )
         notification.add(
             ActionData(
                 4005,
-                "Turn on post notifications",
+                getString(R.string.turn_on),
                 "@_retweets__",
                 0,
-                true,
-                false
+                actionable = true,
+                complete = false
             )
         )
         if (complete){
             notification.add(
                 ActionData(
                     4007,
-                    "We've detected a notification from Twitter, the setup process is now complete",
-                    "Complete",
+                    getString(R.string.detect_notification),
+                    getString(R.string.complete),
                     0,
-                    false,
-                    true
+                    actionable = false,
+                    complete = true
                 )
             )
         } else {
@@ -127,20 +133,20 @@ class SetupActivity : AppCompatActivity(), EventListener {
                 ActionData(
                     4006,
                     getString(R.string.setup_alerts),
-                    "Install",
+                    getString(R.string.install),
                     0,
-                    false,
-                    false
+                    actionable = false,
+                    complete = false
                 )
             )
             notification.add(
                 ActionData(
                     4007,
                     getString(R.string.setup_detect),
-                    "Install",
+                    getString(R.string.install),
                     0,
-                    false,
-                    false
+                    actionable = false,
+                    complete = false
                 )
             )
         }
@@ -198,7 +204,7 @@ class SetupActivity : AppCompatActivity(), EventListener {
                 }
             }
             3003 -> {
-                MainActivity().notify(this, "Setup", "This is a notification test")
+                MainActivity().notify(this, getString(R.string.setup), getString(R.string.not_test))
             }
             3004 -> {
                 val i = Intent(Intent.ACTION_VIEW)
@@ -270,7 +276,10 @@ class SetupActivity : AppCompatActivity(), EventListener {
         if (f != null){
             notification.remove(f)
         }
-        notification.add(ActionData(3003, "Run notification test", "Complete", 0, true, true))
+        notification.add(ActionData(3003, "Run notification test", getString(R.string.complete), 0,
+            actionable = true,
+            complete = true
+        ))
 
         actionAdapter.update(notification)
 
@@ -296,11 +305,11 @@ class SetupActivity : AppCompatActivity(), EventListener {
         }
         notification.add(ActionData(
             4007,
-            "We've detected a notification from Twitter, the setup process is now complete",
-            "Complete",
+            getString(R.string.detect_notification),
+            getString(R.string.complete),
             0,
-            false,
-            true
+            actionable = false,
+            complete = true
         ))
     }
 }

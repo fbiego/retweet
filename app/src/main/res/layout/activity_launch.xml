@@ -40,7 +40,7 @@
             android:id="@+id/taglineText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Stay Active"
+            android:text="@string/tagline"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
@@ -74,7 +74,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="I have read and agree to" />
+                android:text="@string/read" />
 
         </LinearLayout>
 
@@ -83,7 +83,7 @@
             android:id="@+id/termsText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Terms &amp; Conditions"
+            android:text="@string/terms"
             android:textStyle="bold"
             android:layout_margin="5dp"
             android:paddingStart="10dp"
@@ -95,13 +95,13 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="and" />
+            android:text="@string/and" />
 
         <TextView
             android:id="@+id/policyText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Privacy Policy"
+            android:text="@string/policy"
             android:textStyle="bold"
             android:layout_margin="5dp"
             android:paddingStart="10dp"
@@ -157,7 +157,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
-            android:text="Continue"
+            android:text="@string/continue_text"
             android:textSize="20sp" />
 
         <!--        <ImageView-->

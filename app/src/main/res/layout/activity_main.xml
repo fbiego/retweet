@@ -56,7 +56,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="10dp"
                 android:layout_gravity="center"
-                android:text="About" />
+                android:text="@string/about" />
 
             <ImageView
                 android:layout_width="30dp"
@@ -139,7 +139,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:gravity="center"
-            android:text="Reposts"/>
+            android:text="@string/repost"/>
         <TextView
             android:id="@+id/follows"
             android:layout_width="wrap_content"
@@ -148,7 +148,7 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:gravity="center"
-            android:text="Follows"/>
+            android:text="@string/follows"/>
     </LinearLayout>
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout

@@ -36,7 +36,7 @@
                 android:layout_margin="5dp"
                 android:textStyle="bold"
                 android:textSize="18sp"
-                android:text="About" />
+                android:text="about" />
 
 
         </LinearLayout>
@@ -70,7 +70,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
-                    android:text="Retweet App allows you to automatically like &amp; retweet Tweets without direct interaction.\nIt is not guaranteed that it will work on all devices since Android OS is highly fragmented.\nPlease check the setup steps below."/>
+                    android:text="@string/app_about"/>
 
                 <LinearLayout
                     android:id="@+id/btn_privacy"
@@ -89,7 +89,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
                         android:paddingStart="10dp"
-                        android:text="Privacy Policy" />
+                        android:text="@string/policy" />
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -115,7 +115,7 @@
                         android:layout_height="wrap_content"
                         android:layout_margin="5dp"
                         android:paddingStart="10dp"
-                        android:text="Terms &amp; Conditions" />
+                        android:text="@string/terms" />
                     <ImageView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
@@ -139,7 +139,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_margin="5dp"
-                    android:text="Below is a twitter account utilizing the functionality of this app.\nAlso checkout the source code of the app on Github."/>
+                    android:text="@string/acc_example"/>
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
@@ -155,7 +155,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         android:gravity="start|center_vertical"
                         android:textStyle="bold"
-                        android:text="Twitter account" />
+                        android:text="@string/twitter_acc" />
                     <LinearLayout
                         android:id="@+id/btn_twitter"
                         android:layout_width="wrap_content"
@@ -197,7 +197,7 @@
                         app:layout_constraintBottom_toBottomOf="parent"
                         android:gravity="start|center_vertical"
                         android:textStyle="bold"
-                        android:text="Source code" />
+                        android:text="@string/source_code" />
                     <LinearLayout
                         android:id="@+id/btn_github"
                         android:layout_width="wrap_content"
@@ -242,24 +242,21 @@
                     android:layout_margin="5dp"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:text="Setup Steps"/>
+                    android:text="@string/setup_title"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:textStyle="bold"
-                    android:text="Enable Notification access"/>
+                    android:text="@string/enable_notification"/>
 
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:text="The retweet app works by accessing Twitter notifications and performing actions on them.
-Therefore it should be enabled to access notifications.\nClick on the enable notifcations access
-This should open the Notification access settings. Enable the Retweet app.
-"/>
+                    android:text="@string/notification_access_info"/>
 
                 <ImageView
                     android:id="@+id/img_access"
@@ -275,11 +272,7 @@ This should open the Notification access settings. Enable the Retweet app.
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:text="NB: Not all Android version may offer this feature to the end user. This is common for android Go editions.
-Device manufactures choose how to modify the Android OS for their devices.
-Notification access is critical to the working of this app and must be enabled.\nIf you can't enable it for whatever reason, the app won't work. This is not something we have control of, therefore we can't help.\nOnce enabled, you can test by using the Test Notification feature. The retweet app will create a notification and
-test if it can read it. If successful, you can enable the functions for the retweet app.
-" />
+                    android:text="@string/access_limitation" />
                 <ImageView
                     android:id="@+id/img_na"
                     android:layout_width="match_parent"
@@ -294,15 +287,14 @@ test if it can read it. If successful, you can enable the functions for the retw
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:textStyle="bold"
-                    android:text="Enable Twitter Notifications"/>
+                    android:text="@string/enable_twitter"/>
 
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:text="Now that notification access is enabled, the next step is to ensure you can receive Twitter notifications.\nAllow the Twitter app to send you notifications by enabling it in your phone settings
-" />
+                    android:text="@string/twitter_enabled" />
 
 
 
@@ -318,10 +310,7 @@ test if it can read it. If successful, you can enable the functions for the retw
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:text="You also need to Turn on post notifications for a user inside the Twitter app. When the user tweets a post,
-this notification will be sent to your device. The Retweet app will then read the Twitter notification and perform
-the retweet &amp; like action if enabled &amp; available.\nYou can turn on post notification for multiple users.
-" />
+                    android:text="@string/post_notifications" />
 
 
                 <ImageView
@@ -337,16 +326,14 @@ the retweet &amp; like action if enabled &amp; available.\nYou can turn on post 
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:textStyle="bold"
-                    android:text="Setup Complete"/>
+                    android:text="@string/setup_complete"/>
 
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:text="Once you have completed the setup steps, you no longer need to do anything on the Retweet app.
-When a Twitter notification is received, the Retweet app will perform the desired functionality as per your settings.
-" />
+                    android:text="@string/setup_complete_info" />
 
 
 
@@ -366,35 +353,33 @@ When a Twitter notification is received, the Retweet app will perform the desire
                     android:layout_margin="5dp"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:text="FAQs"/>
+                    android:text="@string/faq_title"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:textStyle="bold"
-                    android:text="Retweets stopped working"/>
+                    android:text="@string/stopped_title"/>
 
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:text="Some android devices may kill the Retweet app after some time. You will need to check it from time to time and re-enabling
-notification access when necessary.
-" />
+                    android:text="@string/stopped_text" />
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:textStyle="bold"
-                    android:text="It doesn't work for me"/>
+                    android:text="@string/not_work_title"/>
 
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
-                    android:text="As mentioned above, the app is not guaranteed to work on all devices.\nThis is not something we have control over." />
+                    android:text="@string/not_work_text" />
             </LinearLayout>
 
 

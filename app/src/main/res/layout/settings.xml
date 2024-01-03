@@ -16,7 +16,7 @@
             android:paddingEnd="10dp"
             android:paddingStart="10dp"
             android:textStyle="bold"
-            android:text="Settings" />
+            android:text="@string/settings" />
 
         <View
             android:layout_width="match_parent"
@@ -57,7 +57,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:paddingStart="10dp"
-                    android:text="Enable" />
+                    android:text="@string/enable" />
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
@@ -89,7 +89,7 @@
                 android:layout_marginStart="10dp"
                 android:gravity="start|center_vertical"
                 android:textStyle="bold"
-                android:text="Test notification" />
+                android:text="@string/test_notification" />
             <LinearLayout
                 android:id="@+id/button_test"
                 android:layout_width="wrap_content"
@@ -107,7 +107,7 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:paddingStart="10dp"
-                    android:text="Test" />
+                    android:text="@string/test" />
 
                 <ProgressBar
                     android:id="@+id/testing"
@@ -149,7 +149,7 @@
                 android:layout_marginStart="10dp"
                 android:gravity="start|center_vertical"
                 android:textStyle="bold"
-                android:text="Auto-Repost" />
+                android:text="@string/auto_repost" />
 
             <com.github.angads25.toggle.widget.LabeledSwitch
                 android:id="@+id/retweet_button"
@@ -187,7 +187,7 @@
                 android:layout_marginStart="10dp"
                 android:gravity="start|center_vertical"
                 android:textStyle="bold"
-                android:text="Auto-Like" />
+                android:text="@string/auto_like" />
 
             <com.github.angads25.toggle.widget.LabeledSwitch
                 android:id="@+id/like_button"
@@ -222,7 +222,7 @@
                 android:layout_marginStart="10dp"
                 android:gravity="start|center_vertical"
                 android:textStyle="bold"
-                android:text="Auto-Follow" />
+                android:text="@string/auto_follow" />
 
             <com.github.angads25.toggle.widget.LabeledSwitch
                 android:id="@+id/follow_button"
@@ -257,7 +257,7 @@
                 android:layout_marginStart="10dp"
                 android:gravity="start|center_vertical"
                 android:textStyle="bold"
-                android:text="Clear all notifications" />
+                android:text="@string/clear_all" />
 
             <com.github.angads25.toggle.widget.LabeledSwitch
                 android:id="@+id/clear_button"

@@ -34,11 +34,11 @@ class LaunchActivity : AppCompatActivity() {
         }
 
         binding.termsText.setOnClickListener {
-            textDialog("Terms & Conditions", R.raw.terms)
+            textDialog(getString(R.string.terms), R.raw.terms)
         }
 
         binding.policyText.setOnClickListener {
-            textDialog("Privacy Policy", R.raw.policy)
+            textDialog(getString(R.string.policy), R.raw.policy)
         }
 
 
@@ -49,7 +49,7 @@ class LaunchActivity : AppCompatActivity() {
                 startActivity(Intent(this, SetupActivity::class.java))
                 finish()
             } else {
-                Toast.makeText(this, "You need to agree to the conditions", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, getString(R.string.agree_alert), Toast.LENGTH_SHORT).show()
             }
         }
 
