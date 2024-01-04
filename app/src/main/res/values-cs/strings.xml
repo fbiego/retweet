@@ -1,0 +1,104 @@
+
+<!--
+  ~
+  ~ MIT License
+  ~
+  ~ Copyright (c) 2021 Felix Biego
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<resources>
+	<string name="locale">Czech</string>
+	<string name="app_name">Retweet</string>
+	<string name="notification_permissions">Abychom správně fungovali, Retweet potřebuje oprávnění oznámení. Pokud není povolení uděleno, aplikace nebude fungovat. Všimněte si, že některé verze Android nemusí mít k dispozici „Oznámení o oznámení o čtení“, což zabrání práci retweetu na těchto verzích.</string>
+	<string name="twitter_setup">Retweet se spoléhá na oznámení Twitteru, aby fungovala. Aplikace Twitter je nezbytná a musí být nastavena, aby v telefonu obdržela oznámení.</string>
+	<string name="setup_detect">Proces nastavení bude dokončen, jakmile retweet detekuje oznámení Twitter. Později se můžete vrátit zpět a my vám také pošleme oznámení, až bude dokončeno.</string>
+	<string name="setup_alerts">Po dokončení nastavení budou veškerá upozornění na tweet přijatá jako oznámení automaticky retweet a podle vašich nastavení. Po nastavení můžete přistupovat na stránku Nastavení a upravit tyto preference.</string>
+	<string name="enable">Umožnit</string>
+	<string name="read_notifications">Přečtěte si oznámení</string>
+	<string name="about">O</string>
+	<string name="app_about">Aplikace Retweet umožňuje automaticky podobné a retweet tweety bez přímé interakce. Není zaručeno, že bude fungovat na všech zařízeních, protože OS Android je velmi roztříštěn. Zkontrolujte prosím níže uvedené kroky nastavení.</string>
+	<string name="policy">Zásady ochrany osobních údajů</string>
+	<string name="terms">Všeobecné obchodní podmínky</string>
+	<string name="acc_example">Níže je účet Twitter využívající funkčnost této aplikace. Také prohlédněte zdrojový kód aplikace na GitHubu.</string>
+	<string name="twitter_acc">Twitter účet</string>
+	<string name="source_code">Zdrojový kód</string>
+	<string name="setup_title">Kroky nastavení</string>
+	<string name="enable_notification">Povolit přístup k oznámení</string>
+	<string name="notification_access_info">Aplikace retweet funguje tak, že přístup k oznámení Twitter a prováděním akcí na nich. Proto by mělo být umožněno přístup k oznámeních. Klikněte na přístup k povolení k oznámení, které by mělo otevřít nastavení přístupu k oznámení. Povolte aplikaci Retweet.</string>
+	<string name="access_limitation">NB: Ne všechna verze Android může tuto funkci nabídnout koncovému uživateli. To je běžné pro vydání Android Go. Výrobce zařízení Vyberte, jak upravit operační systém Android pro jejich zařízení. Přístup k oznámení je rozhodující pro fungování této aplikace a musí být povolen. Pokud to z jakéhokoli důvodu nemůžete povolit, aplikace nebude fungovat. To není něco, o čem máme kontrolu, proto si nemůžeme pomoci. Jakmile je povoleno, můžete vyzkoušet pomocí funkce oznámení o testování. Aplikace Retweet vytvoří oznámení a otestuje, zda si ji dokáže přečíst. Pokud je úspěšný, můžete povolit funkce pro aplikaci Retweet.</string>
+	<string name="enable_twitter">Povolit oznámení Twitter</string>
+	<string name="twitter_enabled">Nyní je povolen přístup k oznámení, dalším krokem je zajistit, abyste mohli přijímat oznámení Twitter. Nechte aplikaci Twitter zasílat oznámení o jejím povolením v nastavení telefonu</string>
+	<string name="post_notifications">Musíte také zapnout oznámení o pošpech pro uživatele uvnitř aplikace Twitter. Když uživatel tweetuje příspěvek, bude toto oznámení odesláno do vašeho zařízení. Aplikace Retweet si poté přečte oznámení Twitteru a provede retweet &amp; jako akce, pokud je povolena a dostupná. Můžete zapnout oznámení o příspěvku pro více uživatelů.</string>
+	<string name="setup_complete">Nastavení dokončeno</string>
+	<string name="setup_complete_info">Jakmile dokončíte kroky nastavení, již nemusíte nic dělat v aplikaci Retweet. Po přijetí oznámení Twitteru provede retweetová aplikace požadovaná funkce podle vašeho nastavení.</string>
+	<string name="faq_title">Časté časté</string>
+	<string name="stopped_title">Retweety přestaly fungovat</string>
+	<string name="stopped_text">Některá zařízení Android mohou zabít aplikaci Retweet po nějaké době. Budete to muset čas od času zkontrolovat a v případě potřeby znovu zkontrolovat přístup k oznámení.</string>
+	<string name="not_work_title">Pro mě to nefunguje</string>
+	<string name="not_work_text">Jak je uvedeno výše, aplikace není zaručena, že bude fungovat na všech zařízeních. To není něco, o čem máme kontrolu.</string>
+	<string name="tagline">Zůstaň aktivní</string>
+	<string name="read">Četl jsem a souhlasím</string>
+	<string name="and">a</string>
+	<string name="continue_text">Pokračovat</string>
+	<string name="repost">Reposts</string>
+	<string name="follows">Následuje</string>
+	<string name="notification_permission_title">Oznámení o oznámení</string>
+	<string name="settings">Nastavení</string>
+	<string name="test_notification">Testovací oznámení</string>
+	<string name="test">Test</string>
+	<string name="disable">Deaktivovat</string>
+	<string name="auto_repost">Auto-repost</string>
+	<string name="auto_like">Automatické</string>
+	<string name="auto_follow">Automatické</string>
+	<string name="clear_all">Vymažte všechna oznámení</string>
+	<string name="okay">dobře</string>
+	<string name="agree_alert">Musíte souhlasit s podmínkami</string>
+	<string name="complete_title">Nastavení dokončeno</string>
+	<string name="complete_text">Vítejte v aplikaci Retweet. Jakmile aplikace obdrží oznámení z Twitteru, zobrazí se zde retweetované tweety</string>
+	<string name="rate_title">Sazba a recenze</string>
+	<string name="rate_text">Nezapomeňte nám nechat recenzi na Google Play. Vaše zpětná vazba je vysoce oceněna</string>
+	<string name="post_title">Oznámení o příspěvku</string>
+	<string name="post_text">Za účelem retweet a jako tweet uživatelů se doporučuje zapnout svá oznámení</string>
+	<string name="optimization_text">Vzhledem k limitům provádění pozadí Android nemusí být zde některé tweety zobrazeny. Doporučuje se deaktivovat optimalizaci baterie pro aplikaci Retweet</string>
+	<string name="optimization_title">Optimalizace</string>
+	<string name="next_text">Dokončili jste počáteční nastavení. Interakce s aplikací již není vyžadována, protože lajky a reposts budou prováděny automaticky. Můžete zkontrolovat aplikaci alespoň jednou denně, abyste se ujistili, že stále běží</string>
+	<string name="next_title">Co dál?</string>
+	<string name="access_enabled">Přístup k oznámení je povolen</string>
+	<string name="access_disabled">Přístup k oznámení je zakázán</string>
+	<string name="test_fail">Test selhal</string>
+	<string name="test_passed">Test prošel</string>
+	<string name="change">Změna</string>
+	<string name="enabled">Povoleno</string>
+	<string name="twitter_setup_title">Nastavení Twitteru</string>
+	<string name="install">Nainstalujte</string>
+	<string name="installed">Nainstalováno</string>
+	<string name="help">Pomoc</string>
+	<string name="run">Běh</string>
+	<string name="complete">Kompletní</string>
+	<string name="detect_notification">Zjistili jsme oznámení z Twitteru, proces nastavení je nyní kompletní</string>
+	<string name="turn_on">Zapnout oznámení nových příspěvků</string>
+	<string name="enable_twitter_check">Ujistěte se, že jste povolili oznámení z Twitteru</string>
+	<string name="twitter_required">Vyžaduje se aplikace Twitteru</string>
+	<string name="run_test">Test spuštění oznámení</string>
+	<string name="feature_unavailable">Funkce není k dispozici?</string>
+	<string name="setup">Založit</string>
+	<string name="not_test">Toto je test oznámení</string>
+</resources>

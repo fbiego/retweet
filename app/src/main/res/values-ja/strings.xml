@@ -1,0 +1,104 @@
+
+<!--
+  ~
+  ~ MIT License
+  ~
+  ~ Copyright (c) 2021 Felix Biego
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<resources>
+	<string name="locale">Japanese</string>
+	<string name="app_name">Retweet</string>
+	<string name="notification_permissions">適切に機能するには、リツイートには通知許可が必要です。許可が与えられない場合、アプリは機能しません。一部のAndroidバージョンには、「読み取り通知許可」が利用可能ではない場合があり、リツイートがそれらのバージョンで動作することを妨げます。</string>
+	<string name="twitter_setup">Retweetは、Twitter通知に依存しています。 Twitterアプリが必要であり、携帯電話で通知を受信するために設定する必要があります。</string>
+	<string name="setup_detect">リツイートがTwitter通知を検出すると、セットアッププロセスが完了します。後で確認することもできます。また、完了したら通知をお送りします。</string>
+	<string name="setup_alerts">セットアップが完了すると、通知として受信されたツイートアラートは、設定に応じて自動的にリツイートされ、気に入られます。セットアップ後に設定ページにアクセスして、これらの設定を調整できます。</string>
+	<string name="enable">有効にする</string>
+	<string name="read_notifications">通知を読んでください</string>
+	<string name="about">について</string>
+	<string name="app_about">リツイートアプリを使用すると、直接的な相互作用なしにツイートを自動的に好み、リツイートできます。 Android OSは非常に断片化されているため、すべてのデバイスで動作することは保証されていません。以下のセットアップ手順を確認してください。</string>
+	<string name="policy">プライバシーポリシー</string>
+	<string name="terms">利用規約</string>
+	<string name="acc_example">以下は、このアプリの機能を利用したTwitterアカウントです。また、GitHubのアプリのソースコードをチェックアウトします。</string>
+	<string name="twitter_acc">Twitterアカウント</string>
+	<string name="source_code">ソースコード</string>
+	<string name="setup_title">セットアップ手順</string>
+	<string name="enable_notification">通知アクセスを有効にします</string>
+	<string name="notification_access_info">リツイートアプリは、Twitter通知にアクセスし、アクションを実行することで機能します。したがって、通知にアクセスできるようにする必要があります。 [Notifcations Access]をクリックして、通知アクセス設定を開く必要があります。リツイートアプリを有効にします。</string>
+	<string name="access_limitation">NB：すべてのAndroidバージョンがこの機能をエンドユーザーに提供するわけではありません。これは、Android Goエディションで一般的です。デバイスメーカーは、デバイスのAndroid OSを変更する方法を選択します。通知アクセスは、このアプリの動作に重要であり、有効にする必要があります。何らかの理由で有効にすることができない場合、アプリは機能しません。これは私たちがコントロールしているものではないので、私たちは助けることができません。有効になったら、テスト通知機能を使用してテストできます。リツイートアプリは、通知を作成し、読み取ることができるかどうかをテストします。成功した場合は、リツイートアプリの機能を有効にすることができます。</string>
+	<string name="enable_twitter">Twitter通知を有効にします</string>
+	<string name="twitter_enabled">通知アクセスが有効になったため、次のステップはTwitter通知を確実に受信できるようにすることです。 Twitterアプリが通知を送信できるようにします。電話設定で有効にしてください</string>
+	<string name="post_notifications">また、Twitterアプリ内のユーザーの投稿通知をオンにする必要があります。ユーザーが投稿をツイートすると、この通知がデバイスに送信されます。リツイートアプリは、Twitter通知を読み取り、RetWeet＆Like Actionを実行している場合は実行できます。複数のユーザーの投稿通知をオンにすることができます。</string>
+	<string name="setup_complete">完全なセットアップ</string>
+	<string name="setup_complete_info">セットアップ手順を完了したら、リツイートアプリで何もする必要がなくなります。 Twitter通知が受信されると、リツイートアプリは設定に従って目的の機能を実行します。</string>
+	<string name="faq_title">FAQ</string>
+	<string name="stopped_title">リツイートは機能しなくなりました</string>
+	<string name="stopped_text">一部のAndroidデバイスは、しばらくするとリツイートアプリを殺す可能性があります。必要に応じて、随時チェックし、通知アクセスを再認可する必要があります。</string>
+	<string name="not_work_title">それは私にとってはうまくいきません</string>
+	<string name="not_work_text">上記のように、アプリはすべてのデバイスで動作することが保証されていません。これは私たちが制御しているものではありません。</string>
+	<string name="tagline">アクティブを維持します</string>
+	<string name="read">私は読んで同意しました</string>
+	<string name="and">そして</string>
+	<string name="continue_text">続く</string>
+	<string name="repost">再投稿</string>
+	<string name="follows">続きます</string>
+	<string name="notification_permission_title">通知許可</string>
+	<string name="settings">設定</string>
+	<string name="test_notification">テスト通知</string>
+	<string name="test">テスト</string>
+	<string name="disable">無効にします</string>
+	<string name="auto_repost">オートレポスト</string>
+	<string name="auto_like">オートのような</string>
+	<string name="auto_follow">オートフォロー</string>
+	<string name="clear_all">すべての通知をクリアします</string>
+	<string name="okay">わかった</string>
+	<string name="agree_alert">条件に同意する必要があります</string>
+	<string name="complete_title">完全なセットアップ</string>
+	<string name="complete_text">リツイートアプリへようこそ。アプリがTwitterから通知を受信すると、リツイートされたツイートがここに表示されます</string>
+	<string name="rate_title">レートとレビュー</string>
+	<string name="rate_text">Google Playにレビューを残すことを忘れないでください。あなたのフィードバックは非常に高く評価されています</string>
+	<string name="post_title">通知を投稿します</string>
+	<string name="post_text">リツイートしてユーザーのツイートを好むために、ポスト通知をオンにすることをお勧めします</string>
+	<string name="optimization_text">Androidのバックグラウンドの実行制限により、ここにはいくつかのツイートが表示されない場合があります。リツイートアプリのバッテリーの最適化を無効にすることをお勧めします</string>
+	<string name="optimization_title">最適化</string>
+	<string name="next_text">最初のセットアップが完了しました。いいねと再投稿が自動的に実行されるため、アプリとの相互作用は不要になります。少なくとも1日に1回、アプリがまだ実行されていることを確認することができます</string>
+	<string name="next_title">次は何？</string>
+	<string name="access_enabled">通知アクセスが有効になっています</string>
+	<string name="access_disabled">通知アクセスは無効です</string>
+	<string name="test_fail">テストに失敗しました</string>
+	<string name="test_passed">テストが合格しました</string>
+	<string name="change">変化</string>
+	<string name="enabled">有効になっています</string>
+	<string name="twitter_setup_title">Twitterのセットアップ</string>
+	<string name="install">インストール</string>
+	<string name="installed">インストール</string>
+	<string name="help">ヘルプ</string>
+	<string name="run">走る</string>
+	<string name="complete">完了</string>
+	<string name="detect_notification">Twitterからの通知を検出しましたが、セットアッププロセスが完了しました</string>
+	<string name="turn_on">ポスト通知をオンにします</string>
+	<string name="enable_twitter_check">Twitterからの通知を有効にしていることを確認してください</string>
+	<string name="twitter_required">Twitterアプリが必要です</string>
+	<string name="run_test">通知テストを実行します</string>
+	<string name="feature_unavailable">機能は利用できませんか？</string>
+	<string name="setup">設定</string>
+	<string name="not_test">これは通知テストです</string>
+</resources>

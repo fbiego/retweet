@@ -1,0 +1,104 @@
+
+<!--
+  ~
+  ~ MIT License
+  ~
+  ~ Copyright (c) 2021 Felix Biego
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<resources>
+	<string name="locale">French</string>
+	<string name="app_name">Retweet</string>
+	<string name="notification_permissions">Pour fonctionner correctement, Retweet a besoin de permis de notification. Si l\'autorisation n\'est pas accordée, l\'application ne fonctionnera pas. Notez que certaines versions Android peuvent ne pas disposer de «l\'autorisation de notification de lecture», ce qui empêchera Retweet de travailler sur ces versions.</string>
+	<string name="twitter_setup">Retweet s\'appuie sur les notifications Twitter pour fonctionner. L\'application Twitter est nécessaire et doit être configurée pour recevoir des notifications sur votre téléphone.</string>
+	<string name="setup_detect">Le processus de configuration sera terminé une fois que Retweet détectera une notification Twitter. Vous pouvez revenir plus tard et nous vous enverrons également une notification à sa fin.</string>
+	<string name="setup_alerts">Une fois la configuration terminée, toutes les alertes de tweet reçues en tant que notifications seront automatiquement retweetées et appréciées en fonction de vos paramètres. Vous pouvez accéder à la page Paramètres après la configuration pour ajuster ces préférences.</string>
+	<string name="enable">Activer</string>
+	<string name="read_notifications">Lire les notifications</string>
+	<string name="about">À propos</string>
+	<string name="app_about">L\'application Retweet vous permet d\'aimer automatiquement et de retweeter des tweets sans interaction directe. Il n\'est pas garanti qu\'il fonctionnera sur tous les appareils car Android OS est très fragmenté. Veuillez vérifier les étapes de configuration ci-dessous.</string>
+	<string name="policy">politique de confidentialité</string>
+	<string name="terms">termes et conditions</string>
+	<string name="acc_example">Vous trouverez ci-dessous un compte Twitter utilisant la fonctionnalité de cette application. Découvrez également le code source de l\'application sur GitHub.</string>
+	<string name="twitter_acc">Compte Twitter</string>
+	<string name="source_code">Code source</string>
+	<string name="setup_title">Étapes de configuration</string>
+	<string name="enable_notification">Activer l\'accès à la notification</string>
+	<string name="notification_access_info">L\'application Retweet fonctionne en accédant aux notifications Twitter et en effectuant des actions sur eux. Par conséquent, il doit être permis d\'accéder aux notifications. Cliquez sur l\'accès Activer Notifcations Ceci devrait ouvrir les paramètres d\'accès à la notification. Activez l\'application Retweet.</string>
+	<string name="access_limitation">NB: toutes les versions Android ne peuvent pas offrir cette fonctionnalité à l\'utilisateur final. Ceci est courant pour les éditions Android Go. Les fabricants d\'appareils choisissent comment modifier le système d\'exploitation Android pour leurs appareils. L\'accès à la notification est essentiel au fonctionnement de cette application et doit être activé. Si vous ne pouvez pas l\'activer pour une raison quelconque, l\'application ne fonctionnera pas. Ce n\'est pas quelque chose dont nous avons le contrôle, donc nous ne pouvons pas nous empêcher. Une fois activé, vous pouvez tester en utilisant la fonction de notification de test. L\'application Retweet créera une notification et testera si elle peut la lire. En cas de succès, vous pouvez activer les fonctions de l\'application Retweet.</string>
+	<string name="enable_twitter">Activer les notifications Twitter</string>
+	<string name="twitter_enabled">Maintenant que l\'accès à la notification est activé, la prochaine étape consiste à vous assurer de recevoir des notifications Twitter. Permettez à l\'application Twitter de vous envoyer des notifications en l\'activant dans les paramètres de votre téléphone</string>
+	<string name="post_notifications">Vous devez également activer les notifications de publication pour un utilisateur dans l\'application Twitter. Lorsque l\'utilisateur tweete un message, cette notification sera envoyée à votre appareil. L\'application RETWEET lira ensuite la notification Twitter et effectuera l\'action Retweet &amp; Like Si elle est activée et disponible. Vous pouvez activer la notification de publication pour plusieurs utilisateurs.</string>
+	<string name="setup_complete">Configuration complète</string>
+	<string name="setup_complete_info">Une fois que vous avez terminé les étapes de configuration, vous n\'avez plus besoin de faire quoi que ce soit sur l\'application Retweet. Lorsqu\'une notification Twitter est reçue, l\'application Retweet effectuera les fonctionnalités souhaitées conformément à vos paramètres.</string>
+	<string name="faq_title">FAQ</string>
+	<string name="stopped_title">Les retweets ont cessé de fonctionner</string>
+	<string name="stopped_text">Certains appareils Android peuvent tuer l\'application Retweet après un certain temps. Vous devrez le vérifier de temps à autre et réactiver l\'accès à la notification si nécessaire.</string>
+	<string name="not_work_title">Ça ne marche pas pour moi</string>
+	<string name="not_work_text">Comme mentionné ci-dessus, l\'application n\'est pas garantie de fonctionner sur tous les appareils. Ce n\'est pas quelque chose que nous contrôlons.</string>
+	<string name="tagline">Rester actif</string>
+	<string name="read">J\'ai lu et accepté</string>
+	<string name="and">et</string>
+	<string name="continue_text">Continuer</string>
+	<string name="repost">Republier</string>
+	<string name="follows">Suit</string>
+	<string name="notification_permission_title">Autorisation de notification</string>
+	<string name="settings">Paramètres</string>
+	<string name="test_notification">Notification de test</string>
+	<string name="test">Test</string>
+	<string name="disable">Désactiver</string>
+	<string name="auto_repost">Préposée automatique</string>
+	<string name="auto_like">De type automatique</string>
+	<string name="auto_follow">Adapter automatiquement</string>
+	<string name="clear_all">Effacer toutes les notifications</string>
+	<string name="okay">D\'accord</string>
+	<string name="agree_alert">Vous devez accepter les conditions</string>
+	<string name="complete_title">Configuration complète</string>
+	<string name="complete_text">Bienvenue dans l\'application Retweet. Les tweets retweetés apparaîtront ici une fois que l\'application aura reçu les notifications de Twitter</string>
+	<string name="rate_title">Tarif et examen</string>
+	<string name="rate_text">N\'oubliez pas de nous laisser une revue sur Google Play. Vos remarques sont très appréciées</string>
+	<string name="post_title">Notifications publiées</string>
+	<string name="post_text">Afin de retweeter et comme un tweet des utilisateurs, il est recommandé d\'allumer leurs notifications de publication</string>
+	<string name="optimization_text">En raison des limites d\'exécution d\'arrière-plan Android, certains tweets peuvent ne pas être affichés ici. Il est recommandé de désactiver l\'optimisation de la batterie pour l\'application retweet</string>
+	<string name="optimization_title">Optimisation</string>
+	<string name="next_text">Vous avez terminé la configuration initiale. L\'interaction avec l\'application n\'est plus requise car les goûts et les republier seront effectués automatiquement. Vous pouvez revenir sur l\'application au moins une fois par jour pour vous assurer qu\'il fonctionne toujours</string>
+	<string name="next_title">Quoi de suivi?</string>
+	<string name="access_enabled">L\'accès à la notification est activé</string>
+	<string name="access_disabled">L\'accès à la notification est désactivé</string>
+	<string name="test_fail">Test échoué</string>
+	<string name="test_passed">Test réussi</string>
+	<string name="change">Changement</string>
+	<string name="enabled">Activé</string>
+	<string name="twitter_setup_title">Configuration de Twitter</string>
+	<string name="install">Installer</string>
+	<string name="installed">installée</string>
+	<string name="help">Aide</string>
+	<string name="run">Courir</string>
+	<string name="complete">Complet</string>
+	<string name="detect_notification">Nous avons détecté une notification de Twitter, le processus de configuration est maintenant complet</string>
+	<string name="turn_on">Allumez les notifications de publication</string>
+	<string name="enable_twitter_check">Assurez-vous que vous avez activé les notifications de Twitter</string>
+	<string name="twitter_required">Application Twitter requise</string>
+	<string name="run_test">Exécuter le test de notification</string>
+	<string name="feature_unavailable">Fonctionnalité non disponible?</string>
+	<string name="setup">Installation</string>
+	<string name="not_test">Ceci est un test de notification</string>
+</resources>

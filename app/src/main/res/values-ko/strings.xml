@@ -1,0 +1,104 @@
+
+<!--
+  ~
+  ~ MIT License
+  ~
+  ~ Copyright (c) 2021 Felix Biego
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<resources>
+	<string name="locale">Korean</string>
+	<string name="app_name">Retweet</string>
+	<string name="notification_permissions">제대로 작동하려면 리트 윗에 알림 권한이 필요합니다. 권한이 부여되지 않으면 앱이 작동하지 않습니다. 일부 Android 버전에는 \'읽기 알림 권한\'을 사용할 수 없으므로 리트 윗이 해당 버전에서 작동하지 않습니다.</string>
+	<string name="twitter_setup">리트 윗은 트위터 알림에 의존합니다. 트위터 앱이 필요하며 휴대 전화에서 알림을 받기 위해 설정해야합니다.</string>
+	<string name="setup_detect">리트 윗이 트위터 알림을 감지하면 설정 프로세스가 완료됩니다. 나중에 다시 확인할 수 있으며 완료되면 알림을 보내드립니다.</string>
+	<string name="setup_alerts">설정이 완료되면 알림으로 수신 된 트윗 알림은 설정에 따라 자동으로 리트 윗되고 좋아합니다. 설정 후 설정 페이지에 액세스하여 이러한 환경 설정을 조정할 수 있습니다.</string>
+	<string name="enable">할 수 있게 하다</string>
+	<string name="read_notifications">알림을 읽습니다</string>
+	<string name="about">에 대한</string>
+	<string name="app_about">리트 윗 앱을 사용하면 직접 상호 작용없이 자동으로 &amp; 리트 윗 트윗을 좋아할 수 있습니다. Android OS가 고도로 파편화되어 있으므로 모든 장치에서 작동한다는 것이 보장되지는 않습니다. 아래 설정 단계를 확인하십시오.</string>
+	<string name="policy">개인 정보 정책</string>
+	<string name="terms">이용 약관</string>
+	<string name="acc_example">아래는이 앱의 기능을 사용하는 트위터 계정입니다. 또한 GitHub에서 앱의 소스 코드를 확인하십시오.</string>
+	<string name="twitter_acc">트위터 계정</string>
+	<string name="source_code">소스 코드</string>
+	<string name="setup_title">설정 단계</string>
+	<string name="enable_notification">알림 액세스를 활성화합니다</string>
+	<string name="notification_access_info">리트 윗 앱은 트위터 알림에 액세스하고 조치를 수행하여 작동합니다. 따라서 알림에 액세스 할 수 있도록 활성화해야합니다. 알림 액세스 활성화를 클릭하십시오. 알림 액세스 설정을 열어야합니다. 리트 윗 앱을 활성화하십시오.</string>
+	<string name="access_limitation">NB : 모든 Android 버전이 최종 사용자 에게이 기능을 제공 할 수있는 것은 아닙니다. 이것은 Android Go 에디션에서 일반적입니다. 장치 제조업체는 장치의 Android OS를 수정하는 방법을 선택합니다. 알림 액세스는이 앱의 작동에 중요하며 활성화되어야합니다. 어떤 이유로 든 활성화 할 수 없다면 앱이 작동하지 않습니다. 이것은 우리가 통제 할 수있는 것이 아니므로 도울 수 없습니다. 활성화되면 테스트 알림 기능을 사용하여 테스트 할 수 있습니다. 리트 윗 앱은 알림을 작성하고 읽을 수 있는지 테스트합니다. 성공하면 리트 윗 앱의 기능을 활성화 할 수 있습니다.</string>
+	<string name="enable_twitter">트위터 알림을 활성화합니다</string>
+	<string name="twitter_enabled">알림 액세스가 활성화되었으므로 다음 단계는 트위터 알림을받을 수 있도록하는 것입니다. Twitter 앱이 전화 설정에서 알림을 보내도록 허용합니다.</string>
+	<string name="post_notifications">또한 Twitter 앱 내부의 사용자에 대한 게시 알림을 켜야합니다. 사용자가 게시물을 트윗하면이 알림이 장치로 전송됩니다. 그런 다음 리트 윗 앱은 트위터 알림을 읽고 활성화 및 사용 가능한 경우 리트 윗 및 유사 조치를 수행합니다. 여러 사용자에 대한 게시 알림을 켜면 켜질 수 있습니다.</string>
+	<string name="setup_complete">설정 완료</string>
+	<string name="setup_complete_info">설정 단계를 완료 한 후에는 더 이상 리트 윗 앱에서 아무것도 할 필요가 없습니다. 트위터 알림이 접수되면 리트 윗 앱은 설정에 따라 원하는 기능을 수행합니다.</string>
+	<string name="faq_title">FAQ</string>
+	<string name="stopped_title">리트 윗이 작동을 중단했습니다</string>
+	<string name="stopped_text">일부 안드로이드 장치는 얼마 후 리트 윗 앱을 죽일 수 있습니다. 때때로 확인하고 필요할 때 알림 액세스를 다시 확인해야합니다.</string>
+	<string name="not_work_title">그것은 나를 위해 작동하지 않습니다</string>
+	<string name="not_work_text">위에서 언급했듯이 앱이 모든 장치에서 작동하도록 보장되는 것은 아니며, 이는 우리가 통제 할 수있는 것이 아닙니다.</string>
+	<string name="tagline">활동적인 상태를 유지하십시오</string>
+	<string name="read">나는 읽고 동의했다</string>
+	<string name="and">그리고</string>
+	<string name="continue_text">계속하다</string>
+	<string name="repost">다시 게시</string>
+	<string name="follows">다음</string>
+	<string name="notification_permission_title">알림 권한</string>
+	<string name="settings">설정</string>
+	<string name="test_notification">테스트 알림</string>
+	<string name="test">시험</string>
+	<string name="disable">장애를 입히다</string>
+	<string name="auto_repost">자동 반영</string>
+	<string name="auto_like">자동 같은</string>
+	<string name="auto_follow">자동 팔로우</string>
+	<string name="clear_all">모든 알림을 지우십시오</string>
+	<string name="okay">좋아요</string>
+	<string name="agree_alert">조건에 동의해야합니다</string>
+	<string name="complete_title">설정 완료</string>
+	<string name="complete_text">리트 윗 앱에 오신 것을 환영합니다. 앱이 트위터에서 알림을 받으면 리트 윗 트윗이 여기에 나타납니다.</string>
+	<string name="rate_title">요금 및 검토</string>
+	<string name="rate_text">Google Play에 대한 리뷰를 남겨 두는 것을 잊지 마십시오. 귀하의 의견은 높이 평가됩니다</string>
+	<string name="post_title">게시물 알림</string>
+	<string name="post_text">리트 윗 및 사용자 트윗처럼 보려면 게시물 알림을 켜는 것이 좋습니다.</string>
+	<string name="optimization_text">안드로이드 배경 실행 제한으로 인해 여기에는 일부 트윗이 표시되지 않을 수 있습니다. 리트 윗 앱의 배터리 최적화를 비활성화하는 것이 좋습니다.</string>
+	<string name="optimization_title">최적화</string>
+	<string name="next_text">초기 설정을 완료했습니다. 좋아요와 재 게시물이 자동으로 수행되므로 앱과의 상호 작용은 더 이상 필요하지 않습니다. 최소한 하루에 한 번 앱에서 다시 확인하여 여전히 실행 중인지 확인할 수 있습니다.</string>
+	<string name="next_title">다음은?</string>
+	<string name="access_enabled">알림 액세스가 활성화되었습니다</string>
+	<string name="access_disabled">알림 액세스가 비활성화되었습니다</string>
+	<string name="test_fail">테스트 실패</string>
+	<string name="test_passed">테스트가 통과되었습니다</string>
+	<string name="change">변화</string>
+	<string name="enabled">활성화</string>
+	<string name="twitter_setup_title">트위터 설정</string>
+	<string name="install">설치하다</string>
+	<string name="installed">설치</string>
+	<string name="help">돕다</string>
+	<string name="run">달리다</string>
+	<string name="complete">완벽한</string>
+	<string name="detect_notification">트위터에서 알림을 감지했는데 설정 프로세스가 완료되었습니다.</string>
+	<string name="turn_on">게시 후 알림을 켜십시오</string>
+	<string name="enable_twitter_check">트위터에서 알림을 활성화했는지 확인하십시오</string>
+	<string name="twitter_required">트위터 앱이 필요합니다</string>
+	<string name="run_test">알림 테스트를 실행하십시오</string>
+	<string name="feature_unavailable">기능을 사용할 수 없습니까?</string>
+	<string name="setup">설정</string>
+	<string name="not_test">이것은 알림 테스트입니다</string>
+</resources>

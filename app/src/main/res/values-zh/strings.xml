@@ -1,0 +1,104 @@
+
+<!--
+  ~
+  ~ MIT License
+  ~
+  ~ Copyright (c) 2021 Felix Biego
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<resources>
+	<string name="locale">Chinese</string>
+	<string name="app_name">Retweet</string>
+	<string name="notification_permissions">为了正常运行，转发需要通知权限。如果未授予许可，则该应用程序将无效。请注意，某些Android版本可能没有可用的“读取通知权限”，这将阻止转发在这些版本上工作。</string>
+	<string name="twitter_setup">转发依赖于Twitter通知功能。 Twitter应用程序是必需的，必须设置以在手机上接收通知。</string>
+	<string name="setup_detect">一旦转发检测到Twitter通知，设置过程将完成。您可以稍后再检查，并且我们还将在完成后向您发送通知。</string>
+	<string name="setup_alerts">设置完成后，将根据您的设置自动转发并喜欢收到通知的任何推文警报。您可以在设置后访问设置页面以调整这些首选项。</string>
+	<string name="enable">使能够</string>
+	<string name="read_notifications">阅读通知</string>
+	<string name="about">关于</string>
+	<string name="app_about">转发应用程序允许您自动喜欢＆转发推文而无需直接互动。由于Android OS高度分散，因此不能保证它将在所有设备上使用。请检查下面的设置步骤。</string>
+	<string name="policy">隐私政策</string>
+	<string name="terms">条款和条件</string>
+	<string name="acc_example">以下是使用此应用程序功能的Twitter帐户。还要在GitHub上查看该应用程序的源代码。</string>
+	<string name="twitter_acc">Twitter帐户</string>
+	<string name="source_code">源代码</string>
+	<string name="setup_title">设置步骤</string>
+	<string name="enable_notification">启用通知访问</string>
+	<string name="notification_access_info">转发应用程序通过访问Twitter通知并在其上执行操作来工作。因此，应启用它访问通知。单击“启用通知”访问，这应打开通知访问设置。启用转发应用程序。</string>
+	<string name="access_limitation">NB：并非所有的Android版本都可以为最终用户提供此功能。这对于Android GO版本很常见。设备制造选择如何为其设备修改Android OS。通知访问对于此应用程序的工作至关重要，必须启用。如果出于任何原因无法启用它，则该应用将无法正常工作。这不是我们控制的东西，因此我们无能为力。启用后，您可以使用测试通知功能进行测试。转发应用程序将创建通知并测试是否可以读取它。如果成功，您可以启用转发应用程序的功能。</string>
+	<string name="enable_twitter">启用Twitter通知</string>
+	<string name="twitter_enabled">现在启用了通知访问，下一步是确保您可以接收Twitter通知。允许Twitter应用程序通过在手机设置中启用通知来向您发送通知</string>
+	<string name="post_notifications">您还需要打开Twitter应用程序中用户的邮政通知。当用户发推文时，此通知将发送到您的设备。然后，转发应用程序将读取Twitter通知，并执行转发和喜欢的操作，如果启用并可用。您可以打开多个用户的邮政通知。</string>
+	<string name="setup_complete">设置完成</string>
+	<string name="setup_complete_info">完成设置步骤后，您将不再需要在转发应用程序上执行任何操作。当收到Twitter通知时，转发应用程序将根据您的设置执行所需功能。</string>
+	<string name="faq_title">常见问题解答</string>
+	<string name="stopped_title">转发停止工作</string>
+	<string name="stopped_text">一段时间后，某些Android设备可能会杀死转发应用程序。您需要不时检查它，并在必要时重新启用通知访问。</string>
+	<string name="not_work_title">它对我不起作用</string>
+	<string name="not_work_text">如上所述，该应用程序不能保证在所有设备上都可以使用。这不是我们控制的。</string>
+	<string name="tagline">保持活跃</string>
+	<string name="read">我已经阅读并同意</string>
+	<string name="and">和</string>
+	<string name="continue_text">继续</string>
+	<string name="repost">重新发布</string>
+	<string name="follows">跟随</string>
+	<string name="notification_permission_title">通知许可</string>
+	<string name="settings">设置</string>
+	<string name="test_notification">测试通知</string>
+	<string name="test">测试</string>
+	<string name="disable">禁用</string>
+	<string name="auto_repost">自动替代</string>
+	<string name="auto_like">类似自动</string>
+	<string name="auto_follow">自动遵循</string>
+	<string name="clear_all">清除所有通知</string>
+	<string name="okay">好的</string>
+	<string name="agree_alert">您需要同意条件</string>
+	<string name="complete_title">设置完成</string>
+	<string name="complete_text">欢迎使用转发应用程序。一旦应用程序从Twitter收到通知，转发推文将在此处出现</string>
+	<string name="rate_title">费率和评论</string>
+	<string name="rate_text">别忘了给我们留下有关Google Play的评论。高度赞赏您的反馈</string>
+	<string name="post_title">邮政通知</string>
+	<string name="post_text">为了转发和像用户一样推文，建议打开其邮政通知</string>
+	<string name="optimization_text">由于Android背景执行限制，可能不会在此处显示一些推文。建议禁用转发应用程序的电池优化</string>
+	<string name="optimization_title">优化</string>
+	<string name="next_text">您已经完成了初始设置。不再需要与应用程序的互动，因为喜欢并自动执行重新发布。您可以每天至少检查一次应用程序，以确保其仍在运行</string>
+	<string name="next_title">接下来是什么？</string>
+	<string name="access_enabled">通知访问已启用</string>
+	<string name="access_disabled">通知访问被禁用</string>
+	<string name="test_fail">测试失败</string>
+	<string name="test_passed">考试通过了</string>
+	<string name="change">改变</string>
+	<string name="enabled">启用</string>
+	<string name="twitter_setup_title">Twitter设置</string>
+	<string name="install">安装</string>
+	<string name="installed">安装</string>
+	<string name="help">帮助</string>
+	<string name="run">跑步</string>
+	<string name="complete">完全的</string>
+	<string name="detect_notification">我们已经从Twitter检测到了通知，设置过程已完成</string>
+	<string name="turn_on">打开通知</string>
+	<string name="enable_twitter_check">确保您已从Twitter启用了通知</string>
+	<string name="twitter_required">需要Twitter应用</string>
+	<string name="run_test">运行通知测试</string>
+	<string name="feature_unavailable">功能不可用？</string>
+	<string name="setup">设置</string>
+	<string name="not_test">这是一个通知测试</string>
+</resources>

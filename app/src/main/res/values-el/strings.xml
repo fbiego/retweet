@@ -1,0 +1,104 @@
+
+<!--
+  ~
+  ~ MIT License
+  ~
+  ~ Copyright (c) 2021 Felix Biego
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<resources>
+	<string name="locale">Greek</string>
+	<string name="app_name">Retweet</string>
+	<string name="notification_permissions">Για να λειτουργήσει σωστά, το Retweet χρειάζεται δικαιώματα ειδοποίησης. Εάν δεν χορηγηθεί άδεια, η εφαρμογή δεν θα λειτουργήσει. Σημειώστε ότι ορισμένες εκδόσεις Android ενδέχεται να μην διαθέτουν την "άδεια ειδοποίησης ανάγνωσης", η οποία θα εμποδίσει την Retweet να εργαστεί σε αυτές τις εκδόσεις.</string>
+	<string name="twitter_setup">Το Retweet βασίζεται στις ειδοποιήσεις Twitter για να λειτουργήσει. Η εφαρμογή Twitter είναι απαραίτητη και πρέπει να ρυθμιστεί για να λαμβάνετε ειδοποιήσεις στο τηλέφωνό σας.</string>
+	<string name="setup_detect">Η διαδικασία εγκατάστασης θα ολοκληρωθεί μόλις η Retweet εντοπίσει μια ειδοποίηση Twitter. Μπορείτε να ελέγξετε ξανά αργότερα και θα σας στείλουμε επίσης μια ειδοποίηση όταν είναι πλήρης.</string>
+	<string name="setup_alerts">Μόλις ολοκληρωθεί η ρύθμιση, τυχόν ειδοποιήσεις tweet που λαμβάνονται, καθώς οι ειδοποιήσεις θα επαναληφθούν αυτόματα και θα τους αρέσουν σύμφωνα με τις ρυθμίσεις σας. Μπορείτε να έχετε πρόσβαση στη σελίδα ρυθμίσεων μετά την ρύθμιση για να ρυθμίσετε αυτές τις προτιμήσεις.</string>
+	<string name="enable">επιτρέπω</string>
+	<string name="read_notifications">Διαβάστε ειδοποιήσεις</string>
+	<string name="about">Σχετικά με</string>
+	<string name="app_about">Η εφαρμογή Retweet σάς επιτρέπει να συμπαθείτε αυτόματα και να επαναλάβετε τα tweets χωρίς άμεση αλληλεπίδραση. Δεν είναι εγγυημένο ότι θα λειτουργήσει σε όλες τις συσκευές, αφού το Android OS είναι εξαιρετικά κατακερματισμένο. Ελέγξτε τα παρακάτω βήματα ρύθμισης.</string>
+	<string name="policy">Πολιτική απορρήτου</string>
+	<string name="terms">όροι και Προϋποθέσεις</string>
+	<string name="acc_example">Παρακάτω είναι ένας λογαριασμός Twitter που χρησιμοποιεί τη λειτουργικότητα αυτής της εφαρμογής. Επίσης, ελέγξτε τον πηγαίο κώδικα της εφαρμογής στο GitHub.</string>
+	<string name="twitter_acc">Λογαριασμός Twitter</string>
+	<string name="source_code">Πηγαίος κώδικας</string>
+	<string name="setup_title">Βήματα εγκατάστασης</string>
+	<string name="enable_notification">Ενεργοποίηση πρόσβασης ειδοποίησης</string>
+	<string name="notification_access_info">Η εφαρμογή Retweet λειτουργεί με πρόσβαση σε ειδοποιήσεις στο Twitter και εκτελώντας ενέργειες σε αυτές. Ως εκ τούτου, θα πρέπει να είναι δυνατή η δυνατότητα πρόσβασης σε ειδοποιήσεις. Κάντε κλικ στο Enable Notifcations Access Αυτό θα πρέπει να ανοίξει τις ρυθμίσεις πρόσβασης ειδοποίησης. Ενεργοποιήστε την εφαρμογή Retweet.</string>
+	<string name="access_limitation">ΣΗΜΕΙΩΣΗ: Δεν μπορεί να προσφέρει αυτή τη λειτουργία όλη η έκδοση Android στον τελικό χρήστη. Αυτό είναι κοινό για τις εκδόσεις Android GO. Οι κατασκευές συσκευών επιλέγουν τον τρόπο τροποποίησης του λειτουργικού συστήματος Android για τις συσκευές τους. Η πρόσβαση ειδοποίησης είναι κρίσιμη για τη λειτουργία αυτής της εφαρμογής και πρέπει να είναι ενεργοποιημένη. Εάν δεν μπορείτε να το ενεργοποιήσετε για οποιονδήποτε λόγο, η εφαρμογή δεν θα λειτουργήσει. Αυτό δεν είναι κάτι που έχουμε τον έλεγχο, επομένως δεν μπορούμε να βοηθήσουμε. Μόλις ενεργοποιηθεί, μπορείτε να δοκιμάσετε χρησιμοποιώντας τη λειτουργία ειδοποίησης δοκιμής. Η εφαρμογή Retweet θα δημιουργήσει μια ειδοποίηση και θα δοκιμάσει εάν μπορεί να την διαβάσει. Εάν είναι επιτυχής, μπορείτε να ενεργοποιήσετε τις λειτουργίες για την εφαρμογή Retweet.</string>
+	<string name="enable_twitter">Ενεργοποίηση ειδοποιήσεων στο Twitter</string>
+	<string name="twitter_enabled">Τώρα που η πρόσβαση ειδοποίησης είναι ενεργοποιημένη, το επόμενο βήμα είναι να διασφαλίσετε ότι μπορείτε να λάβετε ειδοποιήσεις Twitter. Επιτρέψτε στην εφαρμογή Twitter να σας στείλει ειδοποιήσεις, επιτρέποντάς την στις ρυθμίσεις του τηλεφώνου σας</string>
+	<string name="post_notifications">Πρέπει επίσης να ενεργοποιήσετε τις ειδοποιήσεις ταχυδρομείου για έναν χρήστη μέσα στην εφαρμογή Twitter. Όταν ο χρήστης tweets μια ανάρτηση, αυτή η ειδοποίηση θα αποσταλεί στη συσκευή σας. Στη συνέχεια, η εφαρμογή Retweet θα διαβάσει την ειδοποίηση Twitter και θα εκτελέσει το Retweet &amp; Like Action εάν είναι ενεργοποιημένη και διαθέσιμη. Μπορείτε να ενεργοποιήσετε την ειδοποίηση μετά την ειδοποίηση για πολλούς χρήστες.</string>
+	<string name="setup_complete">Ολοκληρώθηκε η ρύθμιση</string>
+	<string name="setup_complete_info">Μόλις ολοκληρώσετε τα βήματα εγκατάστασης, δεν χρειάζεται πλέον να κάνετε τίποτα στην εφαρμογή Retweet. Όταν λαμβάνεται μια ειδοποίηση Twitter, η εφαρμογή Retweet θα εκτελέσει την επιθυμητή λειτουργικότητα σύμφωνα με τις ρυθμίσεις σας.</string>
+	<string name="faq_title">Συχνές ερωτήσεις</string>
+	<string name="stopped_title">Οι retweets σταμάτησαν να λειτουργούν</string>
+	<string name="stopped_text">Ορισμένες συσκευές Android ενδέχεται να σκοτώσουν την εφαρμογή Retweet μετά από κάποιο χρονικό διάστημα. Θα χρειαστεί να το ελέγξετε από καιρό σε καιρό και να επαναλάβετε την πρόσβαση ειδοποίησης όταν είναι απαραίτητο.</string>
+	<string name="not_work_title">Δεν λειτουργεί για μένα</string>
+	<string name="not_work_text">Όπως αναφέρθηκε παραπάνω, η εφαρμογή δεν είναι εγγυημένη για να λειτουργεί σε όλες τις συσκευές. Αυτό δεν είναι κάτι που έχουμε τον έλεγχο.</string>
+	<string name="tagline">Μείνε ενεργός</string>
+	<string name="read">Έχω διαβάσει και συμφωνώ</string>
+	<string name="and">και</string>
+	<string name="continue_text">Να συνεχίσει</string>
+	<string name="repost">Επαναλήψεις</string>
+	<string name="follows">Ακολουθεί</string>
+	<string name="notification_permission_title">Δικαιώματα ειδοποίησης</string>
+	<string name="settings">Ρυθμίσεις</string>
+	<string name="test_notification">Ειδοποίηση δοκιμής</string>
+	<string name="test">Δοκιμή</string>
+	<string name="disable">Καθιστώ ανίκανο</string>
+	<string name="auto_repost">Αυτόματο</string>
+	<string name="auto_like">Αυτόματος</string>
+	<string name="auto_follow">Αυτόματος κύριος</string>
+	<string name="clear_all">Καθαρίστε όλες τις ειδοποιήσεις</string>
+	<string name="okay">εντάξει</string>
+	<string name="agree_alert">Πρέπει να συμφωνήσετε με τους όρους</string>
+	<string name="complete_title">Ολοκληρώθηκε η ρύθμιση</string>
+	<string name="complete_text">Καλώς ήλθατε στην εφαρμογή Retweet. Τα retweeted tweets θα εμφανιστούν εδώ μόλις η εφαρμογή λάβει ειδοποιήσεις από το Twitter</string>
+	<string name="rate_title">Βαθμολογία &amp; κριτική</string>
+	<string name="rate_text">Μην ξεχάσετε να μας αφήσετε μια κριτική στο Google Play. Τα σχόλιά σας εκτιμώνται ιδιαίτερα</string>
+	<string name="post_title">Δημοσιεύσεις</string>
+	<string name="post_text">Προκειμένου να επαναλάβετε και να κάνετε ένα tweet χρήστες, συνιστάται να ενεργοποιήσετε τις ειδοποιήσεις post τους</string>
+	<string name="optimization_text">Λόγω των ορίων εκτέλεσης φόντου Android, μερικά tweets ενδέχεται να μην εμφανίζονται εδώ. Συνιστάται να απενεργοποιήσετε τη βελτιστοποίηση της μπαταρίας για την εφαρμογή retweet</string>
+	<string name="optimization_title">Βελτιστοποίηση</string>
+	<string name="next_text">Έχετε ολοκληρώσει την αρχική ρύθμιση. Η αλληλεπίδραση με την εφαρμογή δεν απαιτείται πλέον, καθώς οι συμπαθείς και οι reposts θα εκτελούνται αυτόματα. Μπορείτε να ελέγξετε ξανά την εφαρμογή τουλάχιστον μία φορά την ημέρα για να βεβαιωθείτε ότι εξακολουθεί να λειτουργεί</string>
+	<string name="next_title">Ποιο είναι το επόμενο?</string>
+	<string name="access_enabled">Η πρόσβαση ειδοποίησης είναι ενεργοποιημένη</string>
+	<string name="access_disabled">Η πρόσβαση ειδοποίησης είναι απενεργοποιημένη</string>
+	<string name="test_fail">Απέτυχε η δοκιμή</string>
+	<string name="test_passed">Πέρασε η δοκιμή</string>
+	<string name="change">Αλλαγή</string>
+	<string name="enabled">Ενεργοποιημένος</string>
+	<string name="twitter_setup_title">Ρύθμιση Twitter</string>
+	<string name="install">Εγκαθιστώ</string>
+	<string name="installed">Εγκατεστημένος</string>
+	<string name="help">Βοήθεια</string>
+	<string name="run">Τρέξιμο</string>
+	<string name="complete">Πλήρης</string>
+	<string name="detect_notification">Έχουμε εντοπίσει μια ειδοποίηση από το Twitter, η διαδικασία εγκατάστασης ολοκληρώθηκε τώρα</string>
+	<string name="turn_on">Ενεργοποιήστε τις ειδοποιήσεις ταχυδρομείου</string>
+	<string name="enable_twitter_check">Βεβαιωθείτε ότι έχετε ενεργοποιήσει ειδοποιήσεις από το Twitter</string>
+	<string name="twitter_required">Απαιτείται εφαρμογή Twitter</string>
+	<string name="run_test">Δοκιμή ειδοποίησης εκτέλεσης</string>
+	<string name="feature_unavailable">Μη Διαθέσιμο Χαρακτηριστικό?</string>
+	<string name="setup">Εγκατάσταση</string>
+	<string name="not_test">Αυτή είναι μια δοκιμή ειδοποίησης</string>
+</resources>

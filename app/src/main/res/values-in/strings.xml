@@ -1,0 +1,104 @@
+
+<!--
+  ~
+  ~ MIT License
+  ~
+  ~ Copyright (c) 2021 Felix Biego
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<resources>
+	<string name="locale">Indonesian</string>
+	<string name="app_name">Retweet</string>
+	<string name="notification_permissions">Agar berfungsi dengan baik, retweet membutuhkan izin pemberitahuan. Jika izin tidak diberikan, aplikasi tidak akan berfungsi. Perhatikan bahwa beberapa versi Android mungkin tidak memiliki \'izin pemberitahuan baca\' yang tersedia, yang akan mencegah retweet dari mengerjakan versi -versi tersebut.</string>
+	<string name="twitter_setup">Retweet mengandalkan pemberitahuan Twitter untuk berfungsi. Aplikasi Twitter diperlukan dan harus diatur untuk menerima pemberitahuan di ponsel Anda.</string>
+	<string name="setup_detect">Proses pengaturan akan selesai setelah retweet mendeteksi pemberitahuan Twitter. Anda dapat memeriksa kembali nanti, dan kami juga akan mengirimkan pemberitahuan saat selesai.</string>
+	<string name="setup_alerts">Setelah pengaturan selesai, peringatan tweet apa pun yang diterima sebagai pemberitahuan akan secara otomatis di -retweet dan disukai sesuai dengan pengaturan Anda. Anda dapat mengakses halaman Pengaturan setelah pengaturan untuk menyesuaikan preferensi ini.</string>
+	<string name="enable">Memungkinkan</string>
+	<string name="read_notifications">Baca pemberitahuan</string>
+	<string name="about">Tentang</string>
+	<string name="app_about">Aplikasi Retweet memungkinkan Anda untuk secara otomatis menyukai &amp; retweet tweet tanpa interaksi langsung. Tidak dijamin bahwa itu akan bekerja pada semua perangkat karena Android OS sangat terfragmentasi. Silakan periksa langkah pengaturan di bawah ini.</string>
+	<string name="policy">Kebijakan pribadi</string>
+	<string name="terms">Syarat &amp; Ketentuan</string>
+	<string name="acc_example">Di bawah ini adalah akun Twitter yang menggunakan fungsionalitas aplikasi ini. Periksa juga kode sumber aplikasi di GitHub.</string>
+	<string name="twitter_acc">Akun Twitter</string>
+	<string name="source_code">Kode sumber</string>
+	<string name="setup_title">Siapkan langkah</string>
+	<string name="enable_notification">Aktifkan akses pemberitahuan</string>
+	<string name="notification_access_info">Aplikasi Retweet berfungsi dengan mengakses pemberitahuan Twitter dan melakukan tindakan pada mereka. Oleh karena itu harus diaktifkan untuk mengakses pemberitahuan. Klik Akses Pemberitahuan Aktifkan Ini harus membuka pengaturan akses pemberitahuan. Aktifkan aplikasi retweet.</string>
+	<string name="access_limitation">NB: Tidak semua versi Android dapat menawarkan fitur ini kepada pengguna akhir. Ini umum untuk edisi Android Go. Pabrikan perangkat memilih cara memodifikasi OS Android untuk perangkat mereka. Akses pemberitahuan sangat penting untuk pekerjaan aplikasi ini dan harus diaktifkan. Jika Anda tidak dapat mengaktifkannya karena alasan apa pun, aplikasi tidak akan berfungsi. Ini bukan sesuatu yang kami kendalikan, oleh karena itu kami tidak dapat membantu. Setelah diaktifkan, Anda dapat menguji dengan menggunakan fitur pemberitahuan tes. Aplikasi Retweet akan membuat pemberitahuan dan menguji jika dapat membacanya. Jika berhasil, Anda dapat mengaktifkan fungsi untuk aplikasi Retweet.</string>
+	<string name="enable_twitter">Aktifkan pemberitahuan Twitter</string>
+	<string name="twitter_enabled">Sekarang setelah akses pemberitahuan diaktifkan, langkah selanjutnya adalah memastikan Anda dapat menerima pemberitahuan Twitter. Izinkan aplikasi Twitter untuk mengirimi Anda pemberitahuan dengan mengaktifkannya di pengaturan telepon Anda</string>
+	<string name="post_notifications">Anda juga perlu mengaktifkan pemberitahuan pos untuk pengguna di dalam aplikasi Twitter. Ketika pengguna tweet sebuah posting, pemberitahuan ini akan dikirim ke perangkat Anda. Aplikasi Retweet kemudian akan membaca pemberitahuan Twitter dan melakukan tindakan retweet &amp; suka jika diaktifkan &amp; tersedia. Anda dapat mengaktifkan pemberitahuan posting untuk banyak pengguna.</string>
+	<string name="setup_complete">Pengaturan Lengkap</string>
+	<string name="setup_complete_info">Setelah Anda menyelesaikan langkah pengaturan, Anda tidak perlu lagi melakukan apa pun di aplikasi Retweet. Ketika pemberitahuan Twitter diterima, aplikasi Retweet akan melakukan fungsionalitas yang diinginkan sesuai pengaturan Anda.</string>
+	<string name="faq_title">FAQ</string>
+	<string name="stopped_title">Retweet berhenti bekerja</string>
+	<string name="stopped_text">Beberapa perangkat Android dapat membunuh aplikasi Retweet setelah beberapa waktu. Anda perlu memeriksanya dari waktu ke waktu dan mengaktifkan kembali akses pemberitahuan bila perlu.</string>
+	<string name="not_work_title">Itu tidak berhasil untuk saya</string>
+	<string name="not_work_text">Seperti disebutkan di atas, aplikasi ini tidak dijamin akan bekerja pada semua perangkat. Ini bukan sesuatu yang kami kendalikan.</string>
+	<string name="tagline">Tetap aktif</string>
+	<string name="read">Saya telah membaca dan menyetujui</string>
+	<string name="and">Dan</string>
+	<string name="continue_text">Melanjutkan</string>
+	<string name="repost">Repost</string>
+	<string name="follows">Mengikuti</string>
+	<string name="notification_permission_title">Izin Pemberitahuan</string>
+	<string name="settings">Pengaturan</string>
+	<string name="test_notification">Pemberitahuan tes</string>
+	<string name="test">Tes</string>
+	<string name="disable">Cacat</string>
+	<string name="auto_repost">Repost otomatis</string>
+	<string name="auto_like">Seperti otomatis</string>
+	<string name="auto_follow">Ikuti otomatis</string>
+	<string name="clear_all">Hapus semua pemberitahuan</string>
+	<string name="okay">Oke</string>
+	<string name="agree_alert">Anda perlu menyetujui kondisi tersebut</string>
+	<string name="complete_title">Pengaturan Lengkap</string>
+	<string name="complete_text">Selamat datang di aplikasi Retweet. Tweet retweet akan muncul di sini setelah aplikasi menerima pemberitahuan dari twitter</string>
+	<string name="rate_title">Nilai &amp; Ulasan</string>
+	<string name="rate_text">Jangan lupa untuk meninggalkan kami ulasan di Google Play. Umpan balik Anda sangat dihargai</string>
+	<string name="post_title">Posting pemberitahuan</string>
+	<string name="post_text">Untuk me -retweet &amp; menyukai tweet pengguna, disarankan untuk menyalakan pemberitahuan posting mereka</string>
+	<string name="optimization_text">Karena batas eksekusi latar belakang Android, beberapa tweet mungkin tidak ditampilkan di sini. Disarankan untuk menonaktifkan optimasi baterai untuk aplikasi retweet</string>
+	<string name="optimization_title">Optimasi</string>
+	<string name="next_text">Anda telah menyelesaikan pengaturan awal. Interaksi dengan aplikasi tidak lagi diperlukan karena suka dan repost akan dilakukan secara otomatis. Anda dapat memeriksa kembali aplikasi setidaknya sekali sehari untuk memastikan itu masih berjalan</string>
+	<string name="next_title">Apa selanjutnya?</string>
+	<string name="access_enabled">Akses pemberitahuan diaktifkan</string>
+	<string name="access_disabled">Akses pemberitahuan dinonaktifkan</string>
+	<string name="test_fail">Tes gagal</string>
+	<string name="test_passed">Tes lulus</string>
+	<string name="change">Mengubah</string>
+	<string name="enabled">Diaktifkan</string>
+	<string name="twitter_setup_title">Pengaturan Twitter</string>
+	<string name="install">Install</string>
+	<string name="installed">Terpasang</string>
+	<string name="help">Membantu</string>
+	<string name="run">Berlari</string>
+	<string name="complete">Menyelesaikan</string>
+	<string name="detect_notification">Kami telah mendeteksi pemberitahuan dari Twitter, proses pengaturan sekarang selesai</string>
+	<string name="turn_on">Nyalakan pemberitahuan pos</string>
+	<string name="enable_twitter_check">Pastikan bahwa Anda telah mengaktifkan pemberitahuan dari Twitter</string>
+	<string name="twitter_required">Diperlukan aplikasi twitter</string>
+	<string name="run_test">Jalankan tes pemberitahuan</string>
+	<string name="feature_unavailable">Fitur tidak tersedia?</string>
+	<string name="setup">Mempersiapkan</string>
+	<string name="not_test">Ini adalah tes pemberitahuan</string>
+</resources>

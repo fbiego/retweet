@@ -1,0 +1,104 @@
+
+<!--
+  ~
+  ~ MIT License
+  ~
+  ~ Copyright (c) 2021 Felix Biego
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<resources>
+	<string name="locale">Vietnamese</string>
+	<string name="app_name">Retweet</string>
+	<string name="notification_permissions">Để hoạt động đúng, r tweet cần quyền thông báo. Nếu quyền không được cấp, ứng dụng sẽ không hoạt động. Lưu ý rằng một số phiên bản Android có thể không có khả năng \'Quyền thông báo đọc\', điều này sẽ ngăn chặn tin tweet hoạt động trên các phiên bản đó.</string>
+	<string name="twitter_setup">Retweet dựa trên thông báo Twitter để chức năng. Ứng dụng Twitter là cần thiết và phải được thiết lập để nhận thông báo trên điện thoại của bạn.</string>
+	<string name="setup_detect">Quá trình thiết lập sẽ được hoàn thành sau khi chuyển tiếp phát hiện ra một thông báo Twitter. Bạn có thể kiểm tra lại sau và chúng tôi cũng sẽ gửi cho bạn một thông báo khi hoàn thành.</string>
+	<string name="setup_alerts">Sau khi thiết lập hoàn tất, bất kỳ cảnh báo tweet nào nhận được dưới dạng thông báo sẽ được tự động chuyển tiếp và thích theo cài đặt của bạn. Bạn có thể truy cập trang Cài đặt sau khi thiết lập để điều chỉnh các tùy chọn này.</string>
+	<string name="enable">Cho phép</string>
+	<string name="read_notifications">Đọc thông báo</string>
+	<string name="about">Về</string>
+	<string name="app_about">Ứng dụng retweet cho phép bạn tự động thích &amp; tweet tweet mà không có tương tác trực tiếp. Nó không được đảm bảo rằng nó sẽ hoạt động trên tất cả các thiết bị vì HĐH Android rất phân mảnh. Vui lòng kiểm tra các bước thiết lập bên dưới.</string>
+	<string name="policy">Chính sách bảo mật</string>
+	<string name="terms">Điều khoản và điều kiện</string>
+	<string name="acc_example">Dưới đây là một tài khoản Twitter sử dụng chức năng của ứng dụng này. Ngoài ra, hãy kiểm tra mã nguồn của ứng dụng trên GitHub.</string>
+	<string name="twitter_acc">Tài khoản Twitter</string>
+	<string name="source_code">Mã nguồn</string>
+	<string name="setup_title">Các bước thiết lập</string>
+	<string name="enable_notification">Cho phép truy cập thông báo</string>
+	<string name="notification_access_info">Ứng dụng retweet hoạt động bằng cách truy cập các thông báo Twitter và thực hiện các hành động trên chúng. Do đó, nó nên được kích hoạt để truy cập thông báo. Nhấp vào Truy cập Bật Notifcations Điều này sẽ mở Cài đặt truy cập thông báo. Kích hoạt ứng dụng retweet.</string>
+	<string name="access_limitation">NB: Không phải tất cả phiên bản Android có thể cung cấp tính năng này cho người dùng cuối. Điều này là phổ biến cho phiên bản Android Go. Thiết bị sản xuất chọn cách sửa đổi hệ điều hành Android cho thiết bị của họ. Truy cập thông báo là rất quan trọng đối với hoạt động của ứng dụng này và phải được bật. Nếu bạn không thể bật nó vì bất kỳ lý do gì, ứng dụng sẽ không hoạt động. Đây không phải là thứ chúng tôi có quyền kiểm soát, do đó chúng tôi không thể giúp. Sau khi được bật, bạn có thể kiểm tra bằng cách sử dụng tính năng thông báo kiểm tra. Ứng dụng tiếp tục sẽ tạo một thông báo và kiểm tra nếu nó có thể đọc nó. Nếu thành công, bạn có thể kích hoạt các chức năng cho ứng dụng tweet.</string>
+	<string name="enable_twitter">Cho phép thông báo Twitter</string>
+	<string name="twitter_enabled">Bây giờ truy cập thông báo đã được bật, bước tiếp theo là đảm bảo bạn có thể nhận được thông báo Twitter. Cho phép ứng dụng Twitter gửi cho bạn thông báo bằng cách bật nó trong cài đặt điện thoại của bạn</string>
+	<string name="post_notifications">Bạn cũng cần bật thông báo bài cho người dùng bên trong ứng dụng Twitter. Khi người dùng tweet một bài đăng, thông báo này sẽ được gửi đến thiết bị của bạn. Sau đó, ứng dụng retweet sẽ đọc thông báo Twitter và thực hiện retweet &amp; giống như hành động nếu được bật &amp; có sẵn. Bạn có thể bật thông báo bài cho nhiều người dùng.</string>
+	<string name="setup_complete">Cài đặt hoàn thành</string>
+	<string name="setup_complete_info">Khi bạn đã hoàn thành các bước thiết lập, bạn không còn cần phải làm bất cứ điều gì trên ứng dụng retweet. Khi nhận được thông báo Twitter, ứng dụng tweet sẽ thực hiện chức năng mong muốn theo cài đặt của bạn.</string>
+	<string name="faq_title">Câu hỏi thường gặp</string>
+	<string name="stopped_title">Retweets ngừng hoạt động</string>
+	<string name="stopped_text">Một số thiết bị Android có thể tiêu diệt ứng dụng tweet sau một thời gian. Thỉnh thoảng bạn sẽ cần kiểm tra nó và kích hoạt lại quyền truy cập thông báo khi cần thiết.</string>
+	<string name="not_work_title">Nó không hiệu quả với tôi</string>
+	<string name="not_work_text">Như đã đề cập ở trên, ứng dụng không được đảm bảo hoạt động trên tất cả các thiết bị. Đây không phải là thứ chúng tôi có quyền kiểm soát.</string>
+	<string name="tagline">Duy trì hoạt động</string>
+	<string name="read">Tôi đã đọc và đồng ý</string>
+	<string name="and">Và</string>
+	<string name="continue_text">Tiếp tục</string>
+	<string name="repost">Đăng lại</string>
+	<string name="follows">Theo sau</string>
+	<string name="notification_permission_title">Quyền thông báo</string>
+	<string name="settings">Cài đặt</string>
+	<string name="test_notification">Thông báo kiểm tra</string>
+	<string name="test">Bài kiểm tra</string>
+	<string name="disable">Vô hiệu hóa</string>
+	<string name="auto_repost">Tự động sửa chữa</string>
+	<string name="auto_like">Tự động giống như</string>
+	<string name="auto_follow">Tự động theo doi</string>
+	<string name="clear_all">Xóa tất cả các thông báo</string>
+	<string name="okay">Đồng ý</string>
+	<string name="agree_alert">Bạn cần đồng ý với các điều kiện</string>
+	<string name="complete_title">Cài đặt hoàn thành</string>
+	<string name="complete_text">Chào mừng bạn đến với ứng dụng retweet. Các tweet được chuyển tiếp sẽ xuất hiện ở đây khi ứng dụng nhận được thông báo từ Twitter</string>
+	<string name="rate_title">Đánh giá tỉ lệ</string>
+	<string name="rate_text">Đừng quên để lại cho chúng tôi một đánh giá về Google Play. phản hồi của bạn được đánh giá cao</string>
+	<string name="post_title">Thông báo bài</string>
+	<string name="post_text">Để tweet và giống như một tweet của người dùng, nên bật thông báo bài đăng của họ</string>
+	<string name="optimization_text">Do giới hạn thực thi nền Android, một số tweet có thể không được hiển thị ở đây. Nên vô hiệu hóa tối ưu hóa pin cho ứng dụng retweet</string>
+	<string name="optimization_title">Tối ưu hóa</string>
+	<string name="next_text">Bạn đã hoàn thành thiết lập ban đầu. Tương tác với ứng dụng không còn cần thiết vì các lượt thích và các bản đăng lại sẽ được thực hiện tự động. Bạn có thể kiểm tra lại trên ứng dụng ít nhất một lần một ngày để đảm bảo rằng nó vẫn đang chạy</string>
+	<string name="next_title">Tiếp theo là gì?</string>
+	<string name="access_enabled">Truy cập thông báo được bật</string>
+	<string name="access_disabled">Truy cập thông báo bị vô hiệu hóa</string>
+	<string name="test_fail">Thử nghiệm thất bại</string>
+	<string name="test_passed">Bài kiểm tra đã qua</string>
+	<string name="change">Thay đổi</string>
+	<string name="enabled">Đã bật</string>
+	<string name="twitter_setup_title">Thiết lập Twitter</string>
+	<string name="install">Cài đặt</string>
+	<string name="installed">Cài đặt</string>
+	<string name="help">Giúp đỡ</string>
+	<string name="run">Chạy</string>
+	<string name="complete">Hoàn thành</string>
+	<string name="detect_notification">Chúng tôi đã phát hiện một thông báo từ Twitter, quy trình thiết lập hiện đã hoàn tất</string>
+	<string name="turn_on">Bật thông báo bài viết</string>
+	<string name="enable_twitter_check">Đảm bảo rằng bạn đã bật thông báo từ Twitter</string>
+	<string name="twitter_required">Ứng dụng Twitter yêu cầu</string>
+	<string name="run_test">Chạy kiểm tra thông báo</string>
+	<string name="feature_unavailable">Tính năng không có sẵn?</string>
+	<string name="setup">Cài đặt</string>
+	<string name="not_test">Đây là một bài kiểm tra thông báo</string>
+</resources>

@@ -1,0 +1,104 @@
+
+<!--
+  ~
+  ~ MIT License
+  ~
+  ~ Copyright (c) 2021 Felix Biego
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<resources>
+	<string name="locale">German</string>
+	<string name="app_name">Retweet</string>
+	<string name="notification_permissions">Um ordnungsgemäß zu funktionieren, benötigt Retweet Benachrichtigungsberechtigungen. Wenn keine Erlaubnis erteilt wird, funktioniert die App nicht. Beachten Sie, dass einige Android -Versionen möglicherweise nicht die "Read -Benachrichtigungsgenehmigung" zur Verfügung haben, wodurch Retweet an diesen Versionen gearbeitet wird.</string>
+	<string name="twitter_setup">Retweet stützt sich auf Twitter -Benachrichtigungen, um zu funktionieren. Die Twitter -App ist erforderlich und muss eingerichtet werden, um Benachrichtigungen auf Ihrem Telefon zu erhalten.</string>
+	<string name="setup_detect">Der Setup -Vorgang wird abgeschlossen, sobald Retweet eine Twitter -Benachrichtigung erkennt. Sie können später noch einmal nachsehen, und wir senden Ihnen auch eine Benachrichtigung, wenn sie abgeschlossen ist.</string>
+	<string name="setup_alerts">Sobald das Setup abgeschlossen ist, werden alle als Benachrichtigungen empfangenen Tweet -Benachrichtigungen automatisch retweetet und gemäß Ihren Einstellungen gemocht. Sie können nach dem Einrichten auf die Seite "Einstellungen" zugreifen, um diese Einstellungen anzupassen.</string>
+	<string name="enable">Aktivieren</string>
+	<string name="read_notifications">Benachrichtigungen lesen</string>
+	<string name="about">Um</string>
+	<string name="app_about">Mit Retweet -App können Sie Tweets automatisch ohne direkte Interaktion mögen und retweet. Es ist nicht garantiert, dass es auf allen Geräten funktioniert, da Android OS stark fragmentiert ist. Bitte überprüfen Sie die folgenden Einstellungsschritte.</string>
+	<string name="policy">Datenschutzrichtlinie</string>
+	<string name="terms">Terms &amp; amp; Bedingungen</string>
+	<string name="acc_example">Im Folgenden finden Sie ein Twitter -Konto, das die Funktionalität dieser App verwendet. Schauen Sie sich auch den Quellcode der App auf GitHub an.</string>
+	<string name="twitter_acc">Twitter -Konto</string>
+	<string name="source_code">Quellcode</string>
+	<string name="setup_title">Setup -Schritte einrichten</string>
+	<string name="enable_notification">Benachrichtigungszugriff aktivieren</string>
+	<string name="notification_access_info">Die Retweet -App greift auf Twitter -Benachrichtigungen und Durchführung von Aktionen auf. Daher sollte es aktiviert werden, um auf Benachrichtigungen zuzugreifen. Klicken Sie auf den Zugriff auf Benachrichtigung aktivieren. Dies sollte die Benachrichtigungszugriffeinstellungen öffnen. Aktivieren Sie die Retweet -App.</string>
+	<string name="access_limitation">NB: Nicht alle Android -Version bieten diese Funktion dem Endbenutzer an. Dies ist für Android Go -Editionen üblich. Gerätehersteller wählen, wie das Android -Betriebssystem für ihre Geräte geändert wird. Der Benachrichtigungszugriff ist für die Arbeit dieser App von entscheidender Bedeutung und muss aktiviert sein. Wenn Sie es aus irgendeinem Grund nicht aktivieren können, funktioniert die App nicht. Dies ist nichts, worüber wir die Kontrolle haben, deshalb können wir nicht helfen. Sobald Sie aktiviert sind, können Sie mit der Funktion "Testbenachrichtigung" testen. Die Retweet -App erstellt eine Benachrichtigung und testet, wenn sie sie lesen kann. Wenn Sie erfolgreich sind, können Sie die Funktionen für die Retweet -App aktivieren.</string>
+	<string name="enable_twitter">Aktivieren Sie Twitter -Benachrichtigungen</string>
+	<string name="twitter_enabled">Nachdem der Benachrichtigungszugriff aktiviert ist, besteht der nächste Schritt dafür, dass Sie Twitter -Benachrichtigungen erhalten können. Ermöglichen Sie der Twitter -App, Ihnen Benachrichtigungen zu senden, indem Sie diese in Ihren Telefoneinstellungen aktivieren</string>
+	<string name="post_notifications">Sie müssen auch Postbenachrichtigungen für einen Benutzer in der Twitter -App einstellen. Wenn der Benutzer einen Beitrag twittert, wird diese Benachrichtigung an Ihr Gerät gesendet. In der Retweet -App wird dann die Twitter -Benachrichtigung gelesen und die Retweet &amp; Like -Aktion ausgeführt, falls aktiviert und verfügbar. Sie können die Postbenachrichtigung für mehrere Benutzer aktivieren.</string>
+	<string name="setup_complete">Setup vollständig</string>
+	<string name="setup_complete_info">Sobald Sie die Setup -Schritte ausgeführt haben, müssen Sie in der Retweet -App nichts mehr ausführen. Wenn eine Twitter -Benachrichtigung empfangen wird, führt die Retweet -App die gewünschten Funktionen gemäß Ihren Einstellungen aus.</string>
+	<string name="faq_title">FAQs</string>
+	<string name="stopped_title">Retweets funktionierten nicht mehr</string>
+	<string name="stopped_text">Einige Android -Geräte können die Retweet -App nach einiger Zeit töten. Sie müssen es von Zeit zu Zeit überprüfen und den Benachrichtigungszugriff bei Bedarf wieder aufnehmen.</string>
+	<string name="not_work_title">Es funktioniert bei mir nicht</string>
+	<string name="not_work_text">Wie oben erwähnt, funktioniert die App nicht garantiert auf allen Geräten. Dies ist nicht, worüber wir die Kontrolle haben.</string>
+	<string name="tagline">Bleibe aktiv</string>
+	<string name="read">Ich habe gelesen und zugestimmt</string>
+	<string name="and">Und</string>
+	<string name="continue_text">Weitermachen</string>
+	<string name="repost">Reposts</string>
+	<string name="follows">Folgt</string>
+	<string name="notification_permission_title">Benachrichtigungsberechtigungen</string>
+	<string name="settings">Einstellungen</string>
+	<string name="test_notification">Testbenachrichtigung</string>
+	<string name="test">Prüfen</string>
+	<string name="disable">Deaktivieren</string>
+	<string name="auto_repost">Auto-Repost</string>
+	<string name="auto_like">Automatisch</string>
+	<string name="auto_follow">Automatisch folgen</string>
+	<string name="clear_all">Alle Benachrichtigungen löschen</string>
+	<string name="okay">Okay</string>
+	<string name="agree_alert">Sie müssen den Bedingungen zustimmen</string>
+	<string name="complete_title">Setup vollständig</string>
+	<string name="complete_text">Willkommen in der Retweet -App. Retweetete Tweets werden hier angezeigt, sobald die App Benachrichtigungen von Twitter erhält</string>
+	<string name="rate_title">Rate &amp; Review</string>
+	<string name="rate_text">Vergessen Sie nicht, uns eine Bewertung bei Google Play zu hinterlassen. Ihr Feedback wird sehr geschätzt</string>
+	<string name="post_title">Postbenachrichtigungen</string>
+	<string name="post_text">Um Retweet und wie ein Benutzer zu twittern, wird empfohlen, ihre Postbenachrichtigungen einzuschalten</string>
+	<string name="optimization_text">Aufgrund von Android -Hintergrundausführungsgrenzen werden hier möglicherweise nicht einige Tweets angezeigt. Es wird empfohlen, die Batterieoptimierung für die Retweet -App zu deaktivieren</string>
+	<string name="optimization_title">Optimierung</string>
+	<string name="next_text">Sie haben das erste Setup abgeschlossen. Die Interaktion mit der App ist nicht mehr erforderlich, da die Likes und Reposts automatisch durchgeführt werden. Sie können die App mindestens einmal am Tag wiedersehen, um sicherzustellen, dass sie noch ausgeführt wird</string>
+	<string name="next_title">Was als nächstes?</string>
+	<string name="access_enabled">Benachrichtigungszugriff ist aktiviert</string>
+	<string name="access_disabled">Benachrichtigungszugriff ist deaktiviert</string>
+	<string name="test_fail">Im Test durchgefallen</string>
+	<string name="test_passed">Test bestanden</string>
+	<string name="change">Ändern</string>
+	<string name="enabled">Ermöglicht</string>
+	<string name="twitter_setup_title">Twitter -Setup</string>
+	<string name="install">Installieren</string>
+	<string name="installed">Eingerichtet</string>
+	<string name="help">Helfen</string>
+	<string name="run">Laufen</string>
+	<string name="complete">Vollständig</string>
+	<string name="detect_notification">Wir haben eine Benachrichtigung von Twitter festgestellt, der Einrichtungsprozess ist jetzt abgeschlossen</string>
+	<string name="turn_on">Postbenachrichtigungen einschalten</string>
+	<string name="enable_twitter_check">Stellen Sie sicher, dass Sie Benachrichtigungen von Twitter aktiviert haben</string>
+	<string name="twitter_required">Twitter -App erforderlich</string>
+	<string name="run_test">Benachrichtigungstest ausführen</string>
+	<string name="feature_unavailable">Funktion nicht verfügbar?</string>
+	<string name="setup">Aufstellen</string>
+	<string name="not_test">Dies ist ein Benachrichtigungstest</string>
+</resources>

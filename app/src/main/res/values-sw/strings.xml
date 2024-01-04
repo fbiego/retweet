@@ -1,0 +1,104 @@
+
+<!--
+  ~
+  ~ MIT License
+  ~
+  ~ Copyright (c) 2021 Felix Biego
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<resources>
+	<string name="locale">Swahili</string>
+	<string name="app_name">Retweet</string>
+	<string name="notification_permissions">Ili kufanya kazi vizuri, retweet inahitaji ruhusa za arifa. Ikiwa ruhusa haijapewa, programu haitafanya kazi. Kumbuka kuwa matoleo kadhaa ya Android yanaweza kukosa ruhusa ya \'Soma Arifa\' inayopatikana, ambayo itazuia retweet kufanya kazi kwenye matoleo hayo.</string>
+	<string name="twitter_setup">Retweet hutegemea arifa za Twitter kufanya kazi. Programu ya Twitter ni muhimu na lazima iwekwe ili kupokea arifa kwenye simu yako.</string>
+	<string name="setup_detect">Mchakato wa usanidi utakamilika mara tu Retweet itagundua arifa ya Twitter. Unaweza kuangalia tena baadaye, na pia tutakutumia arifa ikiwa imekamilika.</string>
+	<string name="setup_alerts">Mara tu usanidi utakapokamilika, arifu zozote za tweet zilizopokelewa kama arifa zitarejeshwa kiotomatiki na kupendwa kulingana na mipangilio yako. Unaweza kufikia ukurasa wa Mipangilio baada ya kusanidi kurekebisha upendeleo huu.</string>
+	<string name="enable">Wezesha</string>
+	<string name="read_notifications">Soma arifa</string>
+	<string name="about">Kuhusu</string>
+	<string name="app_about">Programu ya Retweet hukuruhusu moja kwa moja kama na kurudisha tweets bila mwingiliano wa moja kwa moja. Haijahakikishiwa kuwa itafanya kazi kwenye vifaa vyote kwani Android OS imegawanyika sana. Tafadhali angalia hatua za usanidi hapa chini.</string>
+	<string name="policy">Sera ya faragha</string>
+	<string name="terms">Masharti na Masharti</string>
+	<string name="acc_example">Chini ni akaunti ya Twitter inayotumia utendaji wa programu hii. Pia angalia nambari ya chanzo ya programu kwenye GitHub.</string>
+	<string name="twitter_acc">Akaunti ya Twitter</string>
+	<string name="source_code">Nambari ya chanzo</string>
+	<string name="setup_title">Hatua za kuanzisha</string>
+	<string name="enable_notification">Wezesha ufikiaji wa arifa</string>
+	<string name="notification_access_info">Programu ya Retweet inafanya kazi kwa kupata arifa za Twitter na kufanya vitendo juu yao. Kwa hivyo inapaswa kuwezeshwa kupata arifa. Bonyeza kwenye Ufikiaji wa Arifa za Arifa Hii inapaswa kufungua mipangilio ya ufikiaji wa arifa. Wezesha programu ya Retweet.</string>
+	<string name="access_limitation">NB: Sio toleo lote la Android linaloweza kutoa huduma hii kwa mtumiaji wa mwisho. Hii ni kawaida kwa matoleo ya Android Go. Vitendaji vya kifaa Chagua jinsi ya kurekebisha OS ya Android kwa vifaa vyao. Ufikiaji wa arifu ni muhimu kwa kazi ya programu hii na lazima kuwezeshwa. Ikiwa huwezi kuiwezesha kwa sababu yoyote, programu haitafanya kazi. Hili sio kitu tunachodhibiti, kwa hivyo hatuwezi kusaidia. Mara tu kuwezeshwa, unaweza kujaribu kwa kutumia kipengee cha arifa ya mtihani. Programu ya Retweet itaunda arifa na mtihani ikiwa inaweza kuisoma. Ikiwa imefanikiwa, unaweza kuwezesha kazi za programu ya Retweet.</string>
+	<string name="enable_twitter">Wezesha arifa za Twitter</string>
+	<string name="twitter_enabled">Sasa kwa kuwa ufikiaji wa arifa umewezeshwa, hatua inayofuata ni kuhakikisha kuwa unaweza kupokea arifa za Twitter. Ruhusu programu ya Twitter kukutumia arifa kwa kuiwezesha katika mipangilio yako ya simu</string>
+	<string name="post_notifications">Unahitaji pia kuwasha arifa za posta kwa mtumiaji ndani ya programu ya Twitter. Wakati mtumiaji atatuliza chapisho, arifa hii itatumwa kwa kifaa chako. Programu ya Retweet basi itasoma arifa ya Twitter na kutekeleza hatua ya Retweet &amp; Like ikiwa imewezeshwa na inapatikana. Unaweza kuwasha arifa ya posta kwa watumiaji wengi.</string>
+	<string name="setup_complete">Usanidi kamili</string>
+	<string name="setup_complete_info">Mara tu unapokamilisha hatua za usanidi, hauitaji tena kufanya chochote kwenye programu ya Retweet. Wakati arifa ya Twitter inapopokelewa, programu ya Retweet itafanya utendaji unaohitajika kulingana na mipangilio yako.</string>
+	<string name="faq_title">Maswali</string>
+	<string name="stopped_title">Kurudisha nyuma kuliacha kufanya kazi</string>
+	<string name="stopped_text">Vifaa vingine vya Android vinaweza kuua programu ya Retweet baada ya muda. Utahitaji kuiangalia mara kwa mara na kuwezesha ufikiaji wa arifa wakati inahitajika.</string>
+	<string name="not_work_title">Haifanyi kazi kwangu</string>
+	<string name="not_work_text">Kama ilivyoelezwa hapo juu, programu haijahakikishiwa kufanya kazi kwenye vifaa vyote. Hii sio kitu tunachodhibiti.</string>
+	<string name="tagline">Kaa hai</string>
+	<string name="read">Nimesoma na kukubali</string>
+	<string name="and">na</string>
+	<string name="continue_text">Endelea</string>
+	<string name="repost">Reposts</string>
+	<string name="follows">Ifuatavyo</string>
+	<string name="notification_permission_title">Ruhusa za Arifa</string>
+	<string name="settings">Mipangilio</string>
+	<string name="test_notification">Arifa ya mtihani</string>
+	<string name="test">Mtihani</string>
+	<string name="disable">Lemaza</string>
+	<string name="auto_repost">Auto-mapato</string>
+	<string name="auto_like">Kiotomatiki-kama</string>
+	<string name="auto_follow">Kufuata kiotomatiki</string>
+	<string name="clear_all">Futa arifa zote</string>
+	<string name="okay">Sawa</string>
+	<string name="agree_alert">Unahitaji kukubaliana na masharti</string>
+	<string name="complete_title">Usanidi kamili</string>
+	<string name="complete_text">Karibu kwenye programu ya Retweet. Tweets zilizorudishwa zitaonekana hapa mara tu programu itakapopokea arifa kutoka kwa Twitter</string>
+	<string name="rate_title">Kiwango na hakiki</string>
+	<string name="rate_text">Usisahau kutuacha hakiki kwenye Google Play. Maoni yako yanathaminiwa sana</string>
+	<string name="post_title">Arifa za chapisho</string>
+	<string name="post_text">Ili kurudisha tena na kama tweet ya watumiaji, inashauriwa kuwasha arifa zao za posta</string>
+	<string name="optimization_text">Kwa sababu ya mipaka ya utekelezaji wa msingi wa Android, tweets zingine haziwezi kuonyeshwa hapa. Inapendekezwa kuzima uboreshaji wa betri kwa programu ya retweet</string>
+	<string name="optimization_title">Optimization</string>
+	<string name="next_text">Umekamilisha usanidi wa awali. Mwingiliano na programu hauhitajiki tena kwani vipendwa na repost vitafanywa kiatomati. Unaweza kuangalia tena kwenye programu angalau mara moja kwa siku ili kuhakikisha kuwa bado inaendelea</string>
+	<string name="next_title">Nini baadaye?</string>
+	<string name="access_enabled">Ufikiaji wa arifu umewezeshwa</string>
+	<string name="access_disabled">Ufikiaji wa arifu umezimwa</string>
+	<string name="test_fail">Mtihani umeshindwa</string>
+	<string name="test_passed">Mtihani umepita</string>
+	<string name="change">Mabadiliko</string>
+	<string name="enabled">Kuwezeshwa</string>
+	<string name="twitter_setup_title">Usanidi wa Twitter</string>
+	<string name="install">Kuweka</string>
+	<string name="installed">Imewekwa</string>
+	<string name="help">Msaada</string>
+	<string name="run">Kukimbia</string>
+	<string name="complete">Kamili</string>
+	<string name="detect_notification">Tumegundua arifa kutoka kwa Twitter, mchakato wa usanidi sasa umekamilika</string>
+	<string name="turn_on">Washa arifa za posta</string>
+	<string name="enable_twitter_check">Hakikisha kuwa umewezesha arifa kutoka Twitter</string>
+	<string name="twitter_required">Programu ya Twitter inahitajika</string>
+	<string name="run_test">Run mtihani wa arifu</string>
+	<string name="feature_unavailable">Hulka haipatikani?</string>
+	<string name="setup">Usanidi</string>
+	<string name="not_test">Huu ni mtihani wa arifu</string>
+</resources>

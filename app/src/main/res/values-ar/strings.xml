@@ -1,0 +1,104 @@
+
+<!--
+  ~
+  ~ MIT License
+  ~
+  ~ Copyright (c) 2021 Felix Biego
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<resources>
+	<string name="locale">Arabic</string>
+	<string name="app_name">Retweet</string>
+	<string name="notification_permissions">للعمل بشكل صحيح ، يحتاج إعادة تغريد أذونات الإخطار. إذا لم يتم منح إذن ، فلن يعمل التطبيق. لاحظ أن بعض إصدارات Android قد لا تحتوي على "إذن إخطار القراءة" المتاح ، مما سيمنع إعادة تغريد من العمل على هذه الإصدارات.</string>
+	<string name="twitter_setup">يعتمد Retweet على إشعارات Twitter للعمل. تطبيق Twitter ضروري ويجب إعداده لتلقي الإخطارات على هاتفك.</string>
+	<string name="setup_detect">سيتم الانتهاء من عملية الإعداد بمجرد اكتشاف إعادة تغريد إشعار Twitter. يمكنك التحقق مرة أخرى لاحقًا ، وسنرسل لك أيضًا إشعارًا عند اكتماله.</string>
+	<string name="setup_alerts">بمجرد اكتمال الإعداد ، سيتم إعادة تغريد أي تنبيهات تغريدة كإشعارات تلقائيًا وإعجابها وفقًا لإعداداتك. يمكنك الوصول إلى صفحة الإعدادات بعد الإعداد لضبط هذه التفضيلات.</string>
+	<string name="enable">يُمكَِن</string>
+	<string name="read_notifications">اقرأ الإخطارات</string>
+	<string name="about">عن</string>
+	<string name="app_about">يتيح لك تطبيق Retweet تطبيق التغريدات تلقائيًا وإعادة تغريده دون تفاعل مباشر. لا يضمن أنه سيعمل على جميع الأجهزة لأن نظام التشغيل Android مجزأ للغاية. يرجى التحقق من خطوات الإعداد أدناه.</string>
+	<string name="policy">سياسة الخصوصية</string>
+	<string name="terms">البنود و الظروف</string>
+	<string name="acc_example">فيما يلي حساب Twitter باستخدام وظائف هذا التطبيق. أيضا الخروج عن الكود المصدري للتطبيق على جيثب.</string>
+	<string name="twitter_acc">حساب على موقع تويتر</string>
+	<string name="source_code">مصدر الرمز</string>
+	<string name="setup_title">خطوات الإعداد</string>
+	<string name="enable_notification">تمكين الوصول إلى الإخطار</string>
+	<string name="notification_access_info">يعمل تطبيق Retweet من خلال الوصول إلى إعلامات Twitter وإجراءاتها. لذلك ينبغي تمكينه للوصول إلى الإخطارات. انقر فوق "تمكين الوصول إلى الملاحظات" ، يجب أن يفتح هذا إعدادات الوصول إلى الإخطار. تمكين تطبيق إعادة تغريد.</string>
+	<string name="access_limitation">NB: ليس كل إصدار Android قد يقدم هذه الميزة للمستخدم النهائي. هذا أمر شائع لنسخة Android Go. تختار تصنيع الأجهزة كيفية تعديل نظام التشغيل Android لأجهزةه. يعد الوصول إلى الإخطار أمرًا ضروريًا لعمل هذا التطبيق ويجب تمكينه. إذا لم تتمكن من تمكينه لأي سبب من الأسباب ، فلن يعمل التطبيق. هذا ليس شيئًا نتحكم فيه ، لذلك لا يمكننا المساعدة. بمجرد تمكينك ، يمكنك الاختبار باستخدام ميزة إخطار الاختبار. سيقوم تطبيق Retweet بإنشاء إشعار واختبار إذا كان بإمكانه قراءته. إذا نجحت ، يمكنك تمكين وظائف تطبيق Retweet.</string>
+	<string name="enable_twitter">تمكين إشعارات تويتر</string>
+	<string name="twitter_enabled">الآن بعد تمكين الوصول إلى الإخطار ، تتمثل الخطوة التالية في التأكد من استلام إخطارات Twitter. اسمح لتطبيق Twitter بإرسال إشعارات عن طريق تمكينه في إعدادات هاتفك</string>
+	<string name="post_notifications">تحتاج أيضًا إلى تشغيل إشعارات نشر للمستخدم داخل تطبيق Twitter. عندما يقوم المستخدم بتغريد منشور ، سيتم إرسال هذا الإشعار إلى جهازك. سيقوم تطبيق Retweet بعد ذلك بقراءة إشعار Twitter وإجراء إعادة تغريد وأعجب بالإجراء إذا تم تمكينه ومتاحًا. يمكنك تشغيل إشعار النشر لعدة مستخدمين.</string>
+	<string name="setup_complete">الإعداد الكامل</string>
+	<string name="setup_complete_info">بمجرد الانتهاء من خطوات الإعداد ، لم تعد بحاجة إلى القيام بأي شيء على تطبيق Retweet. عند تلقي إشعار Twitter ، سيقوم تطبيق Retweet بوظيفة الوظائف المطلوبة وفقًا لإعداداتك.</string>
+	<string name="faq_title">الأسئلة الشائعة</string>
+	<string name="stopped_title">توقف التغريد عن العمل</string>
+	<string name="stopped_text">قد تقتل بعض أجهزة Android تطبيق Retweet بعد بعض الوقت. ستحتاج إلى التحقق من ذلك من وقت لآخر وإعادة توجيه الوصول إلى الإخطار عند الضرورة.</string>
+	<string name="not_work_title">لا يعمل لي</string>
+	<string name="not_work_text">كما ذكر أعلاه ، لا يضمن التطبيق العمل على جميع الأجهزة. هذا ليس شيئًا نتحكم فيه.</string>
+	<string name="tagline">ابق نشيطًا</string>
+	<string name="read">لقد قرأت وأوافق على</string>
+	<string name="and">و</string>
+	<string name="continue_text">يكمل</string>
+	<string name="repost">إعادة النشر</string>
+	<string name="follows">يتبع</string>
+	<string name="notification_permission_title">أذونات الإخطار</string>
+	<string name="settings">إعدادات</string>
+	<string name="test_notification">إخطار الاختبار</string>
+	<string name="test">امتحان</string>
+	<string name="disable">إبطال</string>
+	<string name="auto_repost">التكرار التلقائي</string>
+	<string name="auto_like">اعجاب ذاتي</string>
+	<string name="auto_follow">تتبع تلقائي</string>
+	<string name="clear_all">مسح جميع الإخطارات</string>
+	<string name="okay">تمام</string>
+	<string name="agree_alert">تحتاج إلى الموافقة على الشروط</string>
+	<string name="complete_title">الإعداد الكامل</string>
+	<string name="complete_text">مرحبًا بك في تطبيق Retweet. ستظهر التغريدات التي تم إعادة تغريدها هنا بمجرد أن يتلقى التطبيق إشعارات من Twitter</string>
+	<string name="rate_title">مراجعة معدل</string>
+	<string name="rate_text">لا تنس أن تترك لنا مراجعة على Google Play. ردود الفعل الخاص بك هو في غاية الامتنان</string>
+	<string name="post_title">بعد الإخطارات</string>
+	<string name="post_text">من أجل إعادة تغريد ومثل تغرد المستخدمين ، يوصى بتشغيل إشعارات منشوراتهم</string>
+	<string name="optimization_text">بسبب حدود تنفيذ خلفية Android ، قد لا يتم عرض بعض التغريدات هنا. يوصى بتعطيل تحسين البطارية لتطبيق إعادة التغريد</string>
+	<string name="optimization_title">تحسين</string>
+	<string name="next_text">لقد أكملت الإعداد الأولي. لم يعد التفاعل مع التطبيق مطلوبًا حيث سيتم تنفيذ الإعجابات وإعادة النشر تلقائيًا. يمكنك التحقق مرة أخرى على التطبيق مرة واحدة على الأقل يوميًا للتأكد من أنه لا يزال يعمل</string>
+	<string name="next_title">ماذا بعد؟</string>
+	<string name="access_enabled">يتم تمكين الوصول إلى الإخطار</string>
+	<string name="access_disabled">يتم تعطيل الوصول إلى الإخطار</string>
+	<string name="test_fail">فشل الاختبار</string>
+	<string name="test_passed">اختبر اختبار</string>
+	<string name="change">يتغير</string>
+	<string name="enabled">تمكين</string>
+	<string name="twitter_setup_title">إعداد تويتر</string>
+	<string name="install">ثَبَّتَ</string>
+	<string name="installed">المثبتة</string>
+	<string name="help">يساعد</string>
+	<string name="run">يجري</string>
+	<string name="complete">مكتمل</string>
+	<string name="detect_notification">لقد اكتشفنا إشعارًا من Twitter ، عملية الإعداد كاملة الآن</string>
+	<string name="turn_on">قم بتشغيل الإشعارات بعد</string>
+	<string name="enable_twitter_check">تأكد من قيامك بتمكين الإخطارات من Twitter</string>
+	<string name="twitter_required">تطبيق Twitter مطلوب</string>
+	<string name="run_test">تشغيل اختبار الإخطار</string>
+	<string name="feature_unavailable">ميزة غير متوفرة؟</string>
+	<string name="setup">يثبت</string>
+	<string name="not_test">هذا اختبار للإخطار</string>
+</resources>

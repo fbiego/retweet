@@ -1,0 +1,104 @@
+
+<!--
+  ~
+  ~ MIT License
+  ~
+  ~ Copyright (c) 2021 Felix Biego
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<resources>
+	<string name="locale">locale</string>
+	<string name="app_name">app_name</string>
+	<string name="notification_permissions">notification_permissions</string>
+	<string name="twitter_setup">twitter_setup</string>
+	<string name="setup_detect">setup_detect</string>
+	<string name="setup_alerts">setup_alerts</string>
+	<string name="enable">enable</string>
+	<string name="read_notifications">read_notifications</string>
+	<string name="about">about</string>
+	<string name="app_about">app_about</string>
+	<string name="policy">policy</string>
+	<string name="terms">terms</string>
+	<string name="acc_example">acc_example</string>
+	<string name="twitter_acc">twitter_acc</string>
+	<string name="source_code">source_code</string>
+	<string name="setup_title">setup_title</string>
+	<string name="enable_notification">enable_notification</string>
+	<string name="notification_access_info">notification_access_info</string>
+	<string name="access_limitation">access_limitation</string>
+	<string name="enable_twitter">enable_twitter</string>
+	<string name="twitter_enabled">twitter_enabled</string>
+	<string name="post_notifications">post_notifications</string>
+	<string name="setup_complete">setup_complete</string>
+	<string name="setup_complete_info">setup_complete_info</string>
+	<string name="faq_title">faq_title</string>
+	<string name="stopped_title">stopped_title</string>
+	<string name="stopped_text">stopped_text</string>
+	<string name="not_work_title">not_work_title</string>
+	<string name="not_work_text">not_work_text</string>
+	<string name="tagline">tagline</string>
+	<string name="read">read</string>
+	<string name="and">and</string>
+	<string name="continue_text">continue_text</string>
+	<string name="repost">repost</string>
+	<string name="follows">follows</string>
+	<string name="notification_permission_title">notification_permission_title</string>
+	<string name="settings">settings</string>
+	<string name="test_notification">test_notification</string>
+	<string name="test">test</string>
+	<string name="disable">disable</string>
+	<string name="auto_repost">auto_repost</string>
+	<string name="auto_like">auto_like</string>
+	<string name="auto_follow">auto_follow</string>
+	<string name="clear_all">clear_all</string>
+	<string name="okay">okay</string>
+	<string name="agree_alert">agree_alert</string>
+	<string name="complete_title">complete_title</string>
+	<string name="complete_text">complete_text</string>
+	<string name="rate_title">rate_title</string>
+	<string name="rate_text">rate_text</string>
+	<string name="post_title">post_title</string>
+	<string name="post_text">post_text</string>
+	<string name="optimization_text">optimization_text</string>
+	<string name="optimization_title">optimization_title</string>
+	<string name="next_text">next_text</string>
+	<string name="next_title">next_title</string>
+	<string name="access_enabled">access_enabled</string>
+	<string name="access_disabled">access_disabled</string>
+	<string name="test_fail">test_fail</string>
+	<string name="test_passed">test_passed</string>
+	<string name="change">change</string>
+	<string name="enabled">enabled</string>
+	<string name="twitter_setup_title">twitter_setup_title</string>
+	<string name="install">install</string>
+	<string name="installed">installed</string>
+	<string name="help">help</string>
+	<string name="run">run</string>
+	<string name="complete">complete</string>
+	<string name="detect_notification">detect_notification</string>
+	<string name="turn_on">turn_on</string>
+	<string name="enable_twitter_check">enable_twitter_check</string>
+	<string name="twitter_required">twitter_required</string>
+	<string name="run_test">run_test</string>
+	<string name="feature_unavailable">feature_unavailable</string>
+	<string name="setup">setup</string>
+	<string name="not_test">not_test</string>
+</resources>

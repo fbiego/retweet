@@ -1,0 +1,104 @@
+
+<!--
+  ~
+  ~ MIT License
+  ~
+  ~ Copyright (c) 2021 Felix Biego
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<resources>
+	<string name="locale">Hindi</string>
+	<string name="app_name">Retweet</string>
+	<string name="notification_permissions">ठीक से कार्य करने के लिए, रीट्वीट को अधिसूचना अनुमतियों की आवश्यकता है। यदि अनुमति नहीं दी जाती है, तो ऐप काम नहीं करेगा। ध्यान दें कि कुछ Android संस्करणों में \'रीड नोटिफिकेशन अनुमति\' उपलब्ध नहीं हो सकती है, जो उन संस्करणों पर काम करने से रिट्वीट को रोक देगा।</string>
+	<string name="twitter_setup">RETWEET कार्य करने के लिए ट्विटर सूचनाओं पर निर्भर करता है। ट्विटर ऐप आवश्यक है और आपके फोन पर सूचनाएं प्राप्त करने के लिए सेट किया जाना चाहिए।</string>
+	<string name="setup_detect">एक बार ट्विटर अधिसूचना का पता लगाने के बाद सेटअप प्रक्रिया समाप्त हो जाएगी। आप बाद में वापस देख सकते हैं, और जब यह पूरा हो जाएगा तो हम आपको एक अधिसूचना भी भेजेंगे।</string>
+	<string name="setup_alerts">एक बार सेटअप पूरा हो जाने के बाद, नोटिफिकेशन के रूप में प्राप्त किसी भी ट्वीट अलर्ट को स्वचालित रूप से रीट्वीट किया जाएगा और आपकी सेटिंग्स के अनुसार पसंद किया जाएगा। इन वरीयताओं को समायोजित करने के लिए आप सेटअप के बाद सेटिंग पृष्ठ तक पहुंच सकते हैं।</string>
+	<string name="enable">सक्षम</string>
+	<string name="read_notifications">सूचनाएं पढ़ें</string>
+	<string name="about">के बारे में</string>
+	<string name="app_about">RETWEET ऐप आपको सीधे इंटरैक्शन के बिना स्वचालित रूप से पसंद करने और ट्वीट करने की अनुमति देता है। यह गारंटी नहीं है कि यह सभी उपकरणों पर काम करेगा क्योंकि एंड्रॉइड ओएस अत्यधिक खंडित है। कृपया नीचे दिए गए सेटअप चरणों की जाँच करें।</string>
+	<string name="policy">गोपनीयता नीति</string>
+	<string name="terms">नियम एवं शर्तें</string>
+	<string name="acc_example">नीचे एक ट्विटर खाता है जो इस ऐप की कार्यक्षमता का उपयोग करता है। इसके अलावा GitHub पर ऐप के स्रोत कोड की जाँच करें।</string>
+	<string name="twitter_acc">ट्विटर खाता</string>
+	<string name="source_code">सोर्स कोड</string>
+	<string name="setup_title">सेटअप चरण</string>
+	<string name="enable_notification">अधिसूचना पहुंच सक्षम करें</string>
+	<string name="notification_access_info">RETWEET ऐप ट्विटर नोटिफिकेशन और उन पर कार्रवाई करने से काम करता है। इसलिए इसे सूचनाओं तक पहुंचने में सक्षम होना चाहिए। Enable Notifcations एक्सेस पर क्लिक करें यह अधिसूचना एक्सेस सेटिंग्स खोलना चाहिए। RETWEET ऐप सक्षम करें।</string>
+	<string name="access_limitation">NB: सभी Android संस्करण इस सुविधा को अंतिम उपयोगकर्ता को नहीं दे सकते हैं। यह Android Go संस्करणों के लिए आम है। डिवाइस मैन्युफैक्चरर्स अपने उपकरणों के लिए एंड्रॉइड ओएस को संशोधित करने का तरीका चुनें। अधिसूचना का उपयोग इस ऐप के काम के लिए महत्वपूर्ण है और इसे सक्षम किया जाना चाहिए। यदि आप इसे किसी भी कारण से सक्षम नहीं कर सकते हैं, तो ऐप काम नहीं करेगा। यह कुछ ऐसा नहीं है जिस पर हमारा नियंत्रण है, इसलिए हम मदद नहीं कर सकते। एक बार सक्षम होने के बाद, आप परीक्षण अधिसूचना सुविधा का उपयोग करके परीक्षण कर सकते हैं। RETWEET ऐप एक अधिसूचना और परीक्षण करेगा यदि वह इसे पढ़ सकता है। सफल होने पर, आप RETWEET ऐप के लिए फ़ंक्शन को सक्षम कर सकते हैं।</string>
+	<string name="enable_twitter">ट्विटर नोटिफिकेशन सक्षम करें</string>
+	<string name="twitter_enabled">अब यह अधिसूचना पहुंच सक्षम है, अगला कदम यह सुनिश्चित करना है कि आप ट्विटर नोटिफिकेशन प्राप्त कर सकते हैं। ट्विटर ऐप को अपने फोन सेटिंग्स में सक्षम करके आपको सूचनाएं भेजने की अनुमति दें</string>
+	<string name="post_notifications">आपको ट्विटर ऐप के अंदर एक उपयोगकर्ता के लिए पोस्ट नोटिफिकेशन को चालू करना होगा। जब उपयोगकर्ता किसी पोस्ट को ट्वीट करता है, तो यह अधिसूचना आपके डिवाइस पर भेजी जाएगी। RETWEET ऐप तब ट्विटर नोटिफिकेशन पढ़ेगा और रिट्वीट और लाइक एक्शन को सक्षम करेगा यदि सक्षम और उपलब्ध हो। आप कई उपयोगकर्ताओं के लिए पोस्ट नोटिफिकेशन चालू कर सकते हैं।</string>
+	<string name="setup_complete">सेटअप पूरा</string>
+	<string name="setup_complete_info">एक बार जब आप सेटअप चरण पूरा कर लेते हैं, तो आपको रिट्वीट ऐप पर कुछ भी करने की आवश्यकता नहीं है। जब एक ट्विटर अधिसूचना प्राप्त होती है, तो RETWEET ऐप आपकी सेटिंग्स के अनुसार वांछित कार्यक्षमता का प्रदर्शन करेगा।</string>
+	<string name="faq_title">पूछे जाने वाले प्रश्न</string>
+	<string name="stopped_title">रीट्वीट ने काम करना बंद कर दिया</string>
+	<string name="stopped_text">कुछ Android डिवाइस कुछ समय के बाद RETWEET ऐप को मार सकते हैं। आपको समय-समय पर इसे जांचने और आवश्यक होने पर अधिसूचना एक्सेस को फिर से सक्षम करने की आवश्यकता होगी।</string>
+	<string name="not_work_title">यह मेरे लिए काम नहीं करता है</string>
+	<string name="not_work_text">जैसा कि ऊपर उल्लेख किया गया है, ऐप को सभी उपकरणों पर काम करने की गारंटी नहीं है। यह कुछ ऐसा नहीं है जिस पर हमारा नियंत्रण है।</string>
+	<string name="tagline">सक्रिय रहो</string>
+	<string name="read">मैंने पढ़ा और सहमत हूं</string>
+	<string name="and">और</string>
+	<string name="continue_text">जारी रखना</string>
+	<string name="repost">रेपोस्ट</string>
+	<string name="follows">इस प्रकार है</string>
+	<string name="notification_permission_title">अधिसूचना अनुमतियाँ</string>
+	<string name="settings">समायोजन</string>
+	<string name="test_notification">परीक्षण अधिसूचना</string>
+	<string name="test">परीक्षा</string>
+	<string name="disable">अक्षम करना</string>
+	<string name="auto_repost">ऑटो-रिपोस्ट</string>
+	<string name="auto_like">जैसे ऑटो</string>
+	<string name="auto_follow">स्वतः अनुसरण</string>
+	<string name="clear_all">सभी सूचनाओं को साफ करें</string>
+	<string name="okay">ठीक है</string>
+	<string name="agree_alert">आपको शर्तों से सहमत होने की आवश्यकता है</string>
+	<string name="complete_title">सेटअप पूरा</string>
+	<string name="complete_text">RETWEET ऐप में आपका स्वागत है। एक बार ऐप ट्विटर से नोटिफिकेशन प्राप्त करने के बाद यहां ट्वीट किए गए ट्वीट दिखाई देंगे</string>
+	<string name="rate_title">दर और समीक्षा</string>
+	<string name="rate_text">हमें Google Play पर समीक्षा छोड़ना न भूलें। आपकी प्रतिक्रिया बहुत ही सराहनीय है</string>
+	<string name="post_title">सूचना के बाद</string>
+	<string name="post_text">उपयोगकर्ताओं के ट्वीट की तरह रीट्वीट करने के लिए, उनकी पोस्ट नोटिफिकेशन को चालू करने की सिफारिश की जाती है</string>
+	<string name="optimization_text">Android पृष्ठभूमि निष्पादन सीमा के कारण, कुछ ट्वीट यहां नहीं दिखाए जा सकते हैं। यह रिट्वीट ऐप के लिए बैटरी ऑप्टिमाइज़ेशन को अक्षम करने की सिफारिश की जाती है</string>
+	<string name="optimization_title">अनुकूलन</string>
+	<string name="next_text">आपने प्रारंभिक सेटअप पूरा कर लिया है। ऐप के साथ बातचीत की आवश्यकता नहीं है क्योंकि पसंद और रिपोस्ट स्वचालित रूप से किए जाएंगे। आप यह सुनिश्चित करने के लिए दिन में कम से कम एक बार ऐप पर वापस जांच कर सकते हैं कि यह अभी भी चल रहा है</string>
+	<string name="next_title">आगे क्या?</string>
+	<string name="access_enabled">अधिसूचना पहुंच सक्षम है</string>
+	<string name="access_disabled">अधिसूचना पहुंच अक्षम है</string>
+	<string name="test_fail">परीक्षण विफल</string>
+	<string name="test_passed">परीक्षा उत्तीर्ण की</string>
+	<string name="change">परिवर्तन</string>
+	<string name="enabled">सक्रिय</string>
+	<string name="twitter_setup_title">ट्विटर सेटअप</string>
+	<string name="install">स्थापित करना</string>
+	<string name="installed">स्थापित</string>
+	<string name="help">मदद</string>
+	<string name="run">दौड़ना</string>
+	<string name="complete">पूरा</string>
+	<string name="detect_notification">हमने ट्विटर से एक अधिसूचना का पता लगाया है, सेटअप प्रक्रिया अब पूरी हो गई है</string>
+	<string name="turn_on">पोस्ट नोटिफिकेशन चालू करें</string>
+	<string name="enable_twitter_check">सुनिश्चित करें कि आपने ट्विटर से सूचनाओं को सक्षम किया है</string>
+	<string name="twitter_required">ट्विटर ऐप की आवश्यकता है</string>
+	<string name="run_test">अधिसूचना परीक्षण चलाएं</string>
+	<string name="feature_unavailable">सुविधा उपलब्ध नहीं है?</string>
+	<string name="setup">स्थापित करना</string>
+	<string name="not_test">यह एक अधिसूचना परीक्षण है</string>
+</resources>

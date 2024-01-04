@@ -1,0 +1,104 @@
+
+<!--
+  ~
+  ~ MIT License
+  ~
+  ~ Copyright (c) 2021 Felix Biego
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<resources>
+	<string name="locale">Russian</string>
+	<string name="app_name">Retweet</string>
+	<string name="notification_permissions">Чтобы правильно функционировать, ретвит требует разрешений уведомлений. Если разрешение не предоставлено, приложение не будет работать. Обратите внимание, что некоторые версии Android могут не иметь доступного разрешения на уведомление о чтении, что помешает ретвиту работать над этими версиями.</string>
+	<string name="twitter_setup">Ретвит полагается на уведомления в Твиттере для функционирования. Приложение Twitter необходимо и должно быть настроено для получения уведомлений на вашем телефоне.</string>
+	<string name="setup_detect">Процесс настройки будет завершен после того, как ретвит обнаружит уведомление в Твиттере. Вы можете проверить позже, и мы также отправим вам уведомление, когда оно будет завершено.</string>
+	<string name="setup_alerts">После завершения настройки любые оповещения твитов, полученные в виде уведомлений, будут автоматически ретвитировать и понравиться в соответствии с вашими настройками. Вы можете получить доступ к странице «Настройки» после настройки, чтобы настроить эти предпочтения.</string>
+	<string name="enable">Давать возможность</string>
+	<string name="read_notifications">Читать уведомления</string>
+	<string name="about">О</string>
+	<string name="app_about">Приложение Retweet позволяет вам автоматически любить твиты и ретвит без прямого взаимодействия. Не гарантируется, что он будет работать на всех устройствах, так как ОС Android сильно фрагментирована. Пожалуйста, проверьте шаги настройки ниже.</string>
+	<string name="policy">политика конфиденциальности</string>
+	<string name="terms">Условия и условия</string>
+	<string name="acc_example">Ниже приведена учетная запись в Твиттере, использующая функциональность этого приложения. Также проверьте исходный код приложения на GitHub.</string>
+	<string name="twitter_acc">Аккаунт в Твиттере</string>
+	<string name="source_code">Исходный код</string>
+	<string name="setup_title">Настройки шагов</string>
+	<string name="enable_notification">Включить доступ к уведомлению</string>
+	<string name="notification_access_info">Приложение Retweet работает, получив уведомления в Твиттере и выполняя действия на них. Поэтому он должен быть включен для доступа к уведомлениям. Нажмите на доступ к Noveifcations. Включить приложение ретвита.</string>
+	<string name="access_limitation">NB: Не вся версия Android может предложить эту функцию конечному пользователю. Это часто для Android Go Editions. Производство устройств Выберите, как изменить ОС Android для своих устройств. Доступ уведомления имеет решающее значение для работы этого приложения и должен быть включен. Если вы не можете включить это по какой -либо причине, приложение не сработает. Это не то, над чем мы контролируем, поэтому мы не можем помочь. После включения вы можете проверить, используя функцию тестового уведомления. Приложение Retweet создаст уведомление и тестирует, если оно сможет прочитать его. В случае успеха вы можете включить функции для приложения ретвита.</string>
+	<string name="enable_twitter">Включить уведомления в Твиттере</string>
+	<string name="twitter_enabled">Теперь, когда доступ к уведомлениям включен, следующим шагом является убедиться, что вы можете получить уведомления в Твиттере. Позвольте приложению Twitter отправлять вам уведомления, включив его в настройках телефона</string>
+	<string name="post_notifications">Вам также необходимо включить уведомления о публикации для пользователя в приложении Twitter. Когда пользователь написал в Твиттере, это уведомление будет отправлено на ваше устройство. Затем приложение Retweet будет прочитать уведомление Twitter и выполнить ретвит и лайк, если включено и доступно. Вы можете включить уведомление о почте для нескольких пользователей.</string>
+	<string name="setup_complete">Настройка завершена</string>
+	<string name="setup_complete_info">После того, как вы выполните шаги настройки, вам больше не нужно делать что -либо в приложении ретвита. При получении уведомления в Твиттере приложение ретвита выполнит желаемую функциональность в соответствии с вашими настройками.</string>
+	<string name="faq_title">Часто задаваемые вопросы</string>
+	<string name="stopped_title">Ретвиты перестали работать</string>
+	<string name="stopped_text">Некоторые устройства Android могут убить приложение ретвита через некоторое время. Вам нужно будет время от времени проверять его и при необходимости повторно включать доступ уведомлений.</string>
+	<string name="not_work_title">Это не работает для меня</string>
+	<string name="not_work_text">Как упоминалось выше, приложение не гарантированно будет работать на всех устройствах. Это не то, что мы контролируем.</string>
+	<string name="tagline">Оставайся активным</string>
+	<string name="read">Я читал и согласен</string>
+	<string name="and">и</string>
+	<string name="continue_text">Продолжать</string>
+	<string name="repost">Репосты</string>
+	<string name="follows">Следует</string>
+	<string name="notification_permission_title">Разрешения уведомления</string>
+	<string name="settings">Настройки</string>
+	<string name="test_notification">Тестовое уведомление</string>
+	<string name="test">Тест</string>
+	<string name="disable">Запрещать</string>
+	<string name="auto_repost">Авторепост</string>
+	<string name="auto_like">Автоподобный</string>
+	<string name="auto_follow">Автопоход</string>
+	<string name="clear_all">Очистить все уведомления</string>
+	<string name="okay">Хорошо</string>
+	<string name="agree_alert">Вам нужно согласиться с условиями</string>
+	<string name="complete_title">Настройка завершена</string>
+	<string name="complete_text">Добро пожаловать в приложение ретвита. Твиты ретвита появятся здесь, как только приложение получит уведомления из Twitter</string>
+	<string name="rate_title">Скорость и обзор</string>
+	<string name="rate_text">Не забудьте оставить нам обзор в Google Play. Ваш отзыв очень важен</string>
+	<string name="post_title">Публиковать уведомления</string>
+	<string name="post_text">Чтобы ретвит и, как твит пользователей, рекомендуется включить их пост -уведомления</string>
+	<string name="optimization_text">Из -за пределов выполнения Android, некоторые твиты не могут быть показаны здесь. Рекомендуется отключить оптимизацию батареи для приложения ретвита</string>
+	<string name="optimization_title">Оптимизация</string>
+	<string name="next_text">Вы завершили начальную настройку. Взаимодействие с приложением больше не требуется, так как лайки и репосты будут выполняться автоматически. Вы можете проверять приложение не реже одного раза в день, чтобы убедиться, что оно все еще работает</string>
+	<string name="next_title">Что дальше?</string>
+	<string name="access_enabled">Доступ уведомления включен</string>
+	<string name="access_disabled">Доступ уведомления отключен</string>
+	<string name="test_fail">Тест не удался</string>
+	<string name="test_passed">Тест пройден</string>
+	<string name="change">Изменять</string>
+	<string name="enabled">Включено</string>
+	<string name="twitter_setup_title">Настройка Twitter</string>
+	<string name="install">Установить</string>
+	<string name="installed">Установлен</string>
+	<string name="help">Помощь</string>
+	<string name="run">Бегать</string>
+	<string name="complete">Полный</string>
+	<string name="detect_notification">Мы обнаружили уведомление из Twitter, процесс настройки теперь завершен</string>
+	<string name="turn_on">Включите почтовые уведомления</string>
+	<string name="enable_twitter_check">Убедитесь, что вы включили уведомления из Twitter</string>
+	<string name="twitter_required">Твиттер приложение требуется</string>
+	<string name="run_test">Запустите тест уведомления</string>
+	<string name="feature_unavailable">Функция недоступна?</string>
+	<string name="setup">Настраивать</string>
+	<string name="not_test">Это тест уведомления</string>
+</resources>

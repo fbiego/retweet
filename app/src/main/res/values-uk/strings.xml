@@ -1,0 +1,104 @@
+
+<!--
+  ~
+  ~ MIT License
+  ~
+  ~ Copyright (c) 2021 Felix Biego
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  ~ IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  ~ FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+  ~ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  ~ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+  ~ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+  ~ SOFTWARE.
+  -->
+
+<resources>
+	<string name="locale">Ukrainian</string>
+	<string name="app_name">Retweet</string>
+	<string name="notification_permissions">Для правильного функціонування Retweet потребує дозволів на повідомлення. Якщо дозвіл не буде надано, додаток не буде працювати. Зауважте, що деякі версії Android можуть не мати доступного "дозволу на читання повідомлення", що не дозволить Retweet працювати над цими версіями.</string>
+	<string name="twitter_setup">Retweet покладається на сповіщення Twitter на функціонування. Додаток Twitter необхідний і повинен бути налаштований для отримання сповіщень на вашому телефоні.</string>
+	<string name="setup_detect">Процес налаштування буде завершено, як тільки Retweet виявить повідомлення в Twitter. Ви можете перевірити пізніше, і ми також надішлемо вам сповіщення, коли воно завершиться.</string>
+	<string name="setup_alerts">Після завершення налаштування будь -які попередження про твіт, отримані як сповіщення, будуть автоматично ретвітовані та сподобалися відповідно до ваших налаштувань. Ви можете отримати доступ до сторінки налаштувань після налаштування для регулювання цих налаштувань.</string>
+	<string name="enable">Ввімкнути</string>
+	<string name="read_notifications">Прочитайте сповіщення</string>
+	<string name="about">Про</string>
+	<string name="app_about">Додаток RetWeet дозволяє автоматично, як і ретвеет, твіти без прямої взаємодії. Не гарантовано, що він буде працювати на всіх пристроях, оскільки ОС Android сильно фрагментована. Перевірте кроки налаштування нижче.</string>
+	<string name="policy">Політика конфіденційності</string>
+	<string name="terms">Загальні положення та умови</string>
+	<string name="acc_example">Нижче наведено акаунт у Twitter, що використовує функціональність цього додатка. Також перевірити вихідний код програми на Github.</string>
+	<string name="twitter_acc">Акаунт у Twitter</string>
+	<string name="source_code">Вихідний код</string>
+	<string name="setup_title">Кроки налаштування</string>
+	<string name="enable_notification">Увімкнути доступ до сповіщення</string>
+	<string name="notification_access_info">Додаток Retweet працює, отримуючи доступ до сповіщень у Twitter та виконуючи дії на них. Тому йому слід дозволити доступ до сповіщень. Клацніть на доступу до уваги доступу, який повинен відкрити налаштування доступу до сповіщень. Увімкнути додаток Retweet.</string>
+	<string name="access_limitation">NB: Не вся версія Android може запропонувати цю функцію кінцевому користувачеві. Це поширене для Android Go Editions. Виробники пристроїв вибирають, як модифікувати ОС Android для своїх пристроїв. Доступ до сповіщень має вирішальне значення для роботи цього додатка і повинен бути включений. Якщо ви не можете ввімкнути це з будь -якої причини, додаток не спрацює. Це не те, що ми маємо контроль, тому ми не можемо допомогти. Після ввімкнення ви можете перевірити, використовуючи функцію тесту. Додаток Retweet створить сповіщення та перевірить, якщо воно може його прочитати. У разі успіху ви можете ввімкнути функції для програми Retweet.</string>
+	<string name="enable_twitter">Увімкнути сповіщення Twitter</string>
+	<string name="twitter_enabled">Тепер, коли доступ до сповіщення ввімкнено, наступним кроком є ​​переконання, що ви можете отримати повідомлення в Twitter. Дозвольте додатку Twitter надсилати вам сповіщення, увімкнувши його у налаштуваннях телефону</string>
+	<string name="post_notifications">Вам також потрібно увімкнути сповіщення про публікацію для користувача всередині програми Twitter. Коли користувач твітує публікацію, це сповіщення буде надіслано на ваш пристрій. Потім додаток Retweet прочитає повідомлення Twitter та виконає ретвіт та як дію, якщо ввімкнено та доступно. Ви можете увімкнути сповіщення про повідомлення для декількох користувачів.</string>
+	<string name="setup_complete">Налаштування завершено</string>
+	<string name="setup_complete_info">Після того, як ви завершили кроки налаштування, вам більше не потрібно нічого робити в додатку Retweet. Коли буде отримано повідомлення в Twitter, додаток Retweet виконає потрібну функціональність відповідно до ваших налаштувань.</string>
+	<string name="faq_title">Поширені запитання</string>
+	<string name="stopped_title">Ретвіти перестали працювати</string>
+	<string name="stopped_text">Деякі пристрої Android можуть через деякий час вбити додаток Retweet. Вам потрібно буде час від часу перевіряти його та повторно встановити доступ до сповіщення, коли це необхідно.</string>
+	<string name="not_work_title">Це не працює для мене</string>
+	<string name="not_work_text">Як було сказано вище, додаток не гарантовано працює над усіма пристроями. Це не те, над чим ми маємо контроль.</string>
+	<string name="tagline">Залишайтеся активними</string>
+	<string name="read">Я читав і погоджуюся</string>
+	<string name="and">і</string>
+	<string name="continue_text">Продовжувати</string>
+	<string name="repost">Репост</string>
+	<string name="follows">Випливати</string>
+	<string name="notification_permission_title">Дозвіл на сповіщення</string>
+	<string name="settings">Налаштування</string>
+	<string name="test_notification">Повідомлення про тестування</string>
+	<string name="test">Тест</string>
+	<string name="disable">Відключати</string>
+	<string name="auto_repost">Авто-відновлення</string>
+	<string name="auto_like">Автоматичний</string>
+	<string name="auto_follow">Автомобільний</string>
+	<string name="clear_all">Очистіть усі сповіщення</string>
+	<string name="okay">Гаразд</string>
+	<string name="agree_alert">Вам потрібно погодитися на умови</string>
+	<string name="complete_title">Налаштування завершено</string>
+	<string name="complete_text">Ласкаво просимо до програми Retweet. Ретвітні твіти з’являться тут, як тільки програма отримає сповіщення з Twitter</string>
+	<string name="rate_title">Цінність та огляд</string>
+	<string name="rate_text">Не забудьте залишити нам відгук у Google Play. Ваш відгук високо вдячний</string>
+	<string name="post_title">Повідомлення про розміщення</string>
+	<string name="post_text">Для того, щоб ретвітувати та як користувачі твіту, рекомендується включити сповіщення про їх повідомлення</string>
+	<string name="optimization_text">Через межі виконання фону Android, деякі твіти тут не можуть бути показані. Рекомендується відключити оптимізацію акумулятора для програми Retweet</string>
+	<string name="optimization_title">Оптимізація</string>
+	<string name="next_text">Ви завершили початкову установку. Взаємодія з додатком більше не потрібна, оскільки подоба та репостів виконуватимуться автоматично. Ви можете перевіряти додаток хоча б раз на день, щоб переконатися, що він все ще працює</string>
+	<string name="next_title">Що далі?</string>
+	<string name="access_enabled">Доступ до сповіщень увімкнено</string>
+	<string name="access_disabled">Доступ до сповіщень вимкнено</string>
+	<string name="test_fail">Не вдалося</string>
+	<string name="test_passed">Тест пройшов</string>
+	<string name="change">Зміна</string>
+	<string name="enabled">Увімкнено</string>
+	<string name="twitter_setup_title">Налаштування Twitter</string>
+	<string name="install">Встановити</string>
+	<string name="installed">Встановлений</string>
+	<string name="help">Допомога</string>
+	<string name="run">Пробігати</string>
+	<string name="complete">Повне</string>
+	<string name="detect_notification">Ми виявили повідомлення з Twitter, процес налаштування тепер завершено</string>
+	<string name="turn_on">Увімкніть повідомлення про повідомлення</string>
+	<string name="enable_twitter_check">Переконайтесь, що ви ввімкнули сповіщення з Twitter</string>
+	<string name="twitter_required">Потрібна програма Twitter</string>
+	<string name="run_test">Тест на запуск сповіщення</string>
+	<string name="feature_unavailable">Функція недоступна?</string>
+	<string name="setup">Налаштування</string>
+	<string name="not_test">Це тест сповіщення</string>
+</resources>
