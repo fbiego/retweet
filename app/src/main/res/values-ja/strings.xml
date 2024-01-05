@@ -101,4 +101,7 @@
 	<string name="feature_unavailable">機能は利用できませんか？</string>
 	<string name="setup">設定</string>
 	<string name="not_test">これは通知テストです</string>
+	<string name="language">言語</string>
+	<string name="okay">わかった</string>
+	<string name="save">保存</string>
 </resources>

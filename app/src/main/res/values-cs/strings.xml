@@ -101,4 +101,7 @@
 	<string name="feature_unavailable">Funkce není k dispozici?</string>
 	<string name="setup">Založit</string>
 	<string name="not_test">Toto je test oznámení</string>
+	<string name="language">Jazyk</string>
+	<string name="okay">dobře</string>
+	<string name="save">Uložit</string>
 </resources>

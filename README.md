@@ -4,6 +4,8 @@ retweets & likes your tweets
 
 follow me on twitter [`@_retweets___`](https://twitter.com/_retweets___)
 
+Language translations [`Google Sheet`](https://docs.google.com/spreadsheets/d/1z8LVsthSxiPUdHTfnsei2F41KTxBMkbhZ4QTpBxBMSk/edit?usp=sharing)
+
 
 ### Create your own
 

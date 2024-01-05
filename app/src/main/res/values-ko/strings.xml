@@ -101,4 +101,7 @@
 	<string name="feature_unavailable">기능을 사용할 수 없습니까?</string>
 	<string name="setup">설정</string>
 	<string name="not_test">이것은 알림 테스트입니다</string>
+	<string name="language">언어</string>
+	<string name="okay">좋아요</string>
+	<string name="save">구하다</string>
 </resources>

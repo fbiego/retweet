@@ -101,4 +101,7 @@
 	<string name="feature_unavailable">Funzione non disponibile?</string>
 	<string name="setup">Impostare</string>
 	<string name="not_test">Questo è un test di notifica</string>
+	<string name="language">Lingua</string>
+	<string name="okay">Va bene</string>
+	<string name="save">Salva</string>
 </resources>

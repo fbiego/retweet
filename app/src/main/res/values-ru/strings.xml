@@ -101,4 +101,7 @@
 	<string name="feature_unavailable">Функция недоступна?</string>
 	<string name="setup">Настраивать</string>
 	<string name="not_test">Это тест уведомления</string>
+	<string name="language">Язык</string>
+	<string name="okay">Хорошо</string>
+	<string name="save">Сохранять</string>
 </resources>

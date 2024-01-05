@@ -101,4 +101,7 @@
 	<string name="feature_unavailable">Fitur tidak tersedia?</string>
 	<string name="setup">Mempersiapkan</string>
 	<string name="not_test">Ini adalah tes pemberitahuan</string>
+	<string name="language">Bahasa</string>
+	<string name="okay">Oke</string>
+	<string name="save">Menyimpan</string>
 </resources>

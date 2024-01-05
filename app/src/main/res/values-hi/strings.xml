@@ -101,4 +101,7 @@
 	<string name="feature_unavailable">सुविधा उपलब्ध नहीं है?</string>
 	<string name="setup">स्थापित करना</string>
 	<string name="not_test">यह एक अधिसूचना परीक्षण है</string>
+	<string name="language">भाषा</string>
+	<string name="okay">ठीक है</string>
+	<string name="save">बचाना</string>
 </resources>

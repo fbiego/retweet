@@ -101,4 +101,7 @@
 	<string name="feature_unavailable">Μη Διαθέσιμο Χαρακτηριστικό?</string>
 	<string name="setup">Εγκατάσταση</string>
 	<string name="not_test">Αυτή είναι μια δοκιμή ειδοποίησης</string>
+	<string name="language">Γλώσσα</string>
+	<string name="okay">εντάξει</string>
+	<string name="save">Αποθηκεύσετε</string>
 </resources>

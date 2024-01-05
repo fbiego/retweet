@@ -101,4 +101,7 @@
 	<string name="feature_unavailable">Característica no disponible?</string>
 	<string name="setup">Configuración</string>
 	<string name="not_test">Esta es una prueba de notificación</string>
+	<string name="language">Idioma</string>
+	<string name="okay">Bueno</string>
+	<string name="save">Ahorrar</string>
 </resources>

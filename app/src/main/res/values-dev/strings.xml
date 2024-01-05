@@ -101,4 +101,7 @@
 	<string name="feature_unavailable">feature_unavailable</string>
 	<string name="setup">setup</string>
 	<string name="not_test">not_test</string>
+	<string name="language">language</string>
+	<string name="okay">okay</string>
+	<string name="save">save</string>
 </resources>
