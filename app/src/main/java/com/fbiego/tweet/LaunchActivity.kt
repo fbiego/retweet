@@ -1,6 +1,8 @@
 package com.fbiego.tweet
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Html
@@ -12,11 +14,15 @@ import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.preference.PreferenceManager
 import com.fbiego.tweet.databinding.ActivityLaunchBinding
+import com.fbiego.tweet.utils.LocaleHelper
+import com.fbiego.tweet.MainActivity as MA
 import timber.log.Timber
+import java.util.Locale
 
 class LaunchActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityLaunchBinding
+    private lateinit var pref: SharedPreferences
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,10 +31,10 @@ class LaunchActivity : AppCompatActivity() {
 
 
         val pref = PreferenceManager.getDefaultSharedPreferences(this)
-        if (pref.getBoolean(MainActivity.PREF_INTRO_COMPLETE, false)){
-            startActivity(Intent(this, MainActivity::class.java))
+        if (pref.getBoolean(MA.PREF_INTRO_COMPLETE, false)){
+            startActivity(Intent(this, MA::class.java))
             finish()
-        } else if (pref.getBoolean(MainActivity.PREF_ACCEPTED, false)){
+        } else if (pref.getBoolean(MA.PREF_ACCEPTED, false)){
             startActivity(Intent(this, SetupActivity::class.java))
             finish()
         }
@@ -45,7 +51,7 @@ class LaunchActivity : AppCompatActivity() {
         binding.okayButton.setOnClickListener {
 
             if (binding.acceptCheck.isChecked) {
-                pref.edit().putBoolean(MainActivity.PREF_ACCEPTED, true).apply()
+                pref.edit().putBoolean(MA.PREF_ACCEPTED, true).apply()
                 startActivity(Intent(this, SetupActivity::class.java))
                 finish()
             } else {
@@ -55,6 +61,31 @@ class LaunchActivity : AppCompatActivity() {
 
 
     }
+
+    override fun attachBaseContext(newBase: Context?) {
+        pref = PreferenceManager.getDefaultSharedPreferences(newBase!!)
+
+        val phoneLang = Locale.getDefault().language // check phone default language
+
+        val lPref = pref.getString(MA.PREF_APP_LANG, "null")
+            .toString() // check if there is preferred language set
+
+        val lang = if (AboutActivity.values.contains(phoneLang) && lPref == "null") {
+            // phone language translation available and preferred not set
+            pref.edit().putString(MA.PREF_APP_LANG, phoneLang).apply()
+            phoneLang
+        } else if (lPref != "null") {
+            // preferred was already set
+            lPref
+        } else {
+            // default language
+            "en"
+        }
+
+        super.attachBaseContext(LocaleHelper.setLocale(newBase, lang))
+        Timber.e("attach base context, language: $lang")
+    }
+
 
     private fun textDialog(title: String, resource: Int){
         val builder = AlertDialog.Builder(this)

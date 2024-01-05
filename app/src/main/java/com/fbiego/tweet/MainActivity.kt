@@ -57,12 +57,16 @@ class MainActivity : AppCompatActivity(), EventListener {
 
         const val PREF_CLICKED_NOTIFY = "pref_clicked_notify"
 
+        const val PREF_APP_LANG = "app_language"
+
 
         const val NOTIFICATION_CHANNEL = "Test Notifications"
         const val NOTIFY_ID = 0xFB1E40
 
         lateinit var tweetAdapter : TweetAdapter
         lateinit var tweetRecycler : RecyclerView
+
+
 
     }
 

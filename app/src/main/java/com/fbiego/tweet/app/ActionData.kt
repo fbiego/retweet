@@ -7,4 +7,6 @@ class ActionData (
     var buttonIcon: Int,
     var actionable: Boolean,
     var complete: Boolean
-        )
+        ){
+    var longClick = false
+}

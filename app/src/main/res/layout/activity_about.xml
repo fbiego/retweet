@@ -36,7 +36,7 @@
                 android:layout_margin="5dp"
                 android:textStyle="bold"
                 android:textSize="18sp"
-                android:text="about" />
+                android:text="@string/about" />
 
 
         </LinearLayout>
@@ -124,6 +124,66 @@
                         app:tint="@color/white" />
 
                 </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@color/line" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_margin="10dp">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@id/appLanguage"
+                        android:layout_marginStart="10dp"
+                        android:gravity="start|center_vertical"
+                        android:textStyle="bold"
+                        android:singleLine="true"
+                        android:text="Language" />
+                    <LinearLayout
+                        android:id="@+id/appLanguage"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:gravity="center_vertical|end"
+                        android:orientation="horizontal"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintWidth_percent="0.35"
+                        android:background="@drawable/buttons"
+                        android:clickable="true"
+                        android:focusable="true">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:paddingStart="10dp"
+                            android:layout_margin="5dp"
+                            app:tint="@color/white" />
+                        <TextView
+                            android:id="@+id/appLanguageText"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_margin="5dp"
+                            android:paddingEnd="10dp"
+                            android:singleLine="true"
+                            android:text="English" />
+
+
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 
             </LinearLayout>
 

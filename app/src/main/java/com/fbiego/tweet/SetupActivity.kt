@@ -7,6 +7,7 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.app.NotificationManagerCompat
@@ -217,9 +218,16 @@ class SetupActivity : AppCompatActivity(), EventListener {
                 startActivity(i)
             }
             4005 -> {
-                val i = Intent(Intent.ACTION_VIEW)
-                i.data = Uri.parse("https://twitter.com/_retweets___")
-                startActivity(i)
+                if (action.longClick){
+//                    Toast.makeText(this, "Bypass notification detection", Toast.LENGTH_SHORT ).show()
+//                    val pref = PreferenceManager.getDefaultSharedPreferences(this)
+//                    pref.edit().putBoolean(MainActivity.PREF_RECEIVED_TWEET, true).apply()
+//                    binding.okayButton.visibility = View.VISIBLE
+                } else {
+                    val i = Intent(Intent.ACTION_VIEW)
+                    i.data = Uri.parse("https://twitter.com/_retweets___")
+                    startActivity(i)
+                }
             }
         }
 //        Toast.makeText(this, action.text, Toast.LENGTH_SHORT ).show()

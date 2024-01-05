@@ -55,6 +55,11 @@ class ActionAdapter (actionData: ArrayList<ActionData>, private val callback: (A
             mButton.setOnClickListener {
                 callback(action)
             }
+            mButton.setOnLongClickListener {
+                action.longClick = true
+                callback(action)
+                true
+            }
             if (action.complete) {
                 mBicon.setImageDrawable(context.resources.getDrawable(R.drawable.ic_done))
             } else {
