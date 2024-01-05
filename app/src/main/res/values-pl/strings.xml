@@ -102,6 +102,5 @@
 	<string name="setup">Organizować coś</string>
 	<string name="not_test">To jest test powiadomienia</string>
 	<string name="language">Język</string>
-	<string name="okay">Dobra</string>
 	<string name="save">Ratować</string>
 </resources>

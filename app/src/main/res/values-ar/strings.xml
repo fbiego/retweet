@@ -102,6 +102,5 @@
 	<string name="setup">يثبت</string>
 	<string name="not_test">هذا اختبار للإخطار</string>
 	<string name="language">لغة</string>
-	<string name="okay">تمام</string>
 	<string name="save">يحفظ</string>
 </resources>

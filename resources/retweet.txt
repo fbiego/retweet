@@ -76,5 +76,4 @@ feature_unavailable	Feature not available?	Функция недоступна?	
 setup	Setup	Настраивать	Mempersiapkan	Cài đặt	Configurar	Εγκατάσταση	Aufstellen	Configuración	Založit	Impostare	Organizować coś	Installation	设置	Usanidi	स्थापित करना	يثبت	설정	設定	Налаштування
 not_test	This is a notification test	Это тест уведомления	Ini adalah tes pemberitahuan	Đây là một bài kiểm tra thông báo	Este é um teste de notificação	Αυτή είναι μια δοκιμή ειδοποίησης	Dies ist ein Benachrichtigungstest	Esta es una prueba de notificación	Toto je test oznámení	Questo è un test di notifica	To jest test powiadomienia	Ceci est un test de notification	这是一个通知测试	Huu ni mtihani wa arifu	यह एक अधिसूचना परीक्षण है	هذا اختبار للإخطار	이것은 알림 테스트입니다	これは通知テストです	Це тест сповіщення
 language	Language	Язык	Bahasa	Ngôn ngữ	Linguagem	Γλώσσα	Sprache	Idioma	Jazyk	Lingua	Język	Langue	语言	Lugha	भाषा	لغة	언어	言語	Мова
-okay	Okay	Хорошо	Oke	Đồng ý	OK	εντάξει	Okay	Bueno	dobře	Va bene	Dobra	D'accord	好的	Sawa	ठीक है	تمام	좋아요	わかった	Гаразд
 save	Save	Сохранять	Menyimpan	Cứu	Salvar	Αποθηκεύσετε	Speichern	Ahorrar	Uložit	Salva	Ratować	Sauvegarder	节省	Kuokoa	बचाना	يحفظ	구하다	保存	Заощадити
