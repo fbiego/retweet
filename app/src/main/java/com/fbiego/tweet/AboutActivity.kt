@@ -110,7 +110,7 @@ class AboutActivity : AppCompatActivity() {
             val builder = AlertDialog.Builder(this)
             var dialog : AlertDialog? = null
 
-            titleText.text = "Language" //getString(R.string.language)
+            titleText.text = getString(R.string.language)
 
             save.setOnClickListener {
 

@@ -11,9 +11,9 @@
       "type": "SINGLE",
       "filters": [],
       "attributes": [],
-      "versionCode": 9,
-      "versionName": "1.8",
-      "outputFile": "Retweet-v1.8.apk"
+      "versionCode": 10,
+      "versionName": "1.9",
+      "outputFile": "Retweet-v1.9.apk"
     }
   ],
   "elementType": "File"

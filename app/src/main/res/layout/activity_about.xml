@@ -148,7 +148,7 @@
                         android:gravity="start|center_vertical"
                         android:textStyle="bold"
                         android:singleLine="true"
-                        android:text="Language" />
+                        android:text="@string/language" />
                     <LinearLayout
                         android:id="@+id/appLanguage"
                         android:layout_width="0dp"
